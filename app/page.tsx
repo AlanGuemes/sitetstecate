@@ -66,24 +66,24 @@ export default function HomePage() {
         </section>
 
         {/* Estadísticas */}
-        <section id="estadisticas" className="py-16 lg:py-18 text-primary-foreground bg-muted">
+        <section id="estadisticas" className="py-10 lg:py-16 bg-muted">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <p className="text-4xl lg:text-5xl font-bold text-secondary">48+</p>
-                <p className="mt-2 text-sm text-muted-foreground">Artículos Publicados</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border">
+              <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none">48+</p>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Artículos Publicados</p>
               </div>
-              <div>
-                <p className="text-4xl lg:text-5xl font-bold text-secondary">120+</p>
-                <p className="mt-2 text-sm text-muted-foreground">Documentos Disponibles</p>
+              <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none">120+</p>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Documentos Disponibles</p>
               </div>
-              <div>
-                <p className="text-4xl lg:text-5xl font-bold text-secondary">5</p>
-                <p className="mt-2 text-sm text-muted-foreground">Módulos de Información</p>
+              <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none">5</p>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Módulos de Información</p>
               </div>
-              <div>
-                <p className="text-4xl lg:text-5xl font-bold text-secondary">Abril 2026</p>
-                <p className="mt-2 text-sm text-muted-foreground">Última Actualización</p>
+              <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
+                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-secondary leading-tight">Abril{"\u00A0"}2026</p>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Última Actualización</p>
               </div>
             </div>
           </div>
@@ -394,7 +394,7 @@ export default function HomePage() {
                 <img
                   src="/res/pnacionaldetransparencia_logo.jpg"
                   alt="Plataforma Nacional de Transparencia"
-                  className="max-h-24 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="max-h-42 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </a>
               <a
@@ -406,7 +406,7 @@ export default function HomePage() {
                 <img
                   src="/res/transpueblo_logo.jpg"
                   alt="Transparencia para el Pueblo - ITAIPBC"
-                  className="max-h-24 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="max-h-42 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </a>
               <a
@@ -418,7 +418,7 @@ export default function HomePage() {
                 <img
                   src="/res/buengobierno_logo.jpg"
                   alt="Baja California - Buen Gobierno"
-                  className="max-h-24 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="max-h-42 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </a>
             </div>
