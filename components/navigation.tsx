@@ -24,10 +24,11 @@ export function Navigation() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-xl font-bold text-primary tracking-tight">
-              COORDINACIÓN<br />
-              <span className="text-secondary">DE GABINETE</span>
-            </span>
+            <img
+              src="/res/coordinacion-gabinete.png"
+              alt="Coordinación de Gabinete"
+              className="h-12 w-auto object-contain"
+            />
           </Link>
         </div>
         

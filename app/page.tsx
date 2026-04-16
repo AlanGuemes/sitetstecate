@@ -2,12 +2,12 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ModuleCard } from "@/components/module-card"
 import { TransparencyCard } from "@/components/transparency-card"
-import { 
-  Building2, 
-  FileText, 
-  Users, 
-  Wallet, 
-  Scale, 
+import {
+  Building2,
+  FileText,
+  Users,
+  Wallet,
+  Scale,
   LayoutGrid,
   Search,
   ArrowRight,
@@ -20,35 +20,35 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
-      
+
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-primary overflow-hidden">
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{
               backgroundImage: "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imagen_2026-04-14_100248418-yK4fxwl9IAUS8Mm18vj4GvfM8gFr9h.png')",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
-          
+
           <div className="relative mx-auto max-w-7xl px-4 py-24 lg:px-8 lg:py-32">
             <h1 className="text-4xl font-bold text-primary-foreground md:text-5xl lg:text-6xl text-balance">
               Portal de<br />Transparencia<br />Municipal
             </h1>
             <p className="mt-6 max-w-xl text-lg text-primary-foreground/80 leading-relaxed">
-              Obligaciones de transparencia conforme a la Ley de Transparencia y Acceso a la Información Pública.
+              Obligaciones de transparencia conforme a la Ley de Transparencia y Acceso a la Información Pública de Tecate B.C.
             </p>
-            
+
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link 
+              <Link
                 href="/transparencia"
                 className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-colors"
               >
                 <Eye className="h-5 w-5" />
                 Ver Obligaciones
               </Link>
-              <Link 
+              <Link
                 href="#modulos"
                 className="inline-flex items-center gap-2 bg-primary-foreground/10 text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary-foreground/20 transition-colors border border-primary-foreground/20"
               >
@@ -68,7 +68,7 @@ export default function HomePage() {
                 Accede a la información pública organizada por áreas y temáticas para una consulta más eficiente.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <ModuleCard
                 title="Transparencia"
@@ -125,7 +125,7 @@ export default function HomePage() {
                 Información conforme a los artículos de la Ley de Transparencia.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <TransparencyCard
                 title="Avisos de Privacidad"
@@ -198,7 +198,7 @@ export default function HomePage() {
                     Utiliza nuestro buscador o navega por los diferentes módulos para encontrar la información que necesitas de manera rápida y sencilla.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-4">
-                    <Link 
+                    <Link
                       href="/transparencia"
                       className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
                     >
@@ -207,7 +207,7 @@ export default function HomePage() {
                     </Link>
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-muted p-4 rounded-lg">
                     <Shield className="h-8 w-8 text-primary mb-2" />
@@ -235,7 +235,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   )
