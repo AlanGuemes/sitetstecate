@@ -25,13 +25,13 @@ export function Navigation() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <img
-              src="/res/coordinacion-gabinete.png"
+              src="/res/gob_tecate_logo.png"
               alt="Coordinación de Gabinete"
               className="h-[84px] w-auto object-contain"
             />
           </Link>
         </div>
-        
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -46,7 +46,7 @@ export function Navigation() {
             )}
           </button>
         </div>
-        
+
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
             <Link
@@ -64,7 +64,7 @@ export function Navigation() {
           ))}
         </div>
       </nav>
-      
+
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden">
