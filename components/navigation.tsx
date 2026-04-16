@@ -27,7 +27,7 @@ export function Navigation() {
             <img
               src="/res/coordinacion-gabinete.png"
               alt="Coordinación de Gabinete"
-              className="h-12 w-auto object-contain"
+              className="h-[84px] w-auto object-contain"
             />
           </Link>
         </div>
