@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin } from "lucide-react"
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-6 lg:px-8">
         {/* Logo centrado en la parte superior */}
         <div className="flex justify-center mb-10">
           <Link href="/">
@@ -18,10 +18,13 @@ export function Footer() {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Portal de Transparencia</h3>
-            <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Acceso a información pública y obligaciones de transparencia conforme a la Ley de Transparencia y Acceso a la Información Pública.
-            </p>
+            <h3 className="text-lg font-semibold mb-4">Protección de Datos Personales</h3>
+            <Link
+              href="/transparencia#privacidad"
+              className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+            >
+              Aviso de Privacidad
+            </Link>
           </div>
 
           <div>

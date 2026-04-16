@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { ModuleCard } from "@/components/module-card"
 import { SearchBar } from "@/components/search-bar"
 import { TransparencyCard } from "@/components/transparency-card"
+import { ScrollIndex } from "@/components/scroll-index"
 import {
   Building2,
   FileText,
@@ -13,7 +14,9 @@ import {
   Search,
   ArrowRight,
   Shield,
-  Eye
+  Eye,
+  ClipboardList,
+  BookOpen
 } from "lucide-react"
 import Link from "next/link"
 
@@ -22,7 +25,8 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
 
-      <main className="flex-1">
+      <main className="flex-1 relative">
+        <ScrollIndex />
         {/* Hero Section */}
         <section className="relative bg-primary overflow-hidden">
           <div
@@ -43,7 +47,7 @@ export default function HomePage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/transparencia"
+                href="/#div-cumplimiento"
                 className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-colors"
               >
                 <Eye className="h-5 w-5" />
@@ -58,21 +62,53 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+
         </section>
 
-        {/* Buscador rápido */}
-        <SearchBar />
-
-        {/* Módulos principales */}
-        <section id="modulos" className="py-16 lg:py-24 bg-background">
+        {/* Estadísticas */}
+        <section id="estadisticas" className="py-16 lg:py-18 text-primary-foreground bg-muted">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground">Módulos de Información</h2>
-              <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-                Accede a la información pública organizada por áreas y temáticas para una consulta más eficiente.
-              </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <p className="text-4xl lg:text-5xl font-bold text-secondary">48+</p>
+                <p className="mt-2 text-sm text-muted-foreground">Artículos Publicados</p>
+              </div>
+              <div>
+                <p className="text-4xl lg:text-5xl font-bold text-secondary">120+</p>
+                <p className="mt-2 text-sm text-muted-foreground">Documentos Disponibles</p>
+              </div>
+              <div>
+                <p className="text-4xl lg:text-5xl font-bold text-secondary">5</p>
+                <p className="mt-2 text-sm text-muted-foreground">Módulos de Información</p>
+              </div>
+              <div>
+                <p className="text-4xl lg:text-5xl font-bold text-secondary">Abril 2026</p>
+                <p className="mt-2 text-sm text-muted-foreground">Última Actualización</p>
+              </div>
             </div>
+          </div>
+        </section>
 
+        {/* Divisor — Explorar*/}
+        <div id="div-explorar" className="flex flex-col items-center justify-center py-8 bg-background">
+          <div className="flex items-center gap-4 w-full max-w-2xl px-4">
+            <div className="flex-1 h-px bg-border" />
+            <div className="flex flex-col items-center gap-1.5">
+              <div className="rounded-full border-2 border-primary/30 bg-primary/5 p-3 shadow-sm">
+                <Search className="h-7 w-7 text-primary" aria-label="Explorar" />
+              </div>
+              <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Explorar</span>
+            </div>
+            <div className="flex-1 h-px bg-border" />
+          </div>
+        </div>
+
+        {/* Explorar */}
+        <section id="modulos" className="pt-6 pb-16 lg:pt-8 lg:pb-24 bg-background">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            {/* Buscador rápido */}
+            <SearchBar />
+            {/* Módulos */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <ModuleCard
                 title="Transparencia"
@@ -82,7 +118,7 @@ export default function HomePage() {
                 variant="primary"
               />
               <ModuleCard
-                title="Estructura Orgánica"
+                title="Estructura"
                 description="Conoce la estructura organizacional, organigramas y directorio de servidores públicos."
                 href="/estructura"
                 icon={Building2}
@@ -120,162 +156,269 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Banner CTA */}
+        <div className="relative overflow-hidden bg-primary">
+          <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <p className="text-xs font-semibold text-secondary uppercase tracking-widest mb-1">Transparencia activa</p>
+              <h2 className="text-2xl lg:text-3xl font-bold text-primary-foreground leading-tight">
+                La información pública es <span className="text-secondary">tu derecho</span>
+              </h2>
+              <p className="mt-2 text-primary-foreground/75 text-sm max-w-lg">
+                Consulta las obligaciones de transparencia del H. Ayuntamiento de Tecate conforme a la Ley de Transparencia y Acceso a la Información Pública de Baja California.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 flex-shrink-0">
+              <Link
+                href="/#div-cumplimiento"
+                className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-secondary/90 transition-colors shadow-lg"
+              >
+                <Eye className="h-4 w-4" />
+                Ver Obligaciones
+              </Link>
+              <Link
+                href="/#buscador"
+                className="inline-flex items-center gap-2 bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/25 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary-foreground/20 transition-colors"
+              >
+                <Search className="h-4 w-4" />
+                Buscar documentos
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Divisor — Cumplimiento */}
+        <div id="div-cumplimiento" className="flex flex-col items-center justify-center py-8 bg-muted">
+          <div className="flex items-center gap-4 w-full max-w-2xl px-4">
+            <div className="flex-1 h-px bg-border" />
+            <div className="flex flex-col items-center gap-1.5">
+              <div className="rounded-full border-2 border-primary/30 bg-background p-3 shadow-sm">
+                <ClipboardList className="h-7 w-7 text-primary" aria-label="Cumplimiento" />
+              </div>
+              <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Cumplimiento</span>
+            </div>
+            <div className="flex-1 h-px bg-border" />
+          </div>
+        </div>
+
         {/* Sección de Obligaciones */}
-        <section className="py-16 lg:py-24 bg-muted">
+        <section id="obligaciones" className="pt-6 pb-16 lg:pt-8 lg:pb-24 bg-muted">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <h2 className="text-3xl font-bold text-foreground">Obligaciones de Transparencia</h2>
-              <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-                Información conforme a los artículos de la Ley de Transparencia.
+              <p className="mt-3 text-muted-foreground max-w-2xl mx-auto text-sm">
+                Información conforme a los artículos de la Ley de Transparencia y Acceso a la Información Pública.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <TransparencyCard
-                title="Avisos de Privacidad"
-                description="Consulta los Avisos de Privacidad de protección de datos personales."
-                href="/transparencia#privacidad"
-              />
-              <TransparencyCard
-                title="Tabla de Aplicabilidad"
-                description="Conoce la tabla de aplicabilidad dictaminada por el ITAIPBC."
-                href="/transparencia#aplicabilidad"
-              />
-              <TransparencyCard
-                title="Información Reservada"
-                description="Consulta el índice de información reservada por parte del sujeto obligado."
-                href="/transparencia#reservada"
-              />
-              <TransparencyCard
-                title="Derechos ARCO"
-                description="Mecanismo para ejercer tus derechos de Acceso, Rectificación, Cancelación u Oposición."
-                href="/transparencia#arco"
-              />
-              <TransparencyCard
-                title="Datos de Contacto ITAIP BC"
-                description="Acceso a la página de inicio del Órgano Garante del Estado de Baja California."
-                href="/transparencia#itaip"
-              />
-              <TransparencyCard
-                title="Plataforma Nacional"
-                description="Consulta de información publicada en la Plataforma Nacional de Transparencia."
-                href="/transparencia#pnt"
-              />
+            {/* Fila 1 — Artículos */}
+            <div className="mb-3">
+              <p className="text-xs font-semibold text-primary/70 uppercase tracking-widest mb-3 pl-1">Artículos</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center" >
+                {[
+                  { art: "Artículo 81", href: "/transparencia#art81" },
+                  { art: "Artículo 82", href: "/transparencia#art82" },
+                  { art: "Artículo 83", href: "/transparencia#art83" },
+                  { art: "Artículo 85", href: "/transparencia#art85" },
+                ].map(({ art, href }) => (
+                  <Link
+                    key={art}
+                    href={href}
+                    className="group flex items-center gap-3 bg-card border border-border rounded-xl px-4 py-4 shadow-sm hover:border-primary/50 hover:shadow-md transition-all duration-200"
+                  >
+                    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                      <BookOpen className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-sm font-bold text-primary uppercase tracking-wide leading-tight">{art}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
+
+            {/* Fila 2 — Solicitudes */}
+            <div className="mb-3">
+              <p className="text-xs font-semibold text-primary/70 uppercase tracking-widest mb-3 pl-1">Solicitudes</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { label: "Solicitud de Acceso a la Información", href: "/transparencia#acceso", icon: FileText },
+                  { label: "Solicitud de Derecho ARCO", href: "/transparencia#arco", icon: Shield },
+                  { label: "Listado de Denuncias Públicas", href: "/transparencia#denuncias", icon: Scale },
+                  { label: "Material de Apoyo", href: "/transparencia#material", icon: Users },
+                ].map(({ label, href, icon: Icon }) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="group flex flex-col items-center justify-center text-center bg-card border border-border rounded-xl px-4 py-5 shadow-sm hover:border-primary/50 hover:shadow-md transition-all duration-200 min-h-[90px]"
+                  >
+                    <Icon className="h-5 w-5 text-secondary mb-2 group-hover:text-primary transition-colors" />
+                    <span className="text-sm font-semibold text-primary group-hover:text-primary/80 leading-tight">{label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Fila 3 — Recursos */}
+            <div>
+              <p className="text-xs font-semibold text-primary/70 uppercase tracking-widest mb-3 pl-1">Recursos</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { label: "Tabla de Aplicabilidad", href: "/transparencia#aplicabilidad", icon: LayoutGrid },
+                  { label: "Archivo de Sesiones Anteriores", href: "/transparencia#sesiones", icon: FileText },
+                  { label: "¿Cómo Presentar una Denuncia?", href: "/transparencia#como-denunciar", icon: Eye },
+                  { label: "Avisos de Privacidad", href: "/transparencia#privacidad", icon: Search },
+                ].map(({ label, href, icon: Icon }) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="group flex flex-col items-center justify-center text-center bg-card border border-border rounded-xl px-4 py-5 shadow-sm hover:border-primary/50 hover:shadow-md transition-all duration-200 min-h-[90px]"
+                  >
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-muted border border-border mb-2 group-hover:bg-primary/10 transition-colors">
+                      <Icon className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </div>
+                    <span className="text-xs font-medium text-foreground leading-tight">{label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
           </div>
         </section>
 
-        {/* Estadísticas */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
-          <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <p className="text-4xl lg:text-5xl font-bold text-secondary">48</p>
-                <p className="mt-2 text-sm text-primary-foreground/80">Artículos Publicados</p>
+        {/* Divisor — Acceso Rapido */}
+        <div id="div-acceso-rapido" className="flex flex-col items-center justify-center py-8">
+          <div className="flex items-center gap-4 w-full max-w-2xl px-4">
+            <div className="flex-1 h-px bg-border" />
+            <div className="flex flex-col items-center gap-1.5">
+              <div className="rounded-full border-2 border-primary/30 bg-background p-3 shadow-sm">
+                <Search className="h-7 w-7 text-primary" aria-label="Acceso Rapido" />
               </div>
-              <div>
-                <p className="text-4xl lg:text-5xl font-bold text-secondary">120+</p>
-                <p className="mt-2 text-sm text-primary-foreground/80">Documentos Disponibles</p>
-              </div>
-              <div>
-                <p className="text-4xl lg:text-5xl font-bold text-secondary">6</p>
-                <p className="mt-2 text-sm text-primary-foreground/80">Módulos de Información</p>
-              </div>
-              <div>
-                <p className="text-4xl lg:text-5xl font-bold text-secondary">2025</p>
-                <p className="mt-2 text-sm text-primary-foreground/80">Última Actualización</p>
-              </div>
+              <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Acceso Rapido</span>
             </div>
+            <div className="flex-1 h-px bg-border" />
           </div>
-        </section>
+        </div>
 
         {/* Acceso Rápido */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section id="acceso-rapido" className="pt-4 pb-16 lg:pt-6 lg:pb-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <div className="bg-card rounded-2xl border border-border p-8 lg:p-12">
-              <div className="grid lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground text-center">
-                    ¿Buscas información específica?
-                  </h2>
-                  <p className="mt-4 text-muted-foreground text-center">
-                    Utiliza nuestro buscador o navega por los diferentes módulos para encontrar la información que necesitas de manera rápida y sencilla.
-                  </p>
-                  <div className="mt-6 flex flex-wrap gap-4 justify-center">
+
+            {/* Tarjeta principal + features */}
+            <div className="rounded-2xl border border-border overflow-hidden shadow-sm">
+              <div className="grid lg:grid-cols-5">
+
+                {/* Panel izquierdo — CTA */}
+                <div className="lg:col-span-2 bg-primary px-8 py-10 flex flex-col justify-between">
+                  <div>
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-secondary/20 text-secondary border border-secondary/30 px-3 py-1 rounded-full mb-4">
+                      <Search className="h-3 w-3" />
+                      Acceso Directo
+                    </span>
+                    <h2 className="text-2xl font-bold text-primary-foreground leading-tight">
+                      ¿Buscas información específica?
+                    </h2>
+                    <p className="mt-3 text-primary-foreground/75 text-sm leading-relaxed">
+                      Utiliza el buscador o navega por los módulos para encontrar la información que necesitas de manera rápida.
+                    </p>
                     <Link
                       href="/#buscador"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                      className="mt-6 inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-secondary/90 transition-colors shadow"
                     >
-                      <Search className="h-5 w-5" />
+                      <Search className="h-4 w-4" />
                       Buscar Documentos
                     </Link>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-muted p-4 rounded-lg">
-                    <Shield className="h-8 w-8 text-primary mb-2" />
-                    <h3 className="font-semibold text-foreground">Protección de Datos</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Tus datos están protegidos</p>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
-                    <FileText className="h-8 w-8 text-secondary mb-2" />
-                    <h3 className="font-semibold text-foreground">Documentos Oficiales</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Información verificada</p>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
-                    <Eye className="h-8 w-8 text-primary mb-2" />
-                    <h3 className="font-semibold text-foreground">Acceso Público</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Información disponible 24/7</p>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
-                    <Users className="h-8 w-8 text-secondary mb-2" />
-                    <h3 className="font-semibold text-foreground">Atención Ciudadana</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Soporte disponible</p>
-                  </div>
+                {/* Panel derecho — Features en grid 2x2 */}
+                <div className="lg:col-span-3 bg-card grid grid-cols-2">
+                  {[
+                    {
+                      icon: Shield,
+                      color: "text-primary",
+                      bg: "bg-primary/10",
+                      title: "Protección de Datos",
+                      desc: "Tus datos personales están protegidos conforme a la ley.",
+                      badge: "ARCO",
+                    },
+                    {
+                      icon: FileText,
+                      color: "text-secondary",
+                      bg: "bg-secondary/10",
+                      title: "Documentos Oficiales",
+                      desc: "Información verificada y publicada por el sujeto obligado.",
+                      badge: "Verificado",
+                    },
+                    {
+                      icon: Eye,
+                      color: "text-primary",
+                      bg: "bg-primary/10",
+                      title: "Acceso Público 24/7",
+                      desc: "Toda la información disponible en línea, sin restricciones.",
+                      badge: "En línea",
+                    },
+                    {
+                      icon: Users,
+                      color: "text-secondary",
+                      bg: "bg-secondary/10",
+                      title: "Atención Ciudadana",
+                      desc: "Soporte y orientación para ejercer tus derechos de acceso.",
+                      badge: "Soporte",
+                    },
+                  ].map(({ icon: Icon, color, bg, title, desc, badge }) => (
+                    <div key={title} className="p-6 border-b border-r border-border last:border-b-0 [&:nth-child(2)]:border-r-0 [&:nth-child(4)]:border-b-0 [&:nth-child(3)]:border-b-0 hover:bg-muted/30 transition-colors">
+                      <div className="flex items-start justify-between mb-3">
+                        <div className={`flex items-center justify-center w-9 h-9 rounded-lg ${bg}`}>
+                          <Icon className={`h-5 w-5 ${color}`} />
+                        </div>
+                        <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${color === 'text-primary' ? 'border-primary/30 text-primary bg-primary/5' : 'border-secondary/30 text-secondary bg-secondary/5'}`}>
+                          {badge}
+                        </span>
+                      </div>
+                      <h3 className="font-semibold text-foreground text-sm">{title}</h3>
+                      <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{desc}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              {/* Plataforma Nacional de Transparencia */}
+
+            {/* Logos institucionales */}
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest text-center mt-10 mb-4">Portales gubernamentales</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <a
                 href="https://www.plataformadetransparencia.org.mx"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 min-h-[160px]"
+                className="group flex items-center justify-center bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 min-h-[120px]"
               >
                 <img
                   src="/res/pnacionaldetransparencia_logo.jpg"
                   alt="Plataforma Nacional de Transparencia"
-                  className="max-h-64 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="max-h-24 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </a>
-
-              {/* Transparencia para el Pueblo - ITAIPBC */}
               <a
                 href="https://transparencia.gob.mx/home.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 min-h-[160px]"
+                className="group flex items-center justify-center bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 min-h-[120px]"
               >
                 <img
                   src="/res/transpueblo_logo.jpg"
                   alt="Transparencia para el Pueblo - ITAIPBC"
-                  className="max-h-64 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="max-h-24 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </a>
-
-              {/* Baja California - Buen Gobierno */}
               <a
                 href="https://sabg.bajacalifornia.gob.mx/sabgbc/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 min-h-[160px]"
+                className="group flex items-center justify-center bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 min-h-[120px]"
               >
                 <img
                   src="/res/buengobierno_logo.jpg"
                   alt="Baja California - Buen Gobierno"
-                  className="max-h-64 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="max-h-24 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </a>
             </div>
