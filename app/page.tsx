@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ModuleCard } from "@/components/module-card"
+import { SearchBar } from "@/components/search-bar"
 import { TransparencyCard } from "@/components/transparency-card"
 import {
   Building2,
@@ -58,6 +59,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Buscador rápido */}
+        <SearchBar />
 
         {/* Módulos principales */}
         <section id="modulos" className="py-16 lg:py-24 bg-background">
@@ -191,15 +195,15 @@ export default function HomePage() {
             <div className="bg-card rounded-2xl border border-border p-8 lg:p-12">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground text-center">
                     ¿Buscas información específica?
                   </h2>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                  <p className="mt-4 text-muted-foreground text-center">
                     Utiliza nuestro buscador o navega por los diferentes módulos para encontrar la información que necesitas de manera rápida y sencilla.
                   </p>
-                  <div className="mt-6 flex flex-wrap gap-4">
+                  <div className="mt-6 flex flex-wrap gap-4 justify-center">
                     <Link
-                      href="/transparencia"
+                      href="/#buscador"
                       className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
                     >
                       <Search className="h-5 w-5" />
@@ -232,10 +236,52 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              {/* Plataforma Nacional de Transparencia */}
+              <a
+                href="https://www.plataformadetransparencia.org.mx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 min-h-[160px]"
+              >
+                <img
+                  src="/res/pnacionaldetransparencia_logo.jpg"
+                  alt="Plataforma Nacional de Transparencia"
+                  className="max-h-64 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </a>
+
+              {/* Transparencia para el Pueblo - ITAIPBC */}
+              <a
+                href="https://transparencia.gob.mx/home.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 min-h-[160px]"
+              >
+                <img
+                  src="/res/transpueblo_logo.jpg"
+                  alt="Transparencia para el Pueblo - ITAIPBC"
+                  className="max-h-64 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </a>
+
+              {/* Baja California - Buen Gobierno */}
+              <a
+                href="https://sabg.bajacalifornia.gob.mx/sabgbc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 min-h-[160px]"
+              >
+                <img
+                  src="/res/buengobierno_logo.jpg"
+                  alt="Baja California - Buen Gobierno"
+                  className="max-h-64 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </a>
+            </div>
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   )
