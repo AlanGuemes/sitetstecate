@@ -16,7 +16,8 @@ import {
   Shield,
   Eye,
   ClipboardList,
-  BookOpen
+  BookOpen,
+  Navigation as NavigationIcon
 } from "lucide-react"
 import Link from "next/link"
 
@@ -290,7 +291,7 @@ export default function HomePage() {
             <div className="flex-1 h-px bg-border" />
             <div className="flex flex-col items-center gap-1.5">
               <div className="rounded-full border-2 border-primary/30 bg-background p-3 shadow-sm">
-                <Search className="h-7 w-7 text-primary" aria-label="Acceso Rapido" />
+                <NavigationIcon className="h-7 w-7 text-primary" aria-label="Acceso Rapido" />
               </div>
               <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Acceso Rapido</span>
             </div>

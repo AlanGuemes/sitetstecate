@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import {
-  Home, Search, ClipboardList, LayoutGrid,
+  Home, Search, ClipboardList, LayoutGrid, Navigation,
   LayoutDashboard, Eye, Building2, Users, Wallet, Scale, X
 } from "lucide-react"
 import Link from "next/link"
@@ -16,24 +16,24 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { id: "top",               observeId: "",              label: "Inicio",        icon: Home,         scrollTop: true },
-  { id: "div-explorar",      observeId: "modulos",       label: "Explorar",      icon: Search        },
-  { id: "div-cumplimiento",  observeId: "obligaciones",  label: "Cumplimiento",  icon: ClipboardList },
-  { id: "div-acceso-rapido", observeId: "acceso-rapido", label: "Acceso Rápido", icon: LayoutGrid    },
+  { id: "top", observeId: "", label: "Inicio", icon: Home, scrollTop: true },
+  { id: "div-explorar", observeId: "modulos", label: "Explorar", icon: Search },
+  { id: "div-cumplimiento", observeId: "obligaciones", label: "Cumplimiento", icon: ClipboardList },
+  { id: "div-acceso-rapido", observeId: "acceso-rapido", label: "Acceso Rápido", icon: Navigation },
 ]
 
 const modules = [
-  { label: "Transparencia",     href: "/transparencia",        icon: Eye       },
-  { label: "Estructura",        href: "/estructura",            icon: Building2 },
-  { label: "Administración",    href: "/administracion",        icon: Users     },
-  { label: "Finanzas",          href: "/finanzas",              icon: Wallet    },
-  { label: "Normatividad",      href: "/normatividad",          icon: Scale     },
-  { label: "Recursos Humanos",  href: "/administracion#recursos", icon: LayoutDashboard },
+  { label: "Transparencia", href: "/transparencia", icon: Eye },
+  { label: "Estructura", href: "/estructura", icon: Building2 },
+  { label: "Administración", href: "/administracion", icon: Users },
+  { label: "Finanzas", href: "/finanzas", icon: Wallet },
+  { label: "Normatividad", href: "/normatividad", icon: Scale },
+  { label: "Recursos Humanos", href: "/administracion#recursos", icon: LayoutDashboard },
 ]
 
 export function MobileNav() {
-  const [active, setActive]     = useState<string>("top")
-  const [visible, setVisible]   = useState(false)
+  const [active, setActive] = useState<string>("top")
+  const [visible, setVisible] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
@@ -81,21 +81,18 @@ export function MobileNav() {
 
   return (
     <div
-      className={`lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-3 transition-all duration-500 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6 pointer-events-none"
-      }`}
+      className={`lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-3 transition-all duration-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6 pointer-events-none"
+        }`}
       aria-label="Navegación móvil"
     >
-      {/* Panel de módulos — aparece encima de la píldora */}
+      {/* Panel de módulos */}
       <div
-        className={`transition-all duration-300 origin-bottom ${
-          menuOpen
-            ? "opacity-100 scale-100 translate-y-0"
-            : "opacity-0 scale-95 translate-y-2 pointer-events-none"
-        }`}
+        className={`transition-all duration-300 origin-bottom ${menuOpen
+          ? "opacity-100 scale-100 translate-y-0"
+          : "opacity-0 scale-95 translate-y-2 pointer-events-none"
+          }`}
       >
         <div className="bg-foreground/92 backdrop-blur-md rounded-2xl shadow-2xl border border-white/10 p-3 w-72">
-          {/* Header */}
           <div className="flex items-center justify-between mb-3 px-1">
             <span className="text-[11px] font-bold text-background/50 uppercase tracking-widest">
               Módulos
@@ -108,8 +105,6 @@ export function MobileNav() {
               <X className="h-4 w-4" />
             </button>
           </div>
-
-          {/* Grid de módulos */}
           <div className="grid grid-cols-3 gap-2">
             {modules.map(({ label, href, icon: Icon }) => (
               <Link
@@ -130,7 +125,6 @@ export function MobileNav() {
 
       {/* Píldora principal */}
       <div className="flex items-center gap-1 bg-foreground/90 backdrop-blur-md rounded-full px-2 py-2 shadow-2xl border border-white/10">
-        {/* Botones de navegación */}
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = item.scrollTop ? active === "top" : active === item.observeId
