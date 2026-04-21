@@ -31,9 +31,9 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative bg-primary overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-30"
+            className="absolute inset-0 bg-cover bg-center opacity-80"
             style={{
-              backgroundImage: "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imagen_2026-04-14_100248418-yK4fxwl9IAUS8Mm18vj4GvfM8gFr9h.png')",
+              backgroundImage: "url('/res/1704-3.png')",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
@@ -217,10 +217,10 @@ export default function HomePage() {
               <p className="text-xs font-semibold text-primary/70 uppercase tracking-widest mb-3 pl-1">Artículos</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center" >
                 {[
-                  { art: "Artículo 81", href: "/transparencia#art81" },
-                  { art: "Artículo 82", href: "/transparencia#art82" },
-                  { art: "Artículo 83", href: "/transparencia#art83" },
-                  { art: "Artículo 85", href: "/transparencia#art85" },
+                  { art: "Artículo 81", href: "/articulos?tab=81" },
+                  { art: "Artículo 82", href: "/articulos?tab=82" },
+                  { art: "Artículo 83", href: "/articulos?tab=83" },
+                  { art: "Artículo 85", href: "/articulos?tab=85" },
                 ].map(({ art, href }) => (
                   <Link
                     key={art}

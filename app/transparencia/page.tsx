@@ -105,7 +105,7 @@ export default function TransparenciaPage() {
                     <div className="h-px bg-border mx-6" />
 
                     {/* Items list */}
-                    <ul className="flex-1 divide-y divide-border">
+                    <ul className="flex-1 divide-y divide-border max-h-[250px] overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20">
                       {section.items.map((item) => (
                         <li key={item.label}>
                           <Link

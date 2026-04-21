@@ -218,7 +218,7 @@ export default function AdministracionPage() {
               description="Actas de las sesiones del H. Ayuntamiento."
             />
             
-            <div className="bg-card border border-border rounded-lg divide-y divide-border">
+            <div className="bg-card border border-border rounded-lg divide-y divide-border max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20">
               {actas.map((acta, index) => (
                 <div key={index} className="flex items-center justify-between p-4 hover:bg-muted transition-colors">
                   <div className="flex items-center gap-4">

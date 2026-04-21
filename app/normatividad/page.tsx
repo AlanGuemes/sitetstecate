@@ -206,7 +206,7 @@ export default function NormatividadPage() {
                   description={`${filteredDocuments.length} documentos encontrados`}
                 />
                 
-                <div className="space-y-4">
+                <div className="space-y-4 max-h-[700px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">
                   {filteredDocuments.map((doc, index) => (
                     <div key={index} className="bg-card border border-border rounded-lg p-5 hover:shadow-md transition-shadow">
                       <div className="flex items-start gap-4">
