@@ -6,10 +6,10 @@ import { SectionHeader } from "@/components/section-header"
 import { DocumentItem } from "@/components/document-item"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import { 
-  Scale, 
-  FileText, 
-  Book, 
+import {
+  Scale,
+  FileText,
+  Book,
   Gavel,
   Search,
   Filter,
@@ -31,6 +31,7 @@ const documentos = [
     category: "leyes",
     title: "Ley de Transparencia y Acceso a la Información Pública del Estado de Baja California",
     description: "Ley que regula el derecho de acceso a la información pública en el Estado.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026-Ley-de-transparencia-baja-california-Reformada.pdf",
     date: "Última reforma: 2024",
     type: "PDF"
   },
@@ -122,12 +123,7 @@ const enlacesExternos = [
   {
     title: "ITAIPBC",
     description: "Instituto de Transparencia del Estado de Baja California",
-    url: "https://www.itaipbc.org.mx"
-  },
-  {
-    title: "Periódico Oficial del Estado",
-    description: "Publicaciones oficiales del Gobierno del Estado",
-    url: "#"
+    url: "http://www.transparenciabc.gob.mx/"
   },
 ]
 
@@ -138,14 +134,14 @@ export default function NormatividadPage() {
   const filteredDocuments = documentos.filter(doc => {
     const matchesCategory = selectedCategory === "all" || doc.category === selectedCategory
     const matchesSearch = doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         doc.description.toLowerCase().includes(searchQuery.toLowerCase())
+      doc.description.toLowerCase().includes(searchQuery.toLowerCase())
     return matchesCategory && matchesSearch
   })
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
-      
+
       <main className="flex-1">
         {/* Hero */}
         <section className="bg-primary py-12 lg:py-16">
@@ -172,7 +168,7 @@ export default function NormatividadPage() {
                   className="w-full pl-10 pr-4 py-3 bg-card border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
-              
+
               {/* Categorías */}
               <div className="flex flex-wrap gap-2">
                 {categories.map((cat) => (
@@ -201,11 +197,11 @@ export default function NormatividadPage() {
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Documentos */}
               <div className="lg:col-span-2">
-                <SectionHeader 
-                  title="Marco Normativo" 
+                <SectionHeader
+                  title="Marco Normativo"
                   description={`${filteredDocuments.length} documentos encontrados`}
                 />
-                
+
                 <div className="space-y-4 max-h-[700px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">
                   {filteredDocuments.map((doc, index) => (
                     <div key={index} className="bg-card border border-border rounded-lg p-5 hover:shadow-md transition-shadow">
@@ -228,21 +224,33 @@ export default function NormatividadPage() {
                             </div>
                           </div>
                           <div className="mt-4 flex gap-2">
-                            <button className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-                              <Download className="h-4 w-4" />
-                              Descargar {doc.type}
-                            </button>
-                            <button className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-muted text-foreground rounded-lg hover:bg-accent transition-colors">
-                              <ExternalLink className="h-4 w-4" />
-                              Ver en línea
-                            </button>
+                            {doc.url ? (
+                              <>
+                                <a
+                                  href={doc.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-muted text-foreground rounded-lg hover:bg-accent transition-colors"
+                                >
+                                  <ExternalLink className="h-4 w-4" />
+                                  Ver en línea
+                                </a>
+                              </>
+                            ) : (
+                              <>
+                                <button className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-muted/50 text-muted-foreground rounded-lg cursor-not-allowed" disabled>
+                                  <ExternalLink className="h-4 w-4" />
+                                  Ver en línea
+                                </button>
+                              </>
+                            )}
                           </div>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
-                
+
                 {filteredDocuments.length === 0 && (
                   <div className="text-center py-12">
                     <FileText className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
@@ -308,7 +316,7 @@ export default function NormatividadPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   )

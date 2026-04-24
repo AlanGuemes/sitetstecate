@@ -266,11 +266,13 @@ export default function HomePage() {
                   { label: "Tabla de Aplicabilidad", href: "/transparencia#aplicabilidad", icon: LayoutGrid },
                   { label: "Archivo de Sesiones Anteriores", href: "/transparencia#sesiones", icon: FileText },
                   { label: "¿Cómo Presentar una Denuncia?", href: "/transparencia#como-denunciar", icon: Eye },
-                  { label: "Avisos de Privacidad", href: "/transparencia#privacidad", icon: Search },
-                ].map(({ label, href, icon: Icon }) => (
+                  { label: "Avisos de Privacidad", href: "https://s3-public-presigner-production-ed97.up.railway.app/AVISO_DE_PRIVACIDAD.pdf", icon: Search, external: true },
+                ].map(({ label, href, icon: Icon, external }) => (
                   <Link
                     key={label}
                     href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
                     className="group flex flex-col items-center justify-center text-center bg-card border border-border rounded-xl px-4 py-5 shadow-sm hover:border-primary/50 hover:shadow-md transition-all duration-200 min-h-[90px]"
                   >
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-muted border border-border mb-2 group-hover:bg-primary/10 transition-colors">
@@ -281,7 +283,6 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-
           </div>
         </section>
 
