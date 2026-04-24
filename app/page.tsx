@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { siteData } from "@/lib/data"
 import { ModuleCard } from "@/components/module-card"
 import { SearchBar } from "@/components/search-bar"
 import { TransparencyCard } from "@/components/transparency-card"
@@ -216,12 +217,7 @@ export default function HomePage() {
             <div className="mb-3">
               <p className="text-xs font-semibold text-primary/70 uppercase tracking-widest mb-3 pl-1">Artículos</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center" >
-                {[
-                  { art: "Artículo 81", href: "/articulos?tab=81" },
-                  { art: "Artículo 82", href: "/articulos?tab=82" },
-                  { art: "Artículo 83", href: "/articulos?tab=83" },
-                  { art: "Artículo 85", href: "/articulos?tab=85" },
-                ].map(({ art, href }) => (
+                {siteData.articulos.map(({ art, href }) => (
                   <Link
                     key={art}
                     href={href}
@@ -240,21 +236,25 @@ export default function HomePage() {
             <div className="mb-3">
               <p className="text-xs font-semibold text-primary/70 uppercase tracking-widest mb-3 pl-1">Solicitudes</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[
-                  { label: "Solicitud de Acceso a la Información", href: "/transparencia#acceso", icon: FileText },
-                  { label: "Solicitud de Derecho ARCO", href: "/transparencia#arco", icon: Shield },
-                  { label: "Listado de Denuncias Públicas", href: "/transparencia#denuncias", icon: Scale },
-                  { label: "Material de Apoyo", href: "/transparencia#material", icon: Users },
-                ].map(({ label, href, icon: Icon }) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    className="group flex flex-col items-center justify-center text-center bg-card border border-border rounded-xl px-4 py-5 shadow-sm hover:border-primary/50 hover:shadow-md transition-all duration-200 min-h-[90px]"
-                  >
-                    <Icon className="h-5 w-5 text-secondary mb-2 group-hover:text-primary transition-colors" />
-                    <span className="text-sm font-semibold text-primary group-hover:text-primary/80 leading-tight">{label}</span>
-                  </Link>
-                ))}
+                {siteData.solicitudes.map(({ label, href, icon: Icon, disabled }) => {
+                  const content = (
+                    <>
+                      <Icon className={`h-5 w-5 mb-2 transition-colors ${disabled ? "text-muted-foreground/50" : "text-secondary group-hover:text-primary"}`} />
+                      <span className={`text-sm font-semibold leading-tight ${disabled ? "text-muted-foreground" : "text-primary group-hover:text-primary/80"}`}>{label}</span>
+                    </>
+                  );
+                  const className = `group flex flex-col items-center justify-center text-center bg-card border border-border rounded-xl px-4 py-5 shadow-sm min-h-[90px] ${disabled ? "opacity-60 cursor-not-allowed bg-muted/30" : "hover:border-primary/50 hover:shadow-md transition-all duration-200"}`;
+
+                  return disabled ? (
+                    <div key={label} className={className}>
+                      {content}
+                    </div>
+                  ) : (
+                    <Link key={label} href={href} className={className}>
+                      {content}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
 
@@ -262,25 +262,33 @@ export default function HomePage() {
             <div>
               <p className="text-xs font-semibold text-primary/70 uppercase tracking-widest mb-3 pl-1">Recursos</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[
-                  { label: "Tabla de Aplicabilidad", href: "/transparencia#aplicabilidad", icon: LayoutGrid },
-                  { label: "Archivo de Sesiones Anteriores", href: "/transparencia#sesiones", icon: FileText },
-                  { label: "¿Cómo Presentar una Denuncia?", href: "/transparencia#como-denunciar", icon: Eye },
-                  { label: "Avisos de Privacidad", href: "https://s3-public-presigner-production-ed97.up.railway.app/AVISO_DE_PRIVACIDAD.pdf", icon: Search, external: true },
-                ].map(({ label, href, icon: Icon, external }) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    target={external ? "_blank" : undefined}
-                    rel={external ? "noopener noreferrer" : undefined}
-                    className="group flex flex-col items-center justify-center text-center bg-card border border-border rounded-xl px-4 py-5 shadow-sm hover:border-primary/50 hover:shadow-md transition-all duration-200 min-h-[90px]"
-                  >
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-muted border border-border mb-2 group-hover:bg-primary/10 transition-colors">
-                      <Icon className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                {siteData.recursos.map(({ label, href, icon: Icon, external, disabled }) => {
+                  const content = (
+                    <>
+                      <div className={`flex items-center justify-center w-10 h-10 rounded-full border border-border mb-2 transition-colors ${disabled ? "bg-muted/50" : "bg-muted group-hover:bg-primary/10"}`}>
+                        <Icon className={`h-5 w-5 transition-colors ${disabled ? "text-muted-foreground/50" : "text-muted-foreground group-hover:text-primary"}`} />
+                      </div>
+                      <span className={`text-xs font-medium leading-tight ${disabled ? "text-muted-foreground" : "text-foreground"}`}>{label}</span>
+                    </>
+                  );
+                  const className = `group flex flex-col items-center justify-center text-center bg-card border border-border rounded-xl px-4 py-5 shadow-sm min-h-[90px] ${disabled ? "opacity-60 cursor-not-allowed bg-muted/30" : "hover:border-primary/50 hover:shadow-md transition-all duration-200"}`;
+
+                  return disabled ? (
+                    <div key={label} className={className}>
+                      {content}
                     </div>
-                    <span className="text-xs font-medium text-foreground leading-tight">{label}</span>
-                  </Link>
-                ))}
+                  ) : (
+                    <Link
+                      key={label}
+                      href={href}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noopener noreferrer" : undefined}
+                      className={className}
+                    >
+                      {content}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -387,42 +395,21 @@ export default function HomePage() {
             {/* Logos institucionales */}
             <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest text-center mt-10 mb-4">Portales gubernamentales</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <a
-                href="https://www.plataformadetransparencia.org.mx"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 min-h-[120px]"
-              >
-                <img
-                  src="/res/pnacionaldetransparencia_logo.jpg"
-                  alt="Plataforma Nacional de Transparencia"
-                  className="max-h-42 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                />
-              </a>
-              <a
-                href="https://transparencia.gob.mx/home.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 min-h-[120px]"
-              >
-                <img
-                  src="/res/transpueblo_logo.jpg"
-                  alt="Transparencia para el Pueblo - ITAIPBC"
-                  className="max-h-42 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                />
-              </a>
-              <a
-                href="https://sabg.bajacalifornia.gob.mx/sabgbc/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 min-h-[120px]"
-              >
-                <img
-                  src="/res/buengobierno_logo.jpg"
-                  alt="Baja California - Buen Gobierno"
-                  className="max-h-42 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                />
-              </a>
+              {siteData.portalesGubernamentales.map((portal) => (
+                <a
+                  key={portal.alt}
+                  href={portal.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 min-h-[120px]"
+                >
+                  <img
+                    src={portal.imgSrc}
+                    alt={portal.alt}
+                    className="max-h-42 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </a>
+              ))}
             </div>
           </div>
         </section>
