@@ -9,22 +9,15 @@ import {
 } from "lucide-react";
 
 const documentos = [
-  {
-    category: "leyes",
-    title: "Ley de Transparencia y Acceso a la Información Pública del Estado de Baja California",
-    description: "Ley que regula el derecho de acceso a la información pública en el Estado.",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026-Ley-de-transparencia-baja-california-Reformada.pdf",
-    date: "Última reforma: 2024",
-    section: "Normatividad",
-    type: "PDF"
-  },
+  // FEDERALES
   {
     category: "leyes",
     title: "Constitución Política de los Estados Unidos Mexicanos",
     description: "Documento supremo y fundamental que rige jurídicamente al país.",
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
     date: "Última Reforma 2025",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
@@ -33,7 +26,8 @@ const documentos = [
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGTAIP.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
@@ -42,7 +36,8 @@ const documentos = [
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPDPPSO.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
@@ -51,7 +46,8 @@ const documentos = [
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGRA.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
@@ -60,16 +56,18 @@ const documentos = [
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGCG.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
     title: "Ley General de Desarrollo Social",
     description: "Ley que regula el diseño, implementación y evaluación de la política de desarrollo social.",
-    url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LDS.pdf",
+    url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDS.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
@@ -78,16 +76,18 @@ const documentos = [
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAASSP.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
-    title: "Ley de Obras Públicas y Servicios Relacionados con las Mismas",
+    title: "Ley de Obras Públicas y Services Relacionados con las Mismas",
     description: "Ley que establece las bases para la contratación y ejecución de obras públicas.",
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOPSRM.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
@@ -96,7 +96,8 @@ const documentos = [
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPRH.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
@@ -105,52 +106,192 @@ const documentos = [
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGBN.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
     title: "Ley General del Sistema Nacional Anticorrupción",
-    description: "Ley que establece las bases del Sistema Nacional Anticorrupción.",
-    url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGSNA.pdf",
+    description: "Coordinación del SNA y obligaciones municipales anticorrupción.",
+    url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGSNA_200521.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
     title: "Ley Federal del Trabajo",
-    description: "Ley reglamentaria del artículo 123 constitucional en materia laboral.",
+    description: "Régimen laboral aplicable al personal del Ayuntamiento.",
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
     title: "Ley del Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado",
-    description: "Normativa aplicable a la seguridad social de los trabajadores del Estado.",
+    description: "Seguridad social de servidores públicos municipales.",
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISSSTE.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
     title: "Código Fiscal de la Federación",
-    description: "Ordenamiento jurídico que establece las obligaciones fiscales de los contribuyentes.",
+    description: "Marco fiscal federal de referencia para el municipio.",
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
   },
   {
     category: "leyes",
     title: "Ley del Impuesto sobre la Renta",
-    description: "Ley que regula el pago del impuesto sobre la renta de personas físicas y morales.",
+    description: "Retenciones de ISR al personal y a proveedores de servicios.",
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
     date: "Última Reforma 2025",
     section: "Normatividad",
-    type: "PDF"
+    type: "PDF",
+    ambito: "Federal"
+  },
+
+  // ESTATALES
+  {
+    category: "leyes",
+    title: "Constitución Política del Estado Libre y Soberano de Baja California",
+    description: "Norma suprema estatal. Define autonomía municipal y derechos ciudadanos.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_I/20200214_CONSTBC.PDF",
+    date: "Última Reforma 2020",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Ley de Transparencia, Acceso a la Información Pública y Apertura Institucional para el Estado de Baja California",
+    description: "Ley estatal garante. Publicada el 16-sep-2025. Fundamento directo del portal.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_I/20250916_LEYDETRANSPARENCIA.PDF",
+    date: "Última Reforma 2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Ley de Transparencia y Acceso a la Información Pública del Estado de Baja California",
+    description: "Ley que regula el derecho de acceso a la información pública en el Estado.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026-Ley-de-transparencia-baja-california-Reformada.pdf",
+    date: "Última reforma: 2024",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Ley del Régimen Municipal para el Estado de Baja California",
+    description: "Última reforma P.O. No. 13, 27-feb-2026. Regula la organización y atribuciones del Ayuntamiento.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_I/20260227_LEYREGIMENMPAL.PDF",
+    date: "Última Reforma 2026",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Ley del Sistema Estatal Anticorrupción de Baja California",
+    description: "Coordinación anticorrupción estatal y obligaciones del municipio.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_I/20231222_LEYSISANTICORRUPC.PDF",
+    date: "Última Reforma 2023",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Ley de Presupuesto y Responsabilidad Hacendaria del Estado de Baja California",
+    description: "Marco presupuestario estatal aplicable a los municipios (reforma dic-2025).",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_II/20251215_LEYPRESUPUESTO.PDF",
+    date: "Última Reforma 2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Código Fiscal del Estado de Baja California",
+    description: "Marco tributario estatal de referencia para la hacienda municipal.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_II/20240315_CODFISC.PDF",
+    date: "Última Reforma 2024",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Ley de Hacienda Municipal del Estado de Baja California",
+    description: "Regula impuestos, derechos y contribuciones municipales (predial, ISABI, alumbrado).",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_II/20241104_LEYHAMUN.PDF",
+    date: "Última Reforma 2024",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Ley de Desarrollo Urbano del Estado de Baja California",
+    description: "Zonificación, usos de suelo y planes de desarrollo urbano.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_VII/20250314_LEYDESUR.PDF",
+    date: "Última Reforma 2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Ley de Edificaciones del Estado de Baja California",
+    description: "Licencias de construcción y autorizaciones de uso de suelo.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_VII/20250411_LEYEDIFI.PDF",
+    date: "Última Reforma 2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  {
+    category: "leyes",
+    title: "Ley del Servicio Civil de los Trabajadores al Servicio de los Poderes del Estado y Municipios de Baja California",
+    description: "Régimen laboral especial de servidores públicos municipales.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_III/20230623_LEYSERVCIVILBC.PDF",
+    date: "Última Reforma 2023",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+  
+  // MUNICIPALES
+  {
+    category: "leyes",
+    title: "Ley de Ingresos del Municipio de Tecate, Baja California — Ejercicio Fiscal 2026",
+    description: "Tasas y bases gravables vigentes: predial, ISABI, alumbrado, derechos. Aprobada dic-2025. ⚠ Actualizar cada enero.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_II/20251230_LEYINGRESOTECATE2026.PDF",
+    date: "Aprobada 2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "leyes",
+    title: "Ley de Ingresos del Municipio de Tecate, Baja California — Ejercicio Fiscal 2025 (referencia)",
+    description: "Versión anterior. Mantener publicada como referencia histórica.",
+    url: "https://transparenciadetecate.gob.mx/25ayuntamiento/finanzas/leydeingresos/Ley%20de%20Ingresos%202025%20del%20Municipio%20de%20Tecate%20Baja%20California.pdf",
+    date: "Aprobada 2024",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
   }
 ];
 
@@ -230,6 +371,7 @@ export type SearchableItem = {
   description: string;
   type: "Documento" | "Artículo" | "Solicitud" | "Recurso" | "Sección";
   url: string;
+  ambito?: string;
 };
 
 export const getAllSearchableItems = (): SearchableItem[] => [
@@ -243,7 +385,8 @@ export const getAllSearchableItems = (): SearchableItem[] => [
     title: d.title,
     description: d.description,
     type: "Documento" as const,
-    url: d.url
+    url: d.url,
+    ambito: d.ambito
   })),
   ...siteData.articulos.map(a => ({
     title: a.art,

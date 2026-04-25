@@ -110,9 +110,22 @@ export default function NormatividadPage() {
                         <div className="flex-1">
                           <div className="flex items-start justify-between gap-4">
                             <div>
-                              <span className="inline-block px-2 py-0.5 text-xs font-medium bg-secondary/10 text-secondary rounded mb-2 capitalize">
-                                {doc.category}
-                              </span>
+                              <div className="flex gap-2 mb-2">
+                                <span className="inline-block px-2 py-0.5 text-xs font-medium bg-secondary/10 text-secondary rounded capitalize">
+                                  {doc.category}
+                                </span>
+                                {(doc as any).ambito && (
+                                  <span className={`inline-block px-2 py-0.5 text-[10px] font-bold rounded uppercase ${
+                                    (doc as any).ambito === 'Federal' 
+                                      ? 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300' 
+                                      : (doc as any).ambito === 'Estatal'
+                                      ? 'bg-[#B8860B] text-white'
+                                      : 'bg-[#0f766e] text-white'
+                                  }`}>
+                                    {(doc as any).ambito}
+                                  </span>
+                                )}
+                              </div>
                               <h3 className="font-semibold text-foreground">{doc.title}</h3>
                               <p className="text-sm text-muted-foreground mt-1">{doc.description}</p>
                               <p className="text-xs text-muted-foreground mt-2">{doc.date}</p>

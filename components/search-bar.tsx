@@ -22,14 +22,15 @@ export function SearchBar() {
 
   const allSearchableItems = getAllSearchableItems();
 
-  const filteredResults = query.trim() === "" 
-    ? [] 
+  const filteredResults = query.trim() === ""
+    ? []
     : allSearchableItems.filter(item => {
-        const q = query.toLowerCase();
-        return item.title.toLowerCase().includes(q) || 
-               item.description.toLowerCase().includes(q) ||
-               item.type.toLowerCase().includes(q);
-      }).slice(0, 6);
+      const q = query.toLowerCase();
+      return item.title.toLowerCase().includes(q) ||
+        item.description.toLowerCase().includes(q) ||
+        item.type.toLowerCase().includes(q) ||
+        (item.ambito && item.ambito.toLowerCase().includes(q));
+    }).slice(0, 6);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -64,16 +65,14 @@ export function SearchBar() {
       <div className="relative">
         <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 relative z-20">
           <div
-            className={`flex items-center gap-2 flex-1 bg-card border-2 rounded-2xl px-4 py-3 shadow-sm transition-all duration-200 ${
-              focused
-                ? "border-primary shadow-lg shadow-primary/10"
-                : "border-border hover:border-primary/40"
-            }`}
+            className={`flex items-center gap-2 flex-1 bg-card border-2 rounded-2xl px-4 py-3 shadow-sm transition-all duration-200 ${focused
+              ? "border-primary shadow-lg shadow-primary/10"
+              : "border-border hover:border-primary/40"
+              }`}
           >
             <Search
-              className={`h-5 w-5 flex-shrink-0 transition-colors duration-200 ${
-                focused ? "text-primary" : "text-muted-foreground"
-              }`}
+              className={`h-5 w-5 flex-shrink-0 transition-colors duration-200 ${focused ? "text-primary" : "text-muted-foreground"
+                }`}
             />
             <input
               type="text"
@@ -116,14 +115,22 @@ export function SearchBar() {
                       <div className="flex flex-col">
                         <span className="font-semibold text-foreground text-sm leading-tight group-hover:text-primary transition-colors">{result.title}</span>
                         <span className="text-xs text-muted-foreground flex items-center gap-2 mt-1.5">
-                          <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
-                            result.type === 'Documento' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
+                          <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${result.type === 'Documento' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
                             result.type === 'Artículo' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
-                            result.type === 'Sección' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400' :
-                            'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
-                          }`}>
+                              result.type === 'Sección' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400' :
+                                'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
+                            }`}>
                             {result.type}
                           </span>
+                          {result.ambito && (
+                            <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
+                              result.ambito === 'Federal' ? 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300' : 
+                              result.ambito === 'Estatal' ? 'bg-[#B8860B] text-white' : 
+                              'bg-[#0f766e] text-white'
+                            }`}>
+                              {result.ambito}
+                            </span>
+                          )}
                           <span className="truncate max-w-[200px] sm:max-w-xs">{result.description}</span>
                         </span>
                       </div>

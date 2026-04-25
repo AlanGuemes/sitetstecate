@@ -19,7 +19,8 @@ function BusquedaContent() {
         const query = q.toLowerCase();
         return item.title.toLowerCase().includes(query) || 
                item.description.toLowerCase().includes(query) ||
-               item.type.toLowerCase().includes(query);
+               item.type.toLowerCase().includes(query) ||
+               (item.ambito && item.ambito.toLowerCase().includes(query));
       })
 
   return (
@@ -52,14 +53,25 @@ function BusquedaContent() {
                   <div key={idx} className="bg-card border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex flex-col">
-                        <span className={`w-fit px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase mb-2 ${
-                          result.type === 'Documento' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
-                          result.type === 'Artículo' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
-                          result.type === 'Sección' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400' :
-                          'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
-                        }`}>
-                          {result.type}
-                        </span>
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className={`w-fit px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase ${
+                            result.type === 'Documento' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
+                            result.type === 'Artículo' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
+                            result.type === 'Sección' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400' :
+                            'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
+                          }`}>
+                            {result.type}
+                          </span>
+                          {result.ambito && (
+                            <span className={`w-fit px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase ${
+                              result.ambito === 'Federal' ? 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300' : 
+                              result.ambito === 'Estatal' ? 'bg-[#B8860B] text-white' : 
+                              'bg-[#0f766e] text-white'
+                            }`}>
+                              {result.ambito}
+                            </span>
+                          )}
+                        </div>
                         <h3 className="text-lg font-bold text-foreground mb-1">{result.title}</h3>
                         <p className="text-sm text-muted-foreground">{result.description}</p>
                       </div>
