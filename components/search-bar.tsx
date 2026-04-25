@@ -124,9 +124,9 @@ export function SearchBar() {
                           </span>
                           {result.ambito && (
                             <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${
-                              result.ambito === 'Federal' ? 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300' : 
-                              result.ambito === 'Estatal' ? 'bg-[#B8860B] text-white' : 
-                              'bg-[#0f766e] text-white'
+                              result.ambito === 'Federal' ? 'bg-accent text-accent-foreground' : 
+                              result.ambito === 'Estatal' ? 'bg-secondary text-secondary-foreground' : 
+                              'bg-primary text-primary-foreground'
                             }`}>
                               {result.ambito}
                             </span>

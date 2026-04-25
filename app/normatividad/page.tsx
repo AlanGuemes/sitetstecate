@@ -15,7 +15,8 @@ import {
   Filter,
   ChevronRight,
   Download,
-  ExternalLink
+  ExternalLink,
+  BookOpen
 } from "lucide-react"
 
 import { normatividadData } from "@/lib/data"
@@ -103,6 +104,7 @@ export default function NormatividadPage() {
                       <div className="flex items-start gap-4">
                         <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                           {doc.category === "leyes" && <Gavel className="h-6 w-6 text-primary" />}
+                          {doc.category === "código" && <BookOpen className="h-6 w-6 text-primary" />}
                           {doc.category === "reglamentos" && <Scale className="h-6 w-6 text-primary" />}
                           {doc.category === "manuales" && <Book className="h-6 w-6 text-primary" />}
                           {doc.category === "lineamientos" && <FileText className="h-6 w-6 text-primary" />}
@@ -117,10 +119,10 @@ export default function NormatividadPage() {
                                 {(doc as any).ambito && (
                                   <span className={`inline-block px-2 py-0.5 text-[10px] font-bold rounded uppercase ${
                                     (doc as any).ambito === 'Federal' 
-                                      ? 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300' 
+                                      ? 'bg-accent text-accent-foreground' 
                                       : (doc as any).ambito === 'Estatal'
-                                      ? 'bg-[#B8860B] text-white'
-                                      : 'bg-[#0f766e] text-white'
+                                      ? 'bg-secondary text-secondary-foreground'
+                                      : 'bg-primary text-primary-foreground'
                                   }`}>
                                     {(doc as any).ambito}
                                   </span>

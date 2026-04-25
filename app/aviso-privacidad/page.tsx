@@ -2,7 +2,7 @@
 
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { Shield, Mail, MapPin, Phone, FileText, Globe, CheckCircle2 } from "lucide-react"
+import { Shield, Mail, MapPin, Phone, FileText, Globe, CheckCircle2, Download } from "lucide-react"
 
 export default function AvisoPrivacidadPage() {
   return (
@@ -180,6 +180,25 @@ export default function AvisoPrivacidadPage() {
                   <p className="text-sm mt-4">
                     El tiempo de respuesta es de 20 días hábiles a partir de la recepción de la solicitud, prorrogable 10 días adicionales en casos justificados. Si la respuesta es insatisfactoria, puede interponer recurso de revisión ante el ITAIPBC.
                   </p>
+                  
+                  <div className="mt-6 flex flex-col sm:flex-row items-center gap-4 bg-muted/30 p-4 rounded-xl border border-border">
+                    <div className="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
+                      <FileText className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="flex-1 text-center sm:text-left">
+                      <h4 className="font-semibold text-foreground text-sm">Formato de Solicitud</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Descarga el formato oficial para presentar tu solicitud de manera física o por correo.</p>
+                    </div>
+                    <a 
+                      href="https://s3-public-presigner-production-ed97.up.railway.app/2026_Solicitud_Derechos_ARCO_Tecate.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors w-full sm:w-auto justify-center"
+                    >
+                      <Download className="h-4 w-4" />
+                      Solicitud de Derechos ARCO Tecate
+                    </a>
+                  </div>
                 </div>
               </section>
 

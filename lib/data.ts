@@ -140,7 +140,7 @@ const documentos = [
     ambito: "Federal"
   },
   {
-    category: "leyes",
+    category: "código",
     title: "Código Fiscal de la Federación",
     description: "Marco fiscal federal de referencia para el municipio.",
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
@@ -222,7 +222,7 @@ const documentos = [
     ambito: "Estatal"
   },
   {
-    category: "leyes",
+    category: "código",
     title: "Código Fiscal del Estado de Baja California",
     description: "Marco tributario estatal de referencia para la hacienda municipal.",
     url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_II/20240315_CODFISC.PDF",
@@ -271,12 +271,22 @@ const documentos = [
     type: "PDF",
     ambito: "Estatal"
   },
-  
+  {
+    category: "reglamentos",
+    title: "Reglamento Ley de Transparencia ITAIPBC",
+    description: "Reglamento de la Ley de Transparencia y Acceso a la Información Pública para el Estado de Baja California.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Reglamento-de-la-Ley-de-Transparencia-ITAIPBC-22JUN2021.pdf",
+    date: "Última reforma 2021",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Estatal"
+  },
+
   // MUNICIPALES
   {
     category: "leyes",
     title: "Ley de Ingresos del Municipio de Tecate, Baja California — Ejercicio Fiscal 2026",
-    description: "Tasas y bases gravables vigentes: predial, ISABI, alumbrado, derechos. Aprobada dic-2025. ⚠ Actualizar cada enero.",
+    description: "Tasas y bases gravables vigentes: predial, ISABI, alumbrado, derechos.",
     url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_II/20251230_LEYINGRESOTECATE2026.PDF",
     date: "Aprobada 2025",
     section: "Normatividad",
@@ -286,13 +296,143 @@ const documentos = [
   {
     category: "leyes",
     title: "Ley de Ingresos del Municipio de Tecate, Baja California — Ejercicio Fiscal 2025 (referencia)",
-    description: "Versión anterior. Mantener publicada como referencia histórica.",
-    url: "https://transparenciadetecate.gob.mx/25ayuntamiento/finanzas/leydeingresos/Ley%20de%20Ingresos%202025%20del%20Municipio%20de%20Tecate%20Baja%20California.pdf",
+    description: "Referencia histórica.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_LeydeIngresos_Tecate_Baja_California.pdf",
     date: "Aprobada 2024",
     section: "Normatividad",
     type: "PDF",
     ambito: "Municipal"
-  }
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento de la Administración Pública para el Municipio de Tecate, B.C.",
+    description: "Estructura orgánica, atribuciones y funcionamiento de las dependencias municipales.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/REGLAMENTO_DE_LA_ADMINISTRACION_PUBLICA_PARA_EL_MUNICIPIO_DE_TECATE.pdf",
+    date: "Última Reforma 2024",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento Interior de Trabajo de los Servidores Públicos y Empleados al Servicio del Ayuntamiento de Tecate y Organismos Paramunicipales",
+    description: "Condiciones laborales, derechos y obligaciones del personal municipal.",
+    url: "",
+    date: "Vigente",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento del Sistema de Apertura Rápida de Empresas (SARE) del Municipio de Tecate, B.C.",
+    description: "Ventanilla única y apertura digital de negocios. Primer municipio de B.C. en implementarlo.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/REGLAMENTO_DEL_SISTEMA_DE_APERTURA_RAPIDA_DE_EMPRESAS_DEL_MUNICIPIO_DE_TECATE.pdf",
+    date: "Aprobado 2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento de Bando de Policía y Gobierno para el Municipio de Tecate, B.C.",
+    description: "Orden público, convivencia ciudadana y facultades de la policía municipal.",
+    url: "",
+    date: "Reforma dic-2025 (Art. 199, fracc. X adicionada)",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento de Tránsito Municipal para el Municipio de Tecate, B.C.",
+    description: "Circulación vehicular, sanciones y reconocimiento de licencias digitales de otras entidades.",
+    url: "",
+    date: "Reforma oct-2025 (Art. 49); reforma previa jun-2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento Municipal de Protección Civil para el Municipio de Tecate, B.C.",
+    description: "Prevención, preparación y respuesta ante emergencias y desastres.",
+    url: "",
+    date: "Reforma ago-2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento para la Prevención de Incendios, Explosiones y Siniestros del Municipio de Tecate, B.C.",
+    description: "Normas de seguridad contra incendios en establecimientos y edificaciones.",
+    url: "",
+    date: "Reforma nov-2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento de Edificaciones para el Municipio de Tecate, B.C.",
+    description: "Licencias de construcción, uso de suelo, normas técnicas de edificación y vía pública.",
+    url: "",
+    date: "Actualizado dic-2025",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento de Protección al Ambiente para el Municipio de Tecate, B.C.",
+    description: "Normas ambientales locales, emisiones, residuos y sanciones.",
+    url: "",
+    date: "Reforma dic-2025 (Arts. 130-131 niveles de ruido)",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento para la Prevención y Control del Ruido para el Municipio de Tecate, B.C.",
+    description: "Niveles máximos permisibles de ruido en fuentes fijas, móviles y actividades comerciales.",
+    url: "",
+    date: "Reforma dic-2025 (Arts. 11, 22, 23, 29)",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento del Servicio Público de Manejo Integral de Residuos Sólidos para el Municipio de Tecate, B.C.",
+    description: "Recolección, traslado y disposición final de residuos sólidos municipales.",
+    url: "",
+    date: "Actualizado dic-2025 (reforma P.O. 28-oct-2024 + nueva versión)",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento para el Funcionamiento y Prestación de los Servicios del Rastro Municipal de Tecate, B.C.",
+    description: "Operación del rastro municipal, sacrificio de animales y control sanitario.",
+    url: "",
+    date: "29-abr-1994 (vigente sin reforma reciente)",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "reglamentos",
+    title: "Reglamento para el Funcionamiento de Negocios de Centros de Acopio de Materiales Reciclables y de Vehículos Usados o Nuevos para su Venta en Partes (Yonkes) del Municipio de Tecate, B.C.",
+    description: "Regulación de yonkes, centros de acopio de reciclaje y compraventa de autopartes.",
+    url: "",
+    date: "28-jul-2009",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Municipal"
+  },
 ];
 
 const enlacesExternos = [
@@ -312,6 +452,7 @@ export const normatividadData = {
   categories: [
     { id: "all", label: "Todos", count: documentos.length },
     { id: "leyes", label: "Leyes", count: documentos.filter(d => d.category === "leyes").length },
+    { id: "código", label: "Códigos", count: documentos.filter(d => d.category === "código").length },
     { id: "reglamentos", label: "Reglamentos", count: documentos.filter(d => d.category === "reglamentos").length },
     { id: "manuales", label: "Manuales", count: documentos.filter(d => d.category === "manuales").length },
     { id: "lineamientos", label: "Lineamientos", count: documentos.filter(d => d.category === "lineamientos").length },
