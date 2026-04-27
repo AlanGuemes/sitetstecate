@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 const documentos = [
-  // FEDERALES
+  // CONSTITUCIONALES
   {
     category: "leyes",
     title: "Constitución Política de los Estados Unidos Mexicanos",
@@ -17,8 +17,19 @@ const documentos = [
     url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
     date: "Última Reforma 2025",
     type: "PDF",
-    ambito: "Federal"
+    ambito: "Constitucional"
   },
+  {
+    category: "leyes",
+    title: "Constitución Política del Estado Libre y Soberano de Baja California",
+    description: "Norma suprema estatal. Define autonomía municipal y derechos ciudadanos.",
+    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_I/20200214_CONSTBC.PDF",
+    date: "Última Reforma 2020",
+    section: "Normatividad",
+    type: "PDF",
+    ambito: "Constitucional"
+  },
+  // FEDERALES
   {
     category: "leyes",
     title: "Ley General de Transparencia y Acceso a la Información Pública",
@@ -161,16 +172,6 @@ const documentos = [
   },
 
   // ESTATALES
-  {
-    category: "leyes",
-    title: "Constitución Política del Estado Libre y Soberano de Baja California",
-    description: "Norma suprema estatal. Define autonomía municipal y derechos ciudadanos.",
-    url: "https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_I/20200214_CONSTBC.PDF",
-    date: "Última Reforma 2020",
-    section: "Normatividad",
-    type: "PDF",
-    ambito: "Estatal"
-  },
   {
     category: "leyes",
     title: "Ley de Transparencia, Acceso a la Información Pública y Apertura Institucional para el Estado de Baja California",

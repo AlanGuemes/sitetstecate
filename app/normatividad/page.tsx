@@ -29,8 +29,10 @@ export default function NormatividadPage() {
 
   const filteredDocuments = documentos.filter(doc => {
     const matchesCategory = selectedCategory === "all" || doc.category === selectedCategory
-    const matchesSearch = doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      doc.description.toLowerCase().includes(searchQuery.toLowerCase())
+    const searchLower = searchQuery.toLowerCase()
+    const matchesSearch = doc.title.toLowerCase().includes(searchLower) ||
+      doc.description.toLowerCase().includes(searchLower) ||
+      ((doc as any).ambito && (doc as any).ambito.toLowerCase().includes(searchLower))
     return matchesCategory && matchesSearch
   })
 
@@ -45,6 +47,15 @@ export default function NormatividadPage() {
             <h1 className="text-3xl lg:text-4xl font-bold text-primary-foreground">Normatividad</h1>
             <p className="mt-4 text-primary-foreground/80 max-w-2xl leading-relaxed">
               Accede al marco normativo aplicable: leyes, reglamentos, manuales administrativos y lineamientos que rigen la actuación de la administración municipal.
+            </p>
+          </div>
+        </section>
+
+        {/* Intro */}
+        <section className="py-8 bg-background">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-4xl">
+              El Municipio de Tecate y sus organismos paramunicipales se rigen por un marco normativo de cuatro niveles: constitucional, federal, estatal y municipal. A continuación, se enlistan los ordenamientos vigentes.
             </p>
           </div>
         </section>
@@ -118,12 +129,14 @@ export default function NormatividadPage() {
                                 </span>
                                 {(doc as any).ambito && (
                                   <span className={`inline-block px-2 py-0.5 text-[10px] font-bold rounded uppercase ${
-                                    (doc as any).ambito === 'Federal' 
-                                      ? 'bg-accent text-accent-foreground' 
-                                      : (doc as any).ambito === 'Estatal'
-                                      ? 'bg-secondary text-secondary-foreground'
-                                      : 'bg-primary text-primary-foreground'
-                                  }`}>
+                                    (doc as any).ambito === 'Constitucional'
+                                      ? 'bg-slate-800 text-slate-100'
+                                      : (doc as any).ambito === 'Federal'
+                                        ? 'bg-accent text-accent-foreground'
+                                        : (doc as any).ambito === 'Estatal'
+                                          ? 'bg-secondary text-secondary-foreground'
+                                          : 'bg-primary text-primary-foreground'
+                                    }`}>
                                     {(doc as any).ambito}
                                   </span>
                                 )}

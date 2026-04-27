@@ -4,26 +4,15 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SectionHeader } from "@/components/section-header"
 import { ScrollIndexGeneric } from "@/components/scroll-index"
-import { Users, Info, Building2, Table, FileText, CheckCircle2, Scale, ExternalLink, MapPin, Mail, Phone, Clock } from "lucide-react"
+import { Users, Info, Building2, Table, FileText, CheckCircle2, Scale, ExternalLink, MapPin, Mail, Phone, Clock, ChevronRight } from "lucide-react"
 import { contactoPrincipal } from "@/lib/data"
+import Link from "next/link"
 
 const navSections = [
   { navId: "quienes-somos",       observeId: "quienes-somos",       label: "Quiénes Somos"          },
   { navId: "informacion",         observeId: "informacion",         label: "Información"             },
   { navId: "sujetos-obligados",   observeId: "sujetos-obligados",   label: "Sujetos Obligados"      },
   { navId: "tabla-aplicabilidad", observeId: "tabla-aplicabilidad", label: "Tabla de Aplicabilidad" },
-]
-
-const sujetosObligadosList = [
-  { id: 1, acceso: "Portal Tecate · PNT", sujeto: "Ayuntamiento de Tecate y Administración Pública Municipal", tipo: "IV", naturaleza: "Gobierno municipal", creacion: "Constitución Política del Estado de B.C., Art. 80; Ley Orgánica del Municipio Libre del Estado de B.C." },
-  { id: 2, acceso: "Portal · PNT", sujeto: "Instituto Municipal del Deporte de Tecate (IMDETE)", tipo: "V", naturaleza: "Organismo descentralizado", creacion: "—" },
-  { id: 3, acceso: "Portal · PNT", sujeto: "Instituto Municipal de la Juventud de Tecate (IMJUVET)", tipo: "V", naturaleza: "Organismo descentralizado", creacion: "—" },
-  { id: 4, acceso: "Portal · PNT", sujeto: "Instituto Municipal de la Mujer de Tecate (IMMUJER)", tipo: "V", naturaleza: "Organismo descentralizado", creacion: "—" },
-  { id: 5, acceso: "Portal · PNT", sujeto: "Instituto Municipal de Planeación de Tecate (INPLADEM)", tipo: "V", naturaleza: "Organismo público descentralizado", creacion: "Acuerdo de creación 23 de enero de 2015 (publicación 23/12/2015)" },
-  { id: 6, acceso: "Portal · PNT", sujeto: "Instituto de Promoción al Desarrollo Urbano y Regional (INPRODEUR)", tipo: "V", naturaleza: "Organismo descentralizado", creacion: "Acuerdo de creación 18 de marzo de 1994" },
-  { id: 7, acceso: "Portal · PNT", sujeto: "Comisión Estatal de Servicios Públicos de Tecate (CESPTE) o equivalente", tipo: "V", naturaleza: "Organismo descentralizado / participación", creacion: "—" },
-  { id: 8, acceso: "Portal · PNT", sujeto: "Sistema para el Desarrollo Integral de la Familia del Municipio de Tecate (DIF Tecate)", tipo: "V", naturaleza: "Organismo descentralizado", creacion: "—" },
-  { id: 9, acceso: "Portal · PNT", sujeto: "Patronato del Bosque y/o Centro de Gobierno (si aplica)", tipo: "V", naturaleza: "Organismo de participación", creacion: "—" },
 ]
 
 export default function TransparenciaPage() {
@@ -152,7 +141,6 @@ export default function TransparenciaPage() {
                       <p className="text-xs font-medium text-secondary uppercase tracking-wider mb-1">Titular</p>
                       <p className="font-semibold text-foreground">{contactoPrincipal.titular}</p>
                       <p className="text-sm text-muted-foreground mt-0.5">{contactoPrincipal.cargo}</p>
-                      
                       <div className="mt-5 space-y-3">
                         <div>
                           <p className="text-xs font-medium text-secondary uppercase tracking-wider mb-0.5">Dependencia</p>
@@ -233,55 +221,54 @@ export default function TransparenciaPage() {
           </div>
         </section>
 
-        {/* ── Sujetos Obligados ────────────────────────────────────── */}
+        {/* ── Sujetos Obligados — enlaces ───────────────────────────── */}
         <section id="sujetos-obligados" className="py-12 bg-background scroll-mt-20">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <SectionHeader
               title="Sujetos Obligados"
-              description="Universo completo de sujetos obligados del Municipio de Tecate a transparentar y permitir el acceso a su información pública."
+              description="Consulta el universo de sujetos obligados del Municipio, sus obligaciones de transparencia y el marco normativo aplicable."
             />
-            
-            <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-4xl">
-              Conforme al Art. 19, fracciones IV y V de la LTAIPBC, son sujetos obligados a transparentar y permitir el acceso a su información pública el Ayuntamiento de Tecate, su Administración Pública Municipal y los organismos descentralizados, desconcentrados y de participación municipal. A continuación, se presenta el universo completo de sujetos obligados del Municipio.
-            </p>
-
-            <div className="bg-card border border-border rounded-xl shadow-sm overflow-hidden mb-6">
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-sm whitespace-nowrap md:whitespace-normal">
-                  <thead className="bg-muted/50 text-secondary border-b border-border text-xs uppercase tracking-wider font-semibold">
-                    <tr>
-                      <th className="px-4 py-3 text-center w-12">#</th>
-                      <th className="px-4 py-3">Sujeto Obligado</th>
-                      <th className="px-4 py-3">Acceso</th>
-                      <th className="px-4 py-3 text-center">Tipo (Art. 19)</th>
-                      <th className="px-4 py-3">Naturaleza Jurídica</th>
-                      <th className="px-4 py-3">Acto/Instrumento de creación</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-border text-foreground">
-                    {sujetosObligadosList.map((item) => (
-                      <tr key={item.id} className="hover:bg-muted/30 transition-colors">
-                        <td className="px-4 py-4 text-center text-muted-foreground font-medium">{item.id}</td>
-                        <td className="px-4 py-4 font-semibold text-primary">{item.sujeto}</td>
-                        <td className="px-4 py-4 text-muted-foreground">
-                          <span className="inline-flex items-center bg-secondary/10 text-secondary border border-secondary/20 px-2 py-0.5 rounded text-xs font-medium whitespace-nowrap">
-                            {item.acceso}
-                          </span>
-                        </td>
-                        <td className="px-4 py-4 text-center font-medium">{item.tipo}</td>
-                        <td className="px-4 py-4 text-muted-foreground">{item.naturaleza}</td>
-                        <td className="px-4 py-4 text-xs text-muted-foreground leading-relaxed min-w-[200px]">{item.creacion}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div className="bg-muted/30 border border-border rounded-lg p-5 text-xs text-muted-foreground leading-relaxed space-y-1.5">
-              <p><strong>Sujeto obligado responsable de esta publicación:</strong> Ayuntamiento de Tecate, B.C., a través de la Unidad de Transparencia.</p>
-              <p><strong>Fundamento legal:</strong> Art. 19 fracciones IV y V; Art. 48; Art. 55-II LTAIPBC.</p>
-              <p><strong>Última actualización:</strong> 20 de abril de 2026 <span className="mx-2 opacity-50">|</span> <strong>Periodicidad de actualización:</strong> Trimestral, o al crearse o modificarse cualquier organismo.</p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {[
+                {
+                  label: "Listado de Sujetos Obligados",
+                  desc: "Organismos y dependencias obligados a transparentar su información conforme al Art. 19 LTAIPBC.",
+                  href: "/sujetos-obligados#listado",
+                  icon: Building2,
+                },
+                {
+                  label: "Obligaciones Comunes (Art. 55)",
+                  desc: "Obligaciones de transparencia que aplican a todos los sujetos obligados del Estado.",
+                  href: "/sujetos-obligados#obligaciones-comunes",
+                  icon: Scale,
+                },
+                {
+                  label: "Obligaciones del Municipio (Art. 56)",
+                  desc: "Obligaciones específicas aplicables al Municipio de Tecate como sujeto obligado.",
+                  href: "/sujetos-obligados#obligaciones-municipio",
+                  icon: FileText,
+                },
+              ].map((item, i) => {
+                const Icon = item.icon
+                return (
+                  <Link
+                    key={i}
+                    href={item.href}
+                    className="bg-card border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/20 transition-all group flex flex-col gap-3"
+                  >
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors shrink-0">
+                      <Icon className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-foreground text-sm">{item.label}</p>
+                      <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
+                    <div className="flex items-center gap-1 text-primary text-xs font-medium">
+                      Ver detalle <ChevronRight className="h-3.5 w-3.5" />
+                    </div>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </section>
