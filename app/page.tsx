@@ -18,9 +18,12 @@ import {
   Eye,
   ClipboardList,
   BookOpen,
-  Navigation as NavigationIcon
+  Navigation as NavigationIcon,
+  Mail,
+  Phone
 } from "lucide-react"
 import Link from "next/link"
+import { contactoPrincipal } from "@/lib/data"
 
 export default function HomePage() {
   return (
@@ -289,6 +292,54 @@ export default function HomePage() {
                     </Link>
                   );
                 })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Divisor — Contacto Titular*/}
+        <div id="div-contacto-titular" className="flex flex-col items-center justify-center py-8">
+          <div className="flex items-center gap-4 w-full max-w-2xl px-4">
+            <div className="flex-1 h-px bg-border" />
+            <div className="flex flex-col items-center gap-1.5">
+              <div className="rounded-full border-2 border-primary/30 bg-background p-3 shadow-sm">
+                <Users className="h-7 w-7 text-primary" aria-label="Contacto Titular" />
+              </div>
+              <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Contacto Titular</span>
+            </div>
+            <div className="flex-1 h-px bg-border" />
+          </div>
+        </div>
+
+        {/* Contacto Titular */}
+        <section className="py-8 bg-background border-b border-border">
+          <div className="mx-auto max-w-4xl px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-foreground">Unidad Coordinadora de Transparencia</h2>
+              <p className="mt-3 text-muted-foreground max-w-2xl mx-auto text-sm leading-relaxed">
+                Información de contacto del titular de la Unidad Coordinadora de Transparencia del H. Ayuntamiento de Tecate, encargada de orientar a la ciudadanía y garantizar el acceso oportuno a la información pública municipal.
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-center bg-card border border-border rounded-2xl p-8 shadow-sm gap-10 md:gap-24">
+              <div className="flex items-center gap-5">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                  <Users className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-semibold text-secondary uppercase tracking-widest mb-1">Titular</p>
+                  <p className="text-xl font-semibold text-foreground leading-tight">{contactoPrincipal.titular}</p>
+                  <p className="text-sm text-muted-foreground mt-0.5">{contactoPrincipal.cargo}</p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2.5">
+                  <Mail className="h-4 w-4 text-primary shrink-0" />
+                  <a href={`mailto:${contactoPrincipal.correo}`} className="hover:text-primary transition-colors">{contactoPrincipal.correo}</a>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Phone className="h-4 w-4 text-primary shrink-0" />
+                  <span>{contactoPrincipal.telefono}</span>
+                </div>
               </div>
             </div>
           </div>

@@ -337,7 +337,7 @@ const documentos = [
     category: "reglamentos",
     title: "Reglamento de Bando de Policía y Gobierno para el Municipio de Tecate, B.C.",
     description: "Orden público, convivencia ciudadana y facultades de la policía municipal.",
-    url: "",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Reglamento_de_Bando_de_Policia_y_Gobierno_Tecate_Baja_California.pdf",
     date: "Reforma dic-2025 (Art. 199, fracc. X adicionada)",
     section: "Normatividad",
     type: "PDF",
@@ -347,7 +347,7 @@ const documentos = [
     category: "reglamentos",
     title: "Reglamento de Tránsito Municipal para el Municipio de Tecate, B.C.",
     description: "Circulación vehicular, sanciones y reconocimiento de licencias digitales de otras entidades.",
-    url: "",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/REGLAMENTO_DE_TRANSITO_PARA_EL_MUNICIPIO_DE_TECATE_BAJA_CALIFORNIA.pdf",
     date: "Reforma oct-2025 (Art. 49); reforma previa jun-2025",
     section: "Normatividad",
     type: "PDF",
@@ -357,7 +357,7 @@ const documentos = [
     category: "reglamentos",
     title: "Reglamento Municipal de Protección Civil para el Municipio de Tecate, B.C.",
     description: "Prevención, preparación y respuesta ante emergencias y desastres.",
-    url: "",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/REGLAMENTO_MUNICIPAL_DE_PROTECCION_CIVIL_PARA_EL_MUNICIPIO_DE_TECATE_BAJA_CALIFORNIA.pdf",
     date: "Reforma ago-2025",
     section: "Normatividad",
     type: "PDF",
@@ -377,7 +377,7 @@ const documentos = [
     category: "reglamentos",
     title: "Reglamento de Edificaciones para el Municipio de Tecate, B.C.",
     description: "Licencias de construcción, uso de suelo, normas técnicas de edificación y vía pública.",
-    url: "",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/REGLAMENTO_DE_EDIFICACIONES_PARA_EL_MUNICIPIO_DE_TECATE_BAJA_CALIFORNIA.pdf",
     date: "Actualizado dic-2025",
     section: "Normatividad",
     type: "PDF",
@@ -548,3 +548,15 @@ export const getAllSearchableItems = (): SearchableItem[] => [
     url: r.href
   }))
 ];
+
+export const contactoPrincipal = {
+  titular: "Lic. Katya A. Escobar A.",
+  cargo: "Jefa de la Unidad Coordinadora de Transparencia",
+  dependencia: "H. Ayuntamiento Constitucional de Tecate, B.C.",
+  correo: "transparencia@tecate.gob.mx",
+  domicilio: "Calzada de los Insurgentes S/N, Centro, Tecate, B.C. C.P. 21400",
+  telefono: "(665) 655-3500",
+  horario: "Lunes a viernes, 08:00 am a 3:00 pm hrs.",
+  plataforma: "www.plataformadetransparencia.org.mx",
+  actualizacion: "20 de abril de 2026"
+};

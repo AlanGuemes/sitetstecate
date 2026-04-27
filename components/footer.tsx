@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin, FileText } from "lucide-react"
+import { Mail, Phone, MapPin, FileText, Clock } from "lucide-react"
 
 export function Footer() {
   return (
@@ -54,6 +54,10 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/80">Calzada de los Insurgentes S/N, Centro, Tecate, B.C.</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Clock className="h-4 w-4 text-secondary shrink-0" />
+                <span className="text-primary-foreground/80">Lunes a viernes, 08:00 am a 3:00 pm hrs.</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-secondary shrink-0" />
