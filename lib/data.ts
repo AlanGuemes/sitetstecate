@@ -478,8 +478,11 @@ export const siteData = {
   recursos: [
     { label: "Tabla de Aplicabilidad", href: "https://s3-public-presigner-production-ed97.up.railway.app/2025_TablaAplicabilidad_AytoTecate.pdf", icon: LayoutGrid, external: true },
     { label: "Archivo de Sesiones Anteriores", href: "/transparencia#sesiones", icon: FileText, disabled: true },
-    { label: "¿Cómo Presentar una Denuncia?", href: "https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/denuncia/denunciaCiudadana.xhtml", icon: Eye },
+    { label: "¿Cómo presentar una denuncia ciudadana?", href: "/autoridad-garante#denuncia", icon: Eye },
     { label: "Avisos de Privacidad", href: "/aviso-privacidad", icon: Search },
+    { label: "Sujetos Obligados", href: "/transparencia#sujetos-obligados", icon: Users },
+    { label: "Autoridad Garante", href: "/transparencia#autoridad-garante", icon: Shield },
+    { label: "Directorio Municipal", href: "/estructura", icon: Users },
   ],
   portalesGubernamentales: [
     {
@@ -561,3 +564,370 @@ export const contactoPrincipal = {
   plataforma: "www.plataformadetransparencia.org.mx",
   actualizacion: "20 de abril de 2026"
 };
+
+export const contactos = [
+  {
+    nombre: "Dirección de Bienestar Municipal",
+    titular: "Monserrat Landeros",
+    direccion: "Blvd. Encinos 5000, colonia Rincón Tecate, C.P. 21452",
+    telefono: "(665) 521 2118",
+    correo: "monserrat.landeros@tecate.gob.mx",
+    funciones: [
+      "Coordinar y ejecutar programas sociales dirigidos a población vulnerable.",
+      "Establecer mecanismos de atención en comunidades marginadas.",
+      "Articular esfuerzos entre el gobierno municipal, estatal y sociedad civil para el bienestar colectivo."
+    ],
+    areas: [
+      "Departamento de Programas Sociales",
+      "Coordinación de Atención Comunitaria",
+      "Jefatura de Apoyos Directos y Subsidios"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 54 y 55"
+  },
+  {
+    nombre: "Tesorería Municipal",
+    titular: "Miguel Ángel Ayala Torres",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 654 9211",
+    correo: "miguel.ayala@tecate.gob.mx",
+    funciones: [
+      "Administrar los recursos financieros del municipio.",
+      "Elaborar y ejecutar la Ley de Ingresos y Presupuesto de Egresos.",
+      "Coordinar recaudación, contabilidad y fiscalización."
+    ],
+    areas: [
+      "Departamento de Recaudación",
+      "Jefatura de Egresos y Presupuesto",
+      "Unidad de Contabilidad Gubernamental"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 60 a 67"
+  },
+  {
+    nombre: "Oficialía Mayor",
+    titular: "Omar Blancarte Aragón",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 654 9223",
+    correo: "omar.blancarte@tecate.gob.mx",
+    funciones: [
+      "Administrar los recursos humanos, materiales y patrimoniales.",
+      "Coordinar procesos de adquisiciones y servicios generales.",
+      "Supervisar bienes muebles e inmuebles municipales."
+    ],
+    areas: [
+      "Departamento de Recursos Humanos",
+      "Coordinación de Servicios Generales",
+      "Unidad de Control Patrimonial"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 68 a 72"
+  },
+  {
+    nombre: "Secretaría del Ayuntamiento",
+    titular: "Eduardo Macias Flores",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 654 9212",
+    correo: "eduardo.macias@tecate.gob.mx",
+    funciones: [
+      "Coordinar sesiones de Cabildo y elaborar actas oficiales.",
+      "Custodiar el archivo municipal y normativo.",
+      "Emitir certificaciones y documentos públicos."
+    ],
+    areas: [
+      "Dirección Jurídica",
+      "Archivo Municipal",
+      "Unidad de Actas y Acuerdos"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 11 a 15"
+  },
+  {
+    nombre: "Sindicatura Procuradora",
+    titular: "Sarahi Osuna Arce",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 654 9213 / Whatsapp 665 1778 072",
+    correo: "sarahi.osuna@sindicaturadetecate.gob.mx",
+    funciones: [
+      "Vigilar la legalidad en la administración pública.",
+      "Proteger el patrimonio municipal.",
+      "Representar jurídicamente al Ayuntamiento en litigios."
+    ],
+    areas: [
+      "Dirección General",
+      "Subdirección Administrativa",
+      "Subdirección de Contraloría Interna",
+      "Subdirección de Responsabilidades Administrativas",
+      "Subdirección de Investigación",
+      "Subdirección de Auditoría de obra Pública y Desarrollo Urbano",
+      "Subdirección de Comisarios",
+      "Departamento de Supervisión del Servicio Público de Arrastre y Almacenamiento de Vehículos"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 31 al 38"
+  },
+  {
+    nombre: "Coordinación General de Gabinete",
+    titular: "Luis Villavicencio Zarate",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 654 9203",
+    correo: "luis.villavicencio@tecate.gob.mx",
+    funciones: [
+      "Dar seguimiento a la ejecución de políticas públicas municipales.",
+      "Coordinar la agenda operativa de las direcciones.",
+      "Monitorear los avances del Plan Municipal de Desarrollo."
+    ],
+    areas: [
+      "Unidad de Seguimiento de Programas",
+      "Enlace de Coordinación Interinstitucional"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 73"
+  },
+  {
+    nombre: "Dirección de Seguridad Pública y Tránsito Municipal",
+    titular: "José Luis Sarmiento Monje",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 654 4782",
+    correo: "jose.sarmiento@tecate.gob.mx",
+    funciones: [
+      "Salvaguardar la integridad y bienes de las personas.",
+      "Mantener el orden público y la paz social.",
+      "Regular el tránsito municipal."
+    ],
+    areas: [
+      "Policía Preventiva",
+      "Tránsito Municipal",
+      "Unidad de Inteligencia"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 93 a 97"
+  },
+  {
+    nombre: "Coordinación de Protección Civil y Bomberos",
+    titular: "Constantino León",
+    direccion: "Av. Lomas de San Humberto S/N, Colonia Lomas de Santa Anita",
+    telefono: "(665) 521 1218",
+    correo: "constantino.leon@tecate.gob.mx",
+    funciones: [
+      "Prevenir y atender situaciones de emergencia.",
+      "Coordinar acciones de rescate y auxilio.",
+      "Supervisar medidas de protección civil."
+    ],
+    areas: [
+      "Coordinación de Bomberos",
+      "Unidad de Rescate",
+      "Dirección Técnica de Emergencias"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 98 a 100"
+  },
+  {
+    nombre: "Dirección de Desarrollo Económico y Turismo",
+    titular: "Grisel García",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 654 8095",
+    correo: "grisel.garcia@tecate.gob.mx",
+    sitioWeb: "www.tecate.gog.mx/DECO",
+    funciones: [
+      "Impulsar el desarrollo económico y empresarial del municipio.",
+      "Gestionar incentivos para inversión local."
+    ],
+    areas: [
+      "Departamento de Fomento Económico",
+      "Coordinación de Turismo",
+      "Ventanilla de Atención Empresarial"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 101 a 104"
+  },
+  {
+    nombre: "Dirección de Gestión Integral del Territorio",
+    titular: "Ivonne Anaya",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 654 9243",
+    correo: "ivonne.anaya@tecate.gob.mx",
+    funciones: [
+      "Coordinar el ordenamiento territorial del municipio.",
+      "Evaluar y autorizar desarrollos urbanos.",
+      "Controlar licencias de construcción y uso de suelo."
+    ],
+    areas: [
+      "Unidad de Catastro",
+      "Dirección de Desarrollo Urbano",
+      "Departamento de Licencias"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 105 a 109"
+  }
+];
+
+export const contactosParamunicipales = [
+  {
+    nombre: "Instituto Municipal de Arte y Cultura (IMACTE)",
+    titular: "Alfredo Ochoa Álamos",
+    direccion: "Tláloc exterior 400, Cuauhtémoc, 21470, Tecate, Baja California",
+    telefono: "(665) 654 4947",
+    correo: "alfredo.ochoa@tecate.gob.mx",
+    funciones: [
+      "Promover las manifestaciones culturales y artísticas.",
+      "Coordinar eventos culturales del municipio.",
+      "Apoyar la formación artística comunitaria."
+    ],
+    areas: [
+      "Coordinación de Eventos Culturales",
+      "Talleres de Formación Artística"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 114 a 117"
+  },
+  {
+    nombre: "Instituto Municipal del Deporte (IMDETE)",
+    titular: "Saul Alberto Pruneda",
+    direccion: "Portes Gil 180, 21470 Tecate, Baja California, Unidad Eufrasio Santana",
+    telefono: "(665) 654 4785",
+    correo: "saul.pruneda@tecate.gob.mx",
+    funciones: [
+      "Fomentar la cultura física y el deporte en la población.",
+      "Administrar espacios deportivos municipales.",
+      "Impulsar programas de activación física."
+    ],
+    areas: [
+      "Coordinación de Ligas Municipales",
+      "Departamento de Promoción Deportiva"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 110 a 113"
+  },
+  {
+    nombre: "Instituto Municipal de la Juventud (IMJUVET)",
+    titular: "Sara Rodríguez",
+    direccion: "Tláloc exterior 400, Cuauhtémoc, 21470, Tecate, Baja California",
+    telefono: "(665) 521 2427",
+    correo: "sara.rodriguez@tecate.gob.mx",
+    funciones: [
+      "Promover la participación de la juventud en el desarrollo local.",
+      "Implementar programas educativos y recreativos.",
+      "Fomentar la cultura de paz entre jóvenes."
+    ],
+    areas: [
+      "Departamento de Proyectos Juveniles",
+      "Coordinación de Vinculación Educativa"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 118 a 120"
+  },
+  {
+    nombre: "Instituto Municipal de la Mujer (IMMUJER)",
+    titular: "Mariana Mena",
+    direccion: "Cuitláhuac 728, 21470 Tecate, Baja California",
+    telefono: "(665) 654 3390",
+    correo: "mariana.mena@tecate.gob.mx",
+    funciones: [
+      "Implementar políticas públicas con perspectiva de género.",
+      "Brindar atención integral a mujeres víctimas de violencia.",
+      "Promover la igualdad de derechos entre hombres y mujeres."
+    ],
+    areas: [
+      "Área Jurídica y Psicológica",
+      "Departamento de Capacitación y Género",
+      "Coordinación de Atención a la Mujer"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 121 a 123"
+  },
+  {
+    nombre: "Sistema Integral de Residuos de Tecate (SIRT)",
+    titular: "José Luis Barba Duarte",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 654 9266",
+    correo: "jose.barba@tecate.gob.mx",
+    funciones: [
+      "Coordinar la recolección y disposición final de residuos.",
+      "Supervisar rutas, frecuencias y mantenimiento de unidades.",
+      "Promover campañas de reciclaje y cultura ambiental."
+    ],
+    areas: [
+      "Coordinación Operativa de Rutas",
+      "Departamento Técnico y Logístico",
+      "Unidad de Educación Ambiental"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 124 a 126"
+  },
+  {
+    nombre: "Instituto Municipal de Bienestar Animal (IMBAT)",
+    titular: "Gabriela Vázquez",
+    direccion: "C.",
+    telefono: "(665) 521-3408",
+    correo: "gabriela.vazquez@tecate.gob.mx",
+    funciones: [
+      "Coordinar campañas de esterilización y vacunación.",
+      "Fomentar la adopción responsable.",
+      "Supervisar el bienestar animal y atención a denuncias."
+    ],
+    areas: [
+      "Clínica Veterinaria Municipal",
+      "Departamento de Resguardo Animal",
+      "Área de Educación y Adopciones"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 127 a 129"
+  },
+  {
+    nombre: "DIF Municipal",
+    titular: "Esther Barbosa",
+    direccion: "Blvd. Encinos #5000, Rincón Tecate, C.P. 21452",
+    telefono: "(665) 103 6730",
+    correo: "esther.barbosa@tecate.gob.mx",
+    funciones: [
+      "Subdirección de Asistencia Social",
+      "Dirección de Programas Alimentarios",
+      "Administrar estancias infantiles y casas hogar."
+    ],
+    areas: [
+      "Unidad de Seguimiento de Programas",
+      "Enlace de Coordinación Interinstitucional",
+      "Unidad de Atención Integral Familiar"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 130 a 134"
+  },
+  {
+    nombre: "Instituto de Planeación y Desarrollo Municipal (INPLADEM)",
+    titular: "Alejandro Ruiz",
+    direccion: "Pdte. Pascual Ortiz Rubio #1310, Zona Centro, C.P. 21400",
+    telefono: "(665) 521 2002",
+    correo: "alejandro.ruiz@tecate.gob.mx",
+    funciones: [
+      "Coordinar la planeación estratégica del desarrollo municipal.",
+      "Elaborar y dar seguimiento al Plan Municipal de Desarrollo.",
+      "Evaluar el impacto de políticas públicas locales."
+    ],
+    areas: [
+      "Unidad de Planeación Estratégica",
+      "Departamento de Evaluación y Seguimiento",
+      "Observatorio de Indicadores Municipales"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 135 a 137"
+  },
+  {
+    nombre: "Sistema Municipal de Parques Temáticos (SIMPATE)",
+    titular: "Jesús Felipe Vega Ramos",
+    direccion: "Quinta, 21482 Tecate, B.C.",
+    telefono: "(665) 655 7278",
+    correo: "jesus.vega@tecate.gob.mx",
+    funciones: [
+      "Administrar y conservar parques públicos y temáticos.",
+      "Promover actividades recreativas y educativas.",
+      "Supervisar servicios y mantenimiento de espacios públicos."
+    ],
+    areas: [
+      "Departamento de Mantenimiento",
+      "Coordinación de Actividades Recreativas",
+      "Unidad de Atención al Usuario"
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos 138 a 140"
+  },
+  {
+    nombre: "Instituto de Promoción del Desarrollo Urbano (INPRODEUR)",
+    titular: "Alfredo Ivan Hernández León",
+    direccion: "Agustín Escudero 134, Escudero, 21452 Tecate, B.C.",
+    telefono: "(665) 654 1580",
+    correo: "alfredo.hernandez@tecate.gob.mx",
+    funciones: [
+      ".",
+      ".",
+      "."
+    ],
+    areas: [
+      "",
+      "",
+      ""
+    ],
+    fundamento: "Reglamento de la Administración Pública Municipal – Artículos"
+  }
+];

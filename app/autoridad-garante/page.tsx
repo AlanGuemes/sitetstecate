@@ -6,11 +6,11 @@ import { Building2, MapPin, Mail, Phone, Globe, ExternalLink, ChevronRight, Aler
 import Link from "next/link"
 
 const navSections = [
-  { navId: "identificacion",   observeId: "identificacion",   label: "Identificación"       },
-  { navId: "domicilios",       observeId: "domicilios",       label: "Domicilios"            },
-  { navId: "sitios-web",       observeId: "sitios-web",       label: "Sitios Web"            },
-  { navId: "denuncia",         observeId: "denuncia",         label: "Cómo Denunciar"        },
-  { navId: "recurso-revision", observeId: "recurso-revision", label: "Recurso de Revisión"   },
+  { navId: "identificacion", observeId: "identificacion", label: "Identificación" },
+  { navId: "domicilios", observeId: "domicilios", label: "Domicilios" },
+  { navId: "sitios-web", observeId: "sitios-web", label: "Sitios Web" },
+  { navId: "denuncia", observeId: "denuncia", label: "Cómo Denunciar" },
+  { navId: "recurso-revision", observeId: "recurso-revision", label: "Recurso de Revisión" },
 ]
 
 const oficinas = [
@@ -42,18 +42,18 @@ const oficinas = [
 
 const sitiosWeb = [
   { label: "Portal institucional de Transparencia para el Pueblo (BC)", url: "https://www1.bajacalifornia.gob.mx/sabgbc/TPP.html" },
-  { label: "Secretaría Anticorrupción y Buen Gobierno BC",              url: "https://sabg.bajacalifornia.gob.mx/"               },
-  { label: "Portal de Transparencia BC",                                 url: "http://www.transparenciabc.gob.mx/"                },
-  { label: "Plataforma Nacional de Transparencia",                       url: "https://www.plataformadetransparencia.org.mx/"     },
+  { label: "Secretaría Anticorrupción y Buen Gobierno BC", url: "https://sabg.bajacalifornia.gob.mx/" },
+  { label: "Portal de Transparencia BC", url: "http://www.transparenciabc.gob.mx/" },
+  { label: "Plataforma Nacional de Transparencia", url: "https://www.plataformadetransparencia.org.mx/" },
 ]
 
 const pasosDenuncia = [
-  { paso: 1, accion: "Identifica la obligación incumplida (artículo y fracción de la LTAIPBC)",                                                                              plazo: "—"                              },
-  { paso: 2, accion: "Reúne evidencia: capturas del portal, fecha y URL específica",                                                                                          plazo: "—"                              },
-  { paso: 3, accion: "Presenta tu denuncia por uno de estos medios: Plataforma Nacional de Transparencia, correo electrónico o escrito en oficinas de TPP",                   plazo: "—"                              },
-  { paso: 4, accion: "La Autoridad Garante emite dictamen",                                                                                                                    plazo: "20 días (Art. 71)"              },
-  { paso: 5, accion: "El sujeto obligado subsana",                                                                                                                             plazo: "20 días (Art. 71)"              },
-  { paso: 6, accion: "De no subsanar, la Autoridad Garante notifica al superior jerárquico e impone sanciones",                                                               plazo: "10 + 5 días adicionales (Art. 71-22)" },
+  { paso: 1, accion: "Identifica la obligación incumplida (artículo y fracción de la LTAIPBC)", plazo: "—" },
+  { paso: 2, accion: "Reúne evidencia: capturas del portal, fecha y URL específica", plazo: "—" },
+  { paso: 3, accion: "Presenta tu denuncia por uno de estos medios: Plataforma Nacional de Transparencia, correo electrónico o escrito en oficinas de TPP", plazo: "—" },
+  { paso: 4, accion: "La Autoridad Garante emite dictamen", plazo: "20 días (Art. 71)" },
+  { paso: 5, accion: "El sujeto obligado subsana", plazo: "20 días (Art. 71)" },
+  { paso: 6, accion: "De no subsanar, la Autoridad Garante notifica al superior jerárquico e impone sanciones", plazo: "10 + 5 días adicionales (Art. 71-22)" },
 ]
 
 export default function AutoridadGarantePage() {
@@ -204,7 +204,6 @@ export default function AutoridadGarantePage() {
                 Cualquier persona puede denunciar ante la Autoridad Garante la falta de publicación de las obligaciones de los Arts. 55 a 66 LTAIPBC <strong>en cualquier momento</strong>. No se requiere trámite previo y la denuncia es gratuita.
               </p>
             </div>
-
             <div className="bg-card border border-border rounded-xl shadow-sm overflow-hidden">
               <div className="bg-primary/5 px-5 py-3 border-b border-border">
                 <h3 className="font-semibold text-primary">Pasos para denunciar</h3>
@@ -234,6 +233,25 @@ export default function AutoridadGarantePage() {
                 </table>
               </div>
             </div>
+            {/* Action Card: Presentar Denuncia PNT */}
+            <a
+              href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/denuncia/denunciaCiudadana.xhtml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex flex-col sm:flex-row items-center gap-4 bg-primary text-primary-foreground p-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all duration-200 mb-8 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-10 translate-x-4 -translate-y-4">
+                <Shield className="h-24 w-24 text-white" />
+              </div>
+              <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                <ExternalLink className="h-6 w-6 text-white" />
+              </div>
+              <div className="text-center sm:text-left relative z-10">
+                <h3 className="text-lg font-bold">Presentar denuncia en línea</h3>
+                <p className="text-sm text-primary-foreground/80">Plataforma Nacional de Transparencia — Acceso directo al sistema de denuncias ciudadanas.</p>
+              </div>
+              <ChevronRight className="hidden sm:block h-5 w-5 ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </a>
           </div>
         </section>
 
