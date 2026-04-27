@@ -478,6 +478,7 @@ export const siteData = {
   recursos: [
     { label: "Tabla de Aplicabilidad", href: "https://s3-public-presigner-production-ed97.up.railway.app/2025_TablaAplicabilidad_AytoTecate.pdf", icon: LayoutGrid, external: true },
     { label: "Archivo de Sesiones Anteriores", href: "/transparencia#sesiones", icon: FileText, disabled: true },
+    { label: "¿Cómo presentar una solicitud?", href: "/autoridad-garante#solicitud", icon: FileText },
     { label: "¿Cómo presentar una denuncia ciudadana?", href: "/autoridad-garante#denuncia", icon: Eye },
     { label: "Avisos de Privacidad", href: "/aviso-privacidad", icon: Search },
     { label: "Sujetos Obligados", href: "/transparencia#sujetos-obligados", icon: Users },

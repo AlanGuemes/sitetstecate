@@ -4,11 +4,13 @@ import { SectionHeader } from "@/components/section-header"
 import { ScrollIndexGeneric } from "@/components/scroll-index"
 import { Building2, MapPin, Mail, Phone, Globe, ExternalLink, ChevronRight, AlertCircle, FileText, Shield } from "lucide-react"
 import Link from "next/link"
+import { contactoPrincipal } from "@/lib/data"
 
 const navSections = [
   { navId: "identificacion", observeId: "identificacion", label: "Identificación" },
   { navId: "domicilios", observeId: "domicilios", label: "Domicilios" },
   { navId: "sitios-web", observeId: "sitios-web", label: "Sitios Web" },
+  { navId: "solicitud", observeId: "solicitud", label: "Cómo Solicitar" },
   { navId: "denuncia", observeId: "denuncia", label: "Cómo Denunciar" },
   { navId: "recurso-revision", observeId: "recurso-revision", label: "Recurso de Revisión" },
 ]
@@ -190,8 +192,99 @@ export default function AutoridadGarantePage() {
           </div>
         </section>
 
+        {/* ── Cómo Solicitar ───────────────────────────────────────── */}
+        <section id="solicitud" className="py-12 bg-muted scroll-mt-20">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <SectionHeader
+              title="Cómo presentar una solicitud"
+              description="📩 Canales de Presentación (Art. 119) — El solicitante puede elegir cualquiera de estas vías:"
+            />
+
+            {/* Action Card: Presentar Solicitud PNT */}
+            <a
+              href="https://www.plataformadetransparencia.org.mx/Inicio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex flex-col sm:flex-row items-center gap-4 bg-primary text-primary-foreground p-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all duration-200 mb-6 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-10 translate-x-4 -translate-y-4">
+                <Globe className="h-24 w-24 text-white" />
+              </div>
+              <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                <ExternalLink className="h-6 w-6 text-white" />
+              </div>
+              <div className="text-center sm:text-left relative z-10">
+                <h3 className="text-lg font-bold">Plataforma Nacional de Transparencia (PNT)</h3>
+                <p className="text-sm text-primary-foreground/80">La vía preferente y más rápida para presentar una solicitud.</p>
+              </div>
+              <ChevronRight className="hidden sm:block h-5 w-5 ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </a>
+
+            <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-4">
+
+              <div className="bg-card border border-border rounded-xl p-6 shadow-sm flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                    <Mail className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground text-sm">Correo Electrónico</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Dirigido a la cuenta oficial de la Unidad de Transparencia:
+                </p>
+                <a href={`mailto:${contactoPrincipal.correo}`} className="text-sm font-medium text-primary hover:underline mt-auto">
+                  {contactoPrincipal.correo}
+                </a>
+              </div>
+
+              <div className="bg-card border border-border rounded-xl p-6 shadow-sm flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground text-sm">Presencial</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Mediante escrito libre o los formatos que la UT debe tener disponibles en sus oficinas:
+                </p>
+                <div className="mt-auto space-y-1">
+                  <p className="text-sm font-medium text-foreground">{contactoPrincipal.domicilio}</p>
+                  <p className="text-xs text-muted-foreground">{contactoPrincipal.horario}</p>
+                </div>
+              </div>
+
+              <div className="bg-card border border-border rounded-xl p-6 shadow-sm flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                    <FileText className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground text-sm">Correo Postal o Mensajería</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Con acuse de recibo.
+                </p>
+                <div className="mt-auto pt-2">
+                  <p className="text-sm font-medium text-foreground">{contactoPrincipal.domicilio}</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg/5 border border-primary/20 rounded-xl p-5 mt-8 flex items-start gap-3">
+              <p className="text-sm text-foreground leading-relaxed">
+                Plazo de respuesta 20 días hábiles a partir de la recepción (Art. 66)
+              </p>
+            </div>
+
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 mt-8 flex items-start gap-3">
+              <AlertCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+              <p className="text-sm text-foreground leading-relaxed">
+                <strong>Prórroga de 10 días adicionales (Arts. 66–89):</strong> En casos complejos, el plazo de respuesta es ampliable por 10 días más, previa notificación al solicitante.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ── Cómo Denunciar ───────────────────────────────────────── */}
-        <section id="denuncia" className="py-12 bg-muted scroll-mt-20">
+        <section id="denuncia" className="py-12 bg-background scroll-mt-20">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <SectionHeader
               title="Cómo presentar una denuncia ciudadana"
@@ -256,7 +349,7 @@ export default function AutoridadGarantePage() {
         </section>
 
         {/* ── Recurso de Revisión ──────────────────────────────────── */}
-        <section id="recurso-revision" className="py-12 bg-background scroll-mt-20">
+        <section id="recurso-revision" className="py-12 bg-muted scroll-mt-20">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <SectionHeader
               title="Recurso de revisión"
