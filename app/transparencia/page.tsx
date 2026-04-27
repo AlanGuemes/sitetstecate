@@ -4,7 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SectionHeader } from "@/components/section-header"
 import { ScrollIndexGeneric } from "@/components/scroll-index"
-import { Users, Info, Building2, Table, FileText, CheckCircle2, Scale, ExternalLink, MapPin, Mail, Phone, Clock, ChevronRight } from "lucide-react"
+import { Users, Info, Building2, Table, FileText, CheckCircle2, Scale, ExternalLink, MapPin, Mail, Phone, Clock, ChevronRight, Shield } from "lucide-react"
 import { contactoPrincipal } from "@/lib/data"
 import Link from "next/link"
 
@@ -12,6 +12,7 @@ const navSections = [
   { navId: "quienes-somos",       observeId: "quienes-somos",       label: "Quiénes Somos"          },
   { navId: "informacion",         observeId: "informacion",         label: "Información"             },
   { navId: "sujetos-obligados",   observeId: "sujetos-obligados",   label: "Sujetos Obligados"      },
+  { navId: "autoridad-garante",   observeId: "autoridad-garante",   label: "Autoridad Garante"      },
   { navId: "tabla-aplicabilidad", observeId: "tabla-aplicabilidad", label: "Tabla de Aplicabilidad" },
 ]
 
@@ -270,6 +271,33 @@ export default function TransparenciaPage() {
                 )
               })}
             </div>
+          </div>
+        </section>
+
+        {/* ── Autoridad Garante ─────────────────────────────────── */}
+        <section id="autoridad-garante" className="py-12 bg-muted scroll-mt-20">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <SectionHeader
+              title="Autoridad Garante"
+              description="Instancia responsable de garantizar el derecho de acceso a la información y resolver recursos de revisión en Baja California."
+            />
+            <Link
+              href="/autoridad-garante"
+              className="bg-card border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/20 transition-all group flex items-start gap-5 max-w-2xl"
+            >
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                <Shield className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
+              </div>
+              <div className="flex-1">
+                <p className="font-semibold text-foreground">Transparencia para el Pueblo (TPP)</p>
+                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                  Órgano garante en materia de transparencia y acceso a la información. Consulta domicilios, sitios web, cómo interponer un recurso de revisión y cómo presentar una denuncia ciudadana.
+                </p>
+                <div className="flex items-center gap-1 text-primary text-xs font-medium mt-3">
+                  Ver datos de contacto <ChevronRight className="h-3.5 w-3.5" />
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
 

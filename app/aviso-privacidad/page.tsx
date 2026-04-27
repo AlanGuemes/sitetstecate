@@ -2,12 +2,25 @@
 
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { ScrollIndexGeneric } from "@/components/scroll-index"
 import { Shield, Mail, MapPin, Phone, FileText, Globe, CheckCircle2, Download } from "lucide-react"
+
+const navSections = [
+  { navId: "responsable",       observeId: "responsable",       label: "I. Responsable"            },
+  { navId: "datos-recabados",   observeId: "datos-recabados",   label: "II. Datos Personales"      },
+  { navId: "finalidad",         observeId: "finalidad",         label: "III. Finalidad"             },
+  { navId: "transferencias",    observeId: "transferencias",    label: "IV. Transferencias"         },
+  { navId: "derechos-arco",     observeId: "derechos-arco",     label: "V. Derechos ARCO"          },
+  { navId: "cookies",           observeId: "cookies",           label: "VI. Cookies"               },
+  { navId: "conservacion",      observeId: "conservacion",      label: "VII. Conservación"         },
+  { navId: "cambios",           observeId: "cambios",           label: "VIII. Cambios"             },
+]
 
 export default function AvisoPrivacidadPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
+      <ScrollIndexGeneric sections={navSections} />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -31,7 +44,7 @@ export default function AvisoPrivacidadPage() {
             <div className="bg-card border border-border rounded-2xl p-6 lg:p-10 shadow-sm space-y-12">
               
               {/* I. Responsable */}
-              <section>
+              <section id="responsable" className="scroll-mt-20">
                 <h2 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-3">
                   <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm">I</span>
                   Responsable del tratamiento
@@ -74,7 +87,7 @@ export default function AvisoPrivacidadPage() {
               </section>
 
               {/* II. Datos personales que se recaban */}
-              <section>
+              <section id="datos-recabados" className="scroll-mt-20">
                 <h2 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-3">
                   <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm">II</span>
                   Datos personales que se recaban
@@ -102,7 +115,7 @@ export default function AvisoPrivacidadPage() {
               </section>
 
               {/* III. Finalidad del tratamiento */}
-              <section>
+              <section id="finalidad" className="scroll-mt-20">
                 <h2 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-3">
                   <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm">III</span>
                   Finalidad del tratamiento
@@ -133,7 +146,7 @@ export default function AvisoPrivacidadPage() {
               </section>
 
               {/* IV. Transferencias de datos */}
-              <section>
+              <section id="transferencias" className="scroll-mt-20">
                 <h2 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-3">
                   <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm">IV</span>
                   Transferencias de datos
@@ -204,21 +217,21 @@ export default function AvisoPrivacidadPage() {
 
               {/* VI, VII, VIII */}
               <div className="grid grid-cols-1 gap-8 pt-6 border-t border-border">
-                <section>
+                <section id="cookies" className="scroll-mt-20">
                   <h2 className="text-lg font-semibold text-foreground mb-3">VI. Uso de cookies y tecnologías de rastreo</h2>
                   <p className="text-sm text-muted-foreground">
                     El Portal de Transparencia puede utilizar cookies de sesión estrictamente necesarias para el funcionamiento técnico del sitio. No se utilizan cookies de rastreo, publicidad o análisis de comportamiento de terceros. El usuario puede configurar su navegador para rechazar cookies, aunque ello puede afectar la funcionalidad del portal.
                   </p>
                 </section>
                 
-                <section>
+                <section id="conservacion" className="scroll-mt-20">
                   <h2 className="text-lg font-semibold text-foreground mb-3">VII. Conservación y seguridad de los datos</h2>
                   <p className="text-sm text-muted-foreground">
                     Los datos personales asociados a solicitudes de información serán conservados durante el tiempo que establezcan las disposiciones legales aplicables, incluyendo los plazos del Archivo Municipal. El Municipio de Tecate adopta medidas técnicas, administrativas y físicas para garantizar la confidencialidad e integridad de la información personal, conforme a las mejores prácticas en materia de seguridad de la información.
                   </p>
                 </section>
 
-                <section>
+                <section id="cambios" className="scroll-mt-20">
                   <h2 className="text-lg font-semibold text-foreground mb-3">VIII. Cambios al aviso de privacidad</h2>
                   <p className="text-sm text-muted-foreground mb-4">
                     El presente aviso podrá ser modificado en cualquier momento. Cualquier cambio sustancial será notificado mediante publicación en el Portal de Transparencia del Municipio de Tecate, indicando la fecha de la última actualización. Se recomienda consultar periódicamente este aviso.
