@@ -7,25 +7,71 @@ import { contactos, contactosParamunicipales } from "@/lib/data"
 
 const organigramas = [
   {
-    title: "Organigrama General del Municipio",
-    description: "Estructura orgánica completa de la administración municipal",
-    date: "Actualizado: Enero 2025"
+    title: "Organigrama Central XXV Ayuntamiento",
+    description: "ORGANIGRAMA CENTRAL XXV AYUNTAMIENTO.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_CENTRAL_XXV_AYUNTAMIENTO.pdf"
   },
   {
-    title: "Organigrama Secretaría General",
-    description: "Estructura de la Secretaría General de Gobierno",
-    date: "Actualizado: Enero 2025"
+    title: "Organigrama Coordinación de Gabinete",
+    description: "COORDINACION DE GABINETE ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/COORDINACION_DE_GABINETE_ORGANIGRAMA.pdf"
   },
   {
-    title: "Organigrama Dirección de Administración",
-    description: "Estructura de la Dirección de Administración",
-    date: "Actualizado: Enero 2025"
+    title: "Organigrama Coordinación de Gabinete (Versión 2)",
+    description: "COORDINACION DE GABINETE ORGANIGRAMA2.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/COORDINACION_DE_GABINETE_ORGANIGRAMA2.pdf"
   },
   {
-    title: "Organigrama Dirección de Finanzas",
-    description: "Estructura de la Dirección de Finanzas",
-    date: "Actualizado: Enero 2025"
+    title: "Organigrama Coordinación de Gabinete XXV Ayuntamiento",
+    description: "ORGANIGRAMA COORDINACION DE GABINETE XXV AYUNTAMIENTO.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_COORDINACION_DE_GABINETE_XXV_AYUNTAMIENTO.pdf"
   },
+  {
+    title: "Organigrama Desarrollo Económico",
+    description: "DESARROLLO ECONOMICO ORGANIGRAMA 2025.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/DESARROLLO_ECONOMICO_ORGANIGRAMA_2025.pdf"
+  },
+  {
+    title: "Organigrama DGIT",
+    description: "DGIT ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/DGIT_ORGANIGRAMA.pdf"
+  },
+  {
+    title: "Organigrama DSCTM",
+    description: "DSCTM ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/DSCTM_ORGANIGRAMA.pdf"
+  },
+  {
+    title: "Organigrama Tesorería",
+    description: "ORGANIGRAMA 2025 TESORERIA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_2025_TESORERIA.pdf"
+  },
+  {
+    title: "Organigrama Bienestar",
+    description: "ORGANIGRAMA BIENESTAR.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_BIENESTAR.pdf"
+  },
+  {
+    title: "Organigrama Protección Civil y Bomberos",
+    description: "PROTECCION CIVIL Y BOMBEROS ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_PROTECCION_CIVIL_Y_BOMBEROS.pdf"
+  },
+  {
+    title: "Organigrama Secretaría del Ayuntamiento",
+    description: "SECRETARÍA DEL AYUNTAMIENTO ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_SECRETARIA_DEL_AYUNTAMIENTO.pdf"
+  }
 ]
 
 type Contacto = {
@@ -177,26 +223,40 @@ export default function EstructuraPage() {
               description="Descarga los organigramas de las diferentes áreas de la administración municipal."
             />
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-2">
               {organigramas.map((org, index) => (
-                <div key={index} className="bg-card border border-border rounded-lg p-6 hover:shadow-md transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
-                      <Network className="h-6 w-6 text-secondary" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-foreground">{org.title}</h3>
-                      <p className="text-sm text-muted-foreground mt-1">{org.description}</p>
-                      <p className="text-xs text-muted-foreground mt-2">{org.date}</p>
-                    </div>
+                <a
+                  key={index}
+                  href={org.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-3.5 bg-card border border-border rounded-xl hover:border-primary/40 hover:bg-primary/5 hover:shadow-sm transition-all duration-200 group"
+                >
+                  {/* Avatar */}
+                  <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
+                    <Network className="h-5 w-5 text-secondary" />
                   </div>
-                  <div className="mt-4 flex gap-2">
-                    <button className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-                      <Download className="h-4 w-4" />
-                      Descargar PDF
-                    </button>
+
+                  {/* Info */}
+                  <div className="min-w-0 flex-1">
+                    <p className="font-semibold text-foreground text-sm leading-tight group-hover:text-primary transition-colors">{org.title}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5 truncate">{org.description}</p>
                   </div>
-                </div>
+
+                  <div className="hidden sm:block w-px h-8 bg-border shrink-0" />
+
+                  {/* Date */}
+                  <div className="hidden sm:flex items-center w-36 shrink-0">
+                    <span className="text-xs text-muted-foreground">{org.date}</span>
+                  </div>
+
+                  <div className="w-px h-8 bg-border shrink-0" />
+                  
+                  {/* Download Icon */}
+                  <div className="flex items-center justify-center w-10 h-10 shrink-0 bg-primary/10 text-primary rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <Download className="h-4 w-4" />
+                  </div>
+                </a>
               ))}
             </div>
           </div>
