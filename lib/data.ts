@@ -434,6 +434,551 @@ const documentos = [
     type: "PDF",
     ambito: "Municipal"
   },
+  {
+    category: "documento",
+    title: "Padron de Proveedores 2026",
+    description: "Listado de proveedores del Municipio de Tecate, B.C.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_PADRON_DE_PROVEEDORES.pdf",
+    date: "2026",
+    section: "Finanzas",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Ley de Ingresos 2025",
+    description: "Ley de Ingresos del Municipio para el ejercicio fiscal 2025.",
+    url: "#",
+    date: "Diciembre 2024",
+    section: "Finanzas",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Presupuesto de Egresos 2025",
+    description: "Presupuesto de Egresos del Municipio para el ejercicio fiscal 2025.",
+    url: "#",
+    date: "Diciembre 2024",
+    section: "Finanzas",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Deuda Pública",
+    description: "Información sobre la deuda pública del municipio.",
+    url: "#",
+    date: "Marzo 2025",
+    section: "Finanzas",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Inventario de Bienes",
+    description: "Inventario de bienes muebles e inmuebles del municipio.",
+    url: "#",
+    date: "Enero 2025",
+    section: "Finanzas",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  // ─── ADMINISTRACION ───────────────────────────────────────────────────────
+
+  // Plan Municipal de Desarrollo
+  {
+    category: "documento",
+    title: "Plan Municipal de Desarrollo",
+    description: "Plan Municipal de Desarrollo del H. Ayuntamiento de Tecate, B.C.",
+    url: "#",
+    date: "2025",
+    section: "Administracion",
+    subsection: "PLAN MUNICIPAL DE DESARROLLO",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Servidores Públicos con Sanciones
+  {
+    category: "documento",
+    title: "Servidores Públicos con Sanciones — 1er Trimestre 2026",
+    description: "Relación de servidores públicos sancionados correspondiente al 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_Sanciones_primer_trimestre_2026.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "SERVIDORES PUBLICOS CON SANCIONES",
+    subsubsection: "2026 / 1ER. TRIMESTRE",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Estadísticas — Atención Ciudadana
+  {
+    category: "documento",
+    title: "Estadísticas Atención Ciudadana — 1er Trimestre 2026",
+    description: "Estadísticas de atención ciudadana correspondientes al 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "ESTADISTICAS",
+    subsubsection: "ATENCION CIUDADANA / 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Estadísticas — Seguridad Ciudadana y Tránsito Municipal
+  {
+    category: "documento",
+    title: "Estadísticas Seguridad Ciudadana y Tránsito Municipal — 1er Trimestre 2026",
+    description: "Estadísticas de seguridad ciudadana y tránsito municipal del 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "ESTADISTICAS",
+    subsubsection: "SEGURIDAD CIUDADANA Y TRANSITO MUNICIPAL / 1ER. TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Estadísticas — Bienestar
+  {
+    category: "documento",
+    title: "Estadísticas Bienestar — 1er Trimestre 2026",
+    description: "Estadísticas de bienestar municipal correspondientes al 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "ESTADISTICAS",
+    subsubsection: "BIENESTAR / 1ER. TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Estadísticas — Unidad Coordinadora de Delegaciones
+  {
+    category: "documento",
+    title: "Estadísticas Unidad Coordinadora de Delegaciones — 1er Trimestre 2026",
+    description: "Estadísticas de la Unidad Coordinadora de Delegaciones del 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "ESTADISTICAS",
+    subsubsection: "UNIDAD COORDINADORA DE DELEGACIONES / 1ER. TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Estadísticas — DGIT
+  {
+    category: "documento",
+    title: "Estadísticas DGIT — 1er Trimestre 2026",
+    description: "Estadísticas de la Dirección de Gestión Integral del Territorio del 1er Trimestre.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "ESTADISTICAS",
+    subsubsection: "DGIT / 1ER TRIMESTRE",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Currículums
+  {
+    category: "documento",
+    title: "Currículum — Sindicatura",
+    description: "Currículum vitae del titular de la Sindicatura Procuradora.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Seguridad Ciudadana",
+    description: "Currículum vitae del titular de Seguridad Ciudadana y Tránsito Municipal.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "SEGURIDAD CIUDADANA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Tesorería",
+    description: "Currículum vitae del titular de la Tesorería Municipal.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "TESORERIA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Secretaría del Ayuntamiento",
+    description: "Currículum vitae del titular de la Secretaría del Ayuntamiento.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Regidores",
+    description: "Currículums vitae de los Regidores del H. Ayuntamiento de Tecate.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "REGIDORES",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Protección Civil y Bomberos",
+    description: "Currículum vitae del titular de la Coordinación de Protección Civil y Bomberos.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Presidencia",
+    description: "Currículum vitae del Presidente Municipal de Tecate, B.C.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "PRESIDENCIA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Oficialía Mayor",
+    description: "Currículum vitae del titular de la Oficialía Mayor.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "OFICIALIA MAYOR",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Bienestar",
+    description: "Currículum vitae del titular de la Dirección de Bienestar Municipal.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "BIENESTAR",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Coordinación General de Gabinete",
+    description: "Currículum vitae del titular de la Coordinación General de Gabinete.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Gestión Integral del Territorio",
+    description: "Currículum vitae del titular de la Dirección de Gestión Integral del Territorio.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "GESTION INTEGRAL",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Desarrollo Económico",
+    description: "Currículum vitae del titular de la Dirección de Desarrollo Económico y Turismo.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "DESARROLLOECONOMICO",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Currículum — Atención Ciudadana",
+    description: "Currículum vitae del titular de la Dirección de Atención Ciudadana.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "CURRICULUMS",
+    subsubsection: "ATENCION CIUDADANA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Metas y Objetivos 2026
+  {
+    category: "documento",
+    title: "Metas y Objetivos — Atención Ciudadana — 1er Trimestre 2026",
+    description: "Metas y objetivos de Atención Ciudadana correspondientes al 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "METAS Y OBJETIVOS",
+    subsubsection: "2026 / ATENCION CIUDADANA / 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Metas y Objetivos — Bienestar — 1er Trimestre 2026",
+    description: "Metas y objetivos de Bienestar Municipal correspondientes al 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "METAS Y OBJETIVOS",
+    subsubsection: "2026 / BIENESTAR / 1ER. TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Metas y Objetivos — Protección Civil y Bomberos — 1er Trimestre 2026",
+    description: "Metas y objetivos de Protección Civil y Bomberos del 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "METAS Y OBJETIVOS",
+    subsubsection: "2026 / PROTECCION CIVIL Y BOMBEROS / 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Metas y Objetivos — Oficialía Mayor",
+    description: "Metas y objetivos de la Oficialía Mayor para el ejercicio 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "METAS Y OBJETIVOS",
+    subsubsection: "2026 / OFICIALIA MAYOR",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Metas y Objetivos — Gestión Integral — 1er Trimestre 2026",
+    description: "Metas y objetivos de la Dirección de Gestión Integral del Territorio del 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "METAS Y OBJETIVOS",
+    subsubsection: "2026 / GESTION INTEGRAL / 1ER. TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Metas y Objetivos — Desarrollo Económico — 1er Trimestre 2026",
+    description: "Metas y objetivos de la Dirección de Desarrollo Económico del 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "METAS Y OBJETIVOS",
+    subsubsection: "2026 / DESARROLLOECONOMICO / 1er TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Metas y Objetivos — Sindicatura — 1er Trimestre 2026",
+    description: "Metas y objetivos de la Sindicatura Procuradora correspondientes al 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "METAS Y OBJETIVOS",
+    subsubsection: "2026 / SINDICATURA / 1ER TRIMESTRE",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Metas y Objetivos — Seguridad Ciudadana — 1er Trimestre 2026",
+    description: "Metas y objetivos de Seguridad Ciudadana y Tránsito del 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "METAS Y OBJETIVOS",
+    subsubsection: "2026 / SEGURIDAD CIUDADANA / 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Declaración Patrimonial
+  {
+    category: "documento",
+    title: "Declaración Patrimonial — Segundo Trimestre",
+    description: "Declaraciones patrimoniales de servidores públicos correspondientes al segundo trimestre.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "DECLARACION PATRIMONIAL",
+    subsubsection: "SEGUNDO TRIMESTRE",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Declaración Patrimonial — Tercer Trimestre",
+    description: "Declaraciones patrimoniales de servidores públicos correspondientes al tercer trimestre.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "DECLARACION PATRIMONIAL",
+    subsubsection: "TERCER TRIMESTRE",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Trámites Ofrecidos
+  {
+    category: "documento",
+    title: "Trámites Ofrecidos — Protección Civil y Bomberos",
+    description: "Catálogo de trámites ofrecidos por la Coordinación de Protección Civil y Bomberos.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "TRAMITES OFRECIDOS",
+    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Servicios Ofrecidos
+  {
+    category: "documento",
+    title: "Servicios Ofrecidos — Bienestar",
+    description: "Catálogo de servicios ofrecidos por la Dirección de Bienestar Municipal.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "SERVICIOS OFRECIDOS",
+    subsubsection: "BIENESTAR",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+
+  // Licencias
+  {
+    category: "documento",
+    title: "Licencias de Construcción — DGIT — 1er Trimestre 2026",
+    description: "Registro de licencias de construcción emitidas por la DGIT en el 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "LICENCIAS",
+    subsubsection: "LICENCIAS DE CONSTRUCCION / DGIT / 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Licencias de Uso de Suelo — DGIT — 1er Trimestre 2026",
+    description: "Registro de licencias de uso de suelo emitidas por la DGIT en el 1er Trimestre 2026.",
+    url: "#",
+    date: "2026",
+    section: "Administracion",
+    subsection: "LICENCIAS",
+    subsubsection: "LICENCIAS DE USO DE SUELO / DGIT / 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  // ─── SESIONES DE CABILDO Y ACTAS DE SESION DE COMISION (Normatividad) ───
+  {
+    category: "documento",
+    title: "Sesiones de Cabildo - XXV Ayuntamiento",
+    description: "Actas y documentos de las Sesiones de Cabildo correspondientes al XXV Ayuntamiento.",
+    url: "#",
+    date: "2026",
+    section: "Normatividad",
+    subsection: "SESIONES DE CABILDO",
+    subsubsection: "XXV AYUNTAMIENTO",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Sesiones de Cabildo - XXIV Ayuntamiento",
+    description: "Actas y documentos de las Sesiones de Cabildo correspondientes al XXIV Ayuntamiento.",
+    url: "#",
+    date: "2026",
+    section: "Normatividad",
+    subsection: "SESIONES DE CABILDO",
+    subsubsection: "XXIV",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Actas de Sesión - 18 Comisión de Protección Civil y Bomberos",
+    description: "Actas de sesión de la 18 Comisión de Protección Civil y Bomberos.",
+    url: "#",
+    date: "2026",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION",
+    subsubsection: "18 COMISION DE PROTECCION CIVIL Y BOMBEROS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Actas de Sesión - 22 Comisión de Protección a las Infancias y Adolescencia",
+    description: "Actas de sesión de la 22 Comisión de Protección a las Infancias y Adolescencia.",
+    url: "#",
+    date: "2026",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION",
+    subsubsection: "22 COMISION DE PROTECCION A LAS INFANCIAS Y ADOLESCENCIA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Actas de Sesión - 3 Comisión de Obras y Servicios Públicos",
+    description: "Actas de sesión de la 3 Comisión de Obras y Servicios Públicos.",
+    url: "#",
+    date: "2026",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION",
+    subsubsection: "3 COMISION DE OBRAS Y SERVICIOS PUBLICOS",
+    type: "PDF",
+    ambito: "Municipal"
+  }
 ];
 
 const enlacesExternos = [
@@ -449,17 +994,28 @@ const enlacesExternos = [
   },
 ];
 
-export const normatividadData = {
-  categories: [
-    { id: "all", label: "Todos", count: documentos.length },
-    { id: "leyes", label: "Leyes", count: documentos.filter(d => d.category === "leyes").length },
-    { id: "código", label: "Códigos", count: documentos.filter(d => d.category === "código").length },
-    { id: "reglamentos", label: "Reglamentos", count: documentos.filter(d => d.category === "reglamentos").length },
-    { id: "manuales", label: "Manuales", count: documentos.filter(d => d.category === "manuales").length },
-    { id: "lineamientos", label: "Lineamientos", count: documentos.filter(d => d.category === "lineamientos").length },
-  ],
-  documentos,
-  enlacesExternos
+export const normatividadData = (() => {
+  const docs = documentos.filter(d => d.section === "Normatividad" || !d.section);
+  return {
+    categories: [
+      { id: "all", label: "Todos", count: docs.length },
+      { id: "leyes", label: "Leyes", count: docs.filter(d => d.category === "leyes").length },
+      { id: "código", label: "Códigos", count: docs.filter(d => d.category === "código").length },
+      { id: "reglamentos", label: "Reglamentos", count: docs.filter(d => d.category === "reglamentos").length },
+      { id: "manuales", label: "Manuales", count: docs.filter(d => d.category === "manuales").length },
+      { id: "lineamientos", label: "Lineamientos", count: docs.filter(d => d.category === "lineamientos").length },
+    ],
+    documentos: docs,
+    enlacesExternos
+  };
+})();
+
+export const finanzasData = {
+  documentos: documentos.filter(d => d.section === "Finanzas")
+};
+
+export const administracionData = {
+  documentos: documentos.filter(d => d.section === "Administracion")
 };
 
 export const siteData = {
@@ -527,11 +1083,11 @@ export const getAllSearchableItems = (): SearchableItem[] => [
     type: "Sección" as const,
     url: s.href
   })),
-  ...normatividadData.documentos.map(d => ({
+  ...documentos.map(d => ({
     title: d.title,
     description: d.description,
     type: "Documento" as const,
-    url: d.url,
+    url: d.url || "#",
     ambito: d.ambito
   })),
   ...siteData.articulos.map(a => ({

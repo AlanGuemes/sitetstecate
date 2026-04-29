@@ -36,6 +36,72 @@ export default function NormatividadPage() {
     return matchesCategory && matchesSearch
   })
 
+  const cabildoDocs = filteredDocuments.filter(d => (d as any).subsection === "SESIONES DE CABILDO")
+  const actasDocs = filteredDocuments.filter(d => (d as any).subsection === "ACTAS DE SESION DE COMISION")
+  const generalDocs = filteredDocuments.filter(d => (d as any).subsection !== "SESIONES DE CABILDO" && (d as any).subsection !== "ACTAS DE SESION DE COMISION")
+
+  const renderDocumentCard = (doc: any, index: number) => (
+    <div key={`${doc.title}-${index}`} className="bg-card border border-border rounded-lg p-5 hover:shadow-md transition-shadow">
+      <div className="flex items-start gap-4">
+        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+          {doc.category === "leyes" && <Gavel className="h-6 w-6 text-primary" />}
+          {doc.category === "código" && <BookOpen className="h-6 w-6 text-primary" />}
+          {doc.category === "reglamentos" && <Scale className="h-6 w-6 text-primary" />}
+          {doc.category === "manuales" && <Book className="h-6 w-6 text-primary" />}
+          {(doc.category === "lineamientos" || doc.category === "documento") && <FileText className="h-6 w-6 text-primary" />}
+        </div>
+        <div className="flex-1">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <div className="flex gap-2 mb-2">
+                <span className="inline-block px-2 py-0.5 text-xs font-medium bg-secondary/10 text-secondary rounded capitalize">
+                  {doc.category}
+                </span>
+                {(doc as any).ambito && (
+                  <span className={`inline-block px-2 py-0.5 text-[10px] font-bold rounded uppercase ${(doc as any).ambito === 'Constitucional'
+                      ? 'bg-slate-800 text-slate-100'
+                      : (doc as any).ambito === 'Federal'
+                        ? 'bg-accent text-accent-foreground'
+                        : (doc as any).ambito === 'Estatal'
+                          ? 'bg-secondary text-secondary-foreground'
+                          : 'bg-primary text-primary-foreground'
+                    }`}>
+                    {(doc as any).ambito}
+                  </span>
+                )}
+              </div>
+              <h3 className="font-semibold text-foreground">{doc.title}</h3>
+              <p className="text-sm text-muted-foreground mt-1">{doc.description}</p>
+              <p className="text-xs text-muted-foreground mt-2">{doc.date}</p>
+            </div>
+          </div>
+          <div className="mt-4 flex gap-2">
+            {doc.url && doc.url !== "#" ? (
+              <>
+                <a
+                  href={doc.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-muted text-foreground rounded-lg hover:bg-accent transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Ver en línea
+                </a>
+              </>
+            ) : (
+              <>
+                <button className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-muted/50 text-muted-foreground rounded-lg cursor-not-allowed" disabled>
+                  <ExternalLink className="h-4 w-4" />
+                  Ver en línea
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
@@ -102,77 +168,45 @@ export default function NormatividadPage() {
         <section className="py-12 bg-background">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid lg:grid-cols-3 gap-8">
+
               {/* Documentos */}
               <div className="lg:col-span-2">
-                <SectionHeader
-                  title="Marco Normativo"
-                  description={`${filteredDocuments.length} documentos encontrados`}
-                />
+                {(generalDocs.length > 0 || (cabildoDocs.length === 0 && actasDocs.length === 0)) && (
+                  <div className="mb-10">
+                    <SectionHeader
+                      title="Marco Normativo"
+                      description={`${generalDocs.length} documentos encontrados`}
+                    />
 
-                <div className="space-y-4 max-h-[700px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">
-                  {filteredDocuments.map((doc, index) => (
-                    <div key={index} className="bg-card border border-border rounded-lg p-5 hover:shadow-md transition-shadow">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          {doc.category === "leyes" && <Gavel className="h-6 w-6 text-primary" />}
-                          {doc.category === "código" && <BookOpen className="h-6 w-6 text-primary" />}
-                          {doc.category === "reglamentos" && <Scale className="h-6 w-6 text-primary" />}
-                          {doc.category === "manuales" && <Book className="h-6 w-6 text-primary" />}
-                          {doc.category === "lineamientos" && <FileText className="h-6 w-6 text-primary" />}
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-start justify-between gap-4">
-                            <div>
-                              <div className="flex gap-2 mb-2">
-                                <span className="inline-block px-2 py-0.5 text-xs font-medium bg-secondary/10 text-secondary rounded capitalize">
-                                  {doc.category}
-                                </span>
-                                {(doc as any).ambito && (
-                                  <span className={`inline-block px-2 py-0.5 text-[10px] font-bold rounded uppercase ${
-                                    (doc as any).ambito === 'Constitucional'
-                                      ? 'bg-slate-800 text-slate-100'
-                                      : (doc as any).ambito === 'Federal'
-                                        ? 'bg-accent text-accent-foreground'
-                                        : (doc as any).ambito === 'Estatal'
-                                          ? 'bg-secondary text-secondary-foreground'
-                                          : 'bg-primary text-primary-foreground'
-                                    }`}>
-                                    {(doc as any).ambito}
-                                  </span>
-                                )}
-                              </div>
-                              <h3 className="font-semibold text-foreground">{doc.title}</h3>
-                              <p className="text-sm text-muted-foreground mt-1">{doc.description}</p>
-                              <p className="text-xs text-muted-foreground mt-2">{doc.date}</p>
-                            </div>
-                          </div>
-                          <div className="mt-4 flex gap-2">
-                            {doc.url ? (
-                              <>
-                                <a
-                                  href={doc.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-muted text-foreground rounded-lg hover:bg-accent transition-colors"
-                                >
-                                  <ExternalLink className="h-4 w-4" />
-                                  Ver en línea
-                                </a>
-                              </>
-                            ) : (
-                              <>
-                                <button className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-muted/50 text-muted-foreground rounded-lg cursor-not-allowed" disabled>
-                                  <ExternalLink className="h-4 w-4" />
-                                  Ver en línea
-                                </button>
-                              </>
-                            )}
-                          </div>
-                        </div>
-                      </div>
+                    <div className="space-y-4 max-h-[700px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">
+                      {generalDocs.map(renderDocumentCard)}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                )}
+
+                {cabildoDocs.length > 0 && (
+                  <div className="mb-10">
+                    <SectionHeader
+                      title="Sesiones de Cabildo"
+                      description={`${cabildoDocs.length} documentos encontrados`}
+                    />
+                    <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">
+                      {cabildoDocs.map(renderDocumentCard)}
+                    </div>
+                  </div>
+                )}
+
+                {actasDocs.length > 0 && (
+                  <div className="mb-10">
+                    <SectionHeader
+                      title="Actas de Sesión de Comisión"
+                      description={`${actasDocs.length} documentos encontrados`}
+                    />
+                    <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">
+                      {actasDocs.map(renderDocumentCard)}
+                    </div>
+                  </div>
+                )}
 
                 {filteredDocuments.length === 0 && (
                   <div className="text-center py-12">

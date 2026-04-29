@@ -1,288 +1,282 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { SectionHeader } from "@/components/section-header"
 import { DocumentItem } from "@/components/document-item"
-import { 
-  Users, 
-  FileText, 
-  ClipboardList, 
+import { administracionData } from "@/lib/data"
+import {
+  BookOpen,
+  AlertTriangle,
+  BarChart2,
+  UserCheck,
+  Target,
+  Shield,
+  ClipboardList,
   HeartHandshake,
-  Building,
-  FileCheck,
-  Briefcase,
-  Calendar,
-  Download
+  Key,
+  FileText,
+  ChevronDown,
+  ChevronRight,
 } from "lucide-react"
-import Link from "next/link"
 
-const servicios = [
+const seccionConfig: Record<
+  string,
   {
-    title: "Trámites y Servicios",
-    description: "Catálogo completo de trámites y servicios disponibles para la ciudadanía.",
+    label: string
+    description: string
+    bg: string
+    icon: React.ComponentType<{ className?: string }>
+  }
+> = {
+  "PLAN MUNICIPAL DE DESARROLLO": {
+    label: "Plan Municipal de Desarrollo",
+    description:
+      "Documento estratégico rector que define las prioridades, metas y objetivos de la administración municipal para el período de gobierno.",
+    bg: "bg-background",
+    icon: BookOpen,
+  },
+  "SERVIDORES PUBLICOS CON SANCIONES": {
+    label: "Servidores Públicos con Sanciones",
+    description:
+      "Relación oficial de servidores públicos que han recibido sanciones administrativas, en cumplimiento de la Ley General de Responsabilidades Administrativas.",
+    bg: "bg-muted",
+    icon: AlertTriangle,
+  },
+  ESTADISTICAS: {
+    label: "Estadísticas",
+    description:
+      "Indicadores estadísticos de atención y operación de las distintas áreas de la administración municipal, publicados trimestralmente.",
+    bg: "bg-background",
+    icon: BarChart2,
+  },
+  CURRICULUMS: {
+    label: "Currículums",
+    description:
+      "Currículums vitae de los servidores públicos de primer nivel del H. Ayuntamiento de Tecate, B.C., en cumplimiento a la Ley de Transparencia.",
+    bg: "bg-muted",
+    icon: UserCheck,
+  },
+  "METAS Y OBJETIVOS": {
+    label: "Metas y Objetivos",
+    description:
+      "Informe trimestral de metas y objetivos alcanzados por las áreas administrativas del municipio para el ejercicio fiscal 2026.",
+    bg: "bg-background",
+    icon: Target,
+  },
+  "DECLARACION PATRIMONIAL": {
+    label: "Declaración Patrimonial",
+    description:
+      "Declaraciones patrimoniales presentadas por los servidores públicos municipales, en cumplimiento de las obligaciones de transparencia.",
+    bg: "bg-muted",
+    icon: Shield,
+  },
+  "TRAMITES OFRECIDOS": {
+    label: "Trámites Ofrecidos",
+    description:
+      "Catálogo de trámites administrativos disponibles para la ciudadanía, con información de requisitos, costos y tiempos de respuesta.",
+    bg: "bg-background",
     icon: ClipboardList,
-    href: "#tramites"
   },
-  {
-    title: "Programas Sociales",
-    description: "Información sobre programas de apoyo social y desarrollo comunitario.",
+  "SERVICIOS OFRECIDOS": {
+    label: "Servicios Ofrecidos",
+    description:
+      "Servicios municipales disponibles para la ciudadanía, con información sobre cobertura, horarios y canales de acceso.",
+    bg: "bg-muted",
     icon: HeartHandshake,
-    href: "#programas"
   },
-  {
-    title: "Atención Ciudadana",
-    description: "Canales de atención, quejas, sugerencias y solicitudes de información.",
-    icon: Users,
-    href: "#atencion"
+  LICENCIAS: {
+    label: "Licencias",
+    description:
+      "Registro público de licencias de construcción y uso de suelo emitidas por la Dirección de Gestión Integral del Territorio (DGIT).",
+    bg: "bg-background",
+    icon: Key,
   },
-  {
-    title: "Licitaciones y Contratos",
-    description: "Información sobre procesos de licitación y contratos públicos.",
-    icon: FileCheck,
-    href: "#licitaciones"
-  },
-]
+}
 
-const tramites = [
-  {
-    title: "Licencia de Funcionamiento Comercial",
-    description: "Autorización para operar establecimientos comerciales.",
-    requisitos: "INE, Comprobante de domicilio, Uso de suelo"
-  },
-  {
-    title: "Permiso de Construcción",
-    description: "Autorización para realizar obras de construcción o remodelación.",
-    requisitos: "Planos, Escrituras, Licencia de uso de suelo"
-  },
-  {
-    title: "Constancia de Residencia",
-    description: "Documento que acredita el domicilio del solicitante.",
-    requisitos: "INE, Comprobante de domicilio reciente"
-  },
-  {
-    title: "Pago de Predial",
-    description: "Liquidación del impuesto predial de bienes inmuebles.",
-    requisitos: "Clave catastral o recibo anterior"
-  },
-]
-
-const programas = [
-  {
-    title: "Programa de Apoyo Alimentario",
-    description: "Apoyo en especie para familias en situación de vulnerabilidad.",
-    beneficiarios: "500 familias",
-    periodo: "Enero - Diciembre 2025"
-  },
-  {
-    title: "Becas Educativas",
-    description: "Apoyo económico para estudiantes de educación básica y media superior.",
-    beneficiarios: "1,200 estudiantes",
-    periodo: "Ciclo escolar 2024-2025"
-  },
-  {
-    title: "Mejoramiento de Vivienda",
-    description: "Apoyo para mejoras en viviendas de familias de bajos recursos.",
-    beneficiarios: "300 familias",
-    periodo: "Enero - Junio 2025"
-  },
-  {
-    title: "Apoyo a Adultos Mayores",
-    description: "Programa de atención integral para personas de la tercera edad.",
-    beneficiarios: "800 adultos mayores",
-    periodo: "Permanente"
-  },
-]
-
-const actas = [
-  {
-    title: "Acta de Cabildo Ordinaria - Marzo 2025",
-    date: "15 de Marzo, 2025"
-  },
-  {
-    title: "Acta de Cabildo Ordinaria - Febrero 2025",
-    date: "15 de Febrero, 2025"
-  },
-  {
-    title: "Acta de Cabildo Extraordinaria - Enero 2025",
-    date: "28 de Enero, 2025"
-  },
-  {
-    title: "Acta de Cabildo Ordinaria - Enero 2025",
-    date: "15 de Enero, 2025"
-  },
+const seccionOrder = [
+  "PLAN MUNICIPAL DE DESARROLLO",
+  "SERVIDORES PUBLICOS CON SANCIONES",
+  "ESTADISTICAS",
+  "CURRICULUMS",
+  "METAS Y OBJETIVOS",
+  "DECLARACION PATRIMONIAL",
+  "TRAMITES OFRECIDOS",
+  "SERVICIOS OFRECIDOS",
+  "LICENCIAS",
 ]
 
 export default function AdministracionPage() {
+  const grouped = seccionOrder.reduce<Record<string, typeof administracionData.documentos>>(
+    (acc, key) => {
+      acc[key] = administracionData.documentos.filter((d) => d.subsection === key)
+      return acc
+    },
+    {}
+  )
+
+  const totalDocs = administracionData.documentos.length
+  const totalSecciones = seccionOrder.filter((k) => (grouped[k]?.length ?? 0) > 0).length
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
-      
+
       <main className="flex-1">
-        {/* Hero */}
-        <section className="bg-primary py-12 lg:py-16">
-          <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <h1 className="text-3xl lg:text-4xl font-bold text-primary-foreground">Administración</h1>
-            <p className="mt-4 text-primary-foreground/80 max-w-2xl leading-relaxed">
-              Información sobre trámites, servicios, programas sociales y atención ciudadana de la administración municipal.
+        {/* ── Hero ──────────────────────────────────────────────────── */}
+        <section className="bg-primary py-14 lg:py-20 relative overflow-hidden">
+          <div className="pointer-events-none absolute -top-16 -right-16 w-72 h-72 rounded-full bg-white/5" />
+          <div className="pointer-events-none absolute bottom-0 left-1/3 w-48 h-48 rounded-full bg-white/5" />
+
+          <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+              <div>
+                <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-widest text-primary-foreground/60 mb-3">
+                  <FileText className="h-3.5 w-3.5" />
+                  H. Ayuntamiento de Tecate, B.C.
+                </span>
+                <h1 className="text-3xl lg:text-5xl font-bold text-primary-foreground leading-tight">
+                  Administración
+                </h1>
+                <p className="mt-4 text-primary-foreground/75 max-w-2xl leading-relaxed text-base lg:text-lg">
+                  Consulta la información administrativa pública del municipio: estadísticas de
+                  gestión, currículums, metas y objetivos, declaraciones patrimoniales, trámites,
+                  servicios y licencias.
+                </p>
+              </div>
+              <div className="flex gap-4 flex-shrink-0">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-4 text-center min-w-[90px]">
+                  <p className="text-3xl font-bold text-primary-foreground">{totalDocs}</p>
+                  <p className="text-xs text-primary-foreground/70 mt-1">Documentos</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-4 text-center min-w-[90px]">
+                  <p className="text-3xl font-bold text-primary-foreground">{totalSecciones}</p>
+                  <p className="text-xs text-primary-foreground/70 mt-1">Secciones</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-4 text-center min-w-[90px]">
+                  <p className="text-3xl font-bold text-primary-foreground">2026</p>
+                  <p className="text-xs text-primary-foreground/70 mt-1">Ejercicio</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Secciones colapsables ─────────────────────────────────── */}
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 py-10 space-y-3">
+          {seccionOrder.map((key) => {
+            const docs = grouped[key]
+            if (!docs || docs.length === 0) return null
+
+            const config = seccionConfig[key]
+            const Icon = config.icon
+
+            type DocWithSub = typeof docs[number] & { subsubsection?: string }
+            const hasSubgroups = docs.some((d) => (d as DocWithSub).subsubsection)
+
+            // Build sub-groups if needed
+            const subGroups: Record<string, DocWithSub[]> = {}
+            if (hasSubgroups) {
+              ;(docs as DocWithSub[]).forEach((doc) => {
+                const sub = doc.subsubsection ?? "General"
+                if (!subGroups[sub]) subGroups[sub] = []
+                subGroups[sub].push(doc)
+              })
+            }
+
+            return (
+              <details
+                key={key}
+                id={`section-${key}`}
+                className="group bg-card border border-border rounded-xl overflow-hidden shadow-sm group-open:border-primary/40 group-open:shadow-md"
+              >
+                {/* ── Collapsible header (summary) ── */}
+                <summary className="flex items-center gap-4 px-5 py-4 cursor-pointer list-none hover:bg-primary/5 group-open:bg-primary/5 transition-colors">
+                  {/* Icon */}
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </div>
+
+                  {/* Title + description */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="font-semibold text-foreground text-sm">{config.label}</span>
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                        {docs.length} {docs.length === 1 ? "doc." : "docs."}
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1 hidden sm:block">
+                      {config.description}
+                    </p>
+                  </div>
+
+                  {/* Chevron */}
+                  <ChevronDown className="h-4 w-4 text-muted-foreground shrink-0 transition-transform duration-200 group-open:rotate-180" />
+                </summary>
+
+                {/* ── Content ── */}
+                <div className="border-t border-border">
+                  {!hasSubgroups ? (
+                    <div className="divide-y divide-border">
+                      {docs.map((doc, i) => (
+                        <DocumentItem
+                          key={i}
+                          title={doc.title}
+                          description={doc.description}
+                          date={doc.date}
+                          downloadUrl={doc.url}
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="divide-y divide-border">
+                      {Object.entries(subGroups).map(([subKey, subDocs]) => (
+                        <div key={subKey}>
+                          {/* Sub-group label */}
+                          <div className="flex items-center gap-2 px-5 py-2.5 bg-primary/5">
+                            <ChevronRight className="h-3.5 w-3.5 text-primary" />
+                            <span className="text-xs font-bold uppercase tracking-wider text-primary">
+                              {subKey}
+                            </span>
+                          </div>
+                          <div className="divide-y divide-border">
+                            {subDocs.map((doc, i) => (
+                              <DocumentItem
+                                key={i}
+                                title={doc.title}
+                                description={doc.description}
+                                date={doc.date}
+                                downloadUrl={doc.url}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </details>
+            )
+          })}
+        </div>
+
+        {/* ── Footer CTA ────────────────────────────────────────────── */}
+        <section className="bg-primary/5 border-t border-border py-10">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8 text-center">
+            <p className="text-sm text-muted-foreground">
+              La información publicada en esta sección es de carácter público y se actualiza
+              trimestralmente conforme a la{" "}
+              <a
+                href="https://www.congresobc.gob.mx/Documentos/ProcesoParlamentario/Leyes/TOMO_I/20250916_LEYDETRANSPARENCIA.PDF"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-foreground hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4"
+              >
+                Ley de Transparencia y Acceso a la Información Pública del Estado de Baja California
+              </a>
+              .
             </p>
           </div>
         </section>
-
-        {/* Servicios principales */}
-        <section className="py-12 bg-background">
-          <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {servicios.map((servicio, index) => (
-                <Link 
-                  key={index} 
-                  href={servicio.href}
-                  className="bg-card border border-border rounded-lg p-6 hover:shadow-lg hover:border-primary/20 transition-all group"
-                >
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
-                    <servicio.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="font-semibold text-foreground">{servicio.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-2">{servicio.description}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Trámites */}
-        <section id="tramites" className="py-12 bg-muted">
-          <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <SectionHeader 
-              title="Trámites y Servicios" 
-              description="Catálogo de trámites más solicitados por la ciudadanía."
-            />
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              {tramites.map((tramite, index) => (
-                <div key={index} className="bg-card border border-border rounded-lg p-6">
-                  <h3 className="font-semibold text-foreground">{tramite.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-2">{tramite.description}</p>
-                  <div className="mt-4 pt-4 border-t border-border">
-                    <p className="text-xs font-medium text-secondary">Requisitos principales:</p>
-                    <p className="text-xs text-muted-foreground mt-1">{tramite.requisitos}</p>
-                  </div>
-                  <button className="mt-4 text-sm px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-                    Ver detalles
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Programas Sociales */}
-        <section id="programas" className="py-12 bg-background">
-          <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <SectionHeader 
-              title="Programas Sociales" 
-              description="Programas de apoyo implementados por la administración municipal."
-            />
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              {programas.map((programa, index) => (
-                <div key={index} className="bg-card border border-border rounded-lg overflow-hidden">
-                  <div className="bg-secondary/10 px-6 py-4 border-b border-border">
-                    <h3 className="font-semibold text-foreground">{programa.title}</h3>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-sm text-muted-foreground">{programa.description}</p>
-                    <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <p className="text-xs font-medium text-secondary">Beneficiarios</p>
-                        <p className="text-foreground">{programa.beneficiarios}</p>
-                      </div>
-                      <div>
-                        <p className="text-xs font-medium text-secondary">Período</p>
-                        <p className="text-foreground">{programa.periodo}</p>
-                      </div>
-                    </div>
-                    <button className="mt-4 text-sm px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors">
-                      Más información
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Actas de Cabildo */}
-        <section id="recursos" className="py-12 bg-muted">
-          <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <SectionHeader 
-              title="Actas de Cabildo" 
-              description="Actas de las sesiones del H. Ayuntamiento."
-            />
-            
-            <div className="bg-card border border-border rounded-lg divide-y divide-border max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20">
-              {actas.map((acta, index) => (
-                <div key={index} className="flex items-center justify-between p-4 hover:bg-muted transition-colors">
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <FileText className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-medium text-foreground">{acta.title}</h4>
-                      <p className="text-xs text-muted-foreground">{acta.date}</p>
-                    </div>
-                  </div>
-                  <button className="p-2 text-muted-foreground hover:text-primary transition-colors">
-                    <Download className="h-5 w-5" />
-                  </button>
-                </div>
-              ))}
-            </div>
-            
-            <div className="mt-6 text-center">
-              <button className="text-sm px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors">
-                Ver todas las actas
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Gaceta Municipal */}
-        <section className="py-12 bg-background">
-          <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <SectionHeader 
-              title="Gaceta Municipal" 
-              description="Publicaciones oficiales del H. Ayuntamiento."
-            />
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-card border border-border rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-accent/50 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground">2025</h3>
-                <p className="text-sm text-muted-foreground mt-2">3 publicaciones</p>
-                <button className="mt-4 text-sm text-primary hover:underline">Ver ediciones</button>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-accent/50 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground">2024</h3>
-                <p className="text-sm text-muted-foreground mt-2">12 publicaciones</p>
-                <button className="mt-4 text-sm text-primary hover:underline">Ver ediciones</button>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-accent/50 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground">2023</h3>
-                <p className="text-sm text-muted-foreground mt-2">12 publicaciones</p>
-                <button className="mt-4 text-sm text-primary hover:underline">Ver ediciones</button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
-      
+
       <Footer />
     </div>
   )

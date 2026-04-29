@@ -16,13 +16,13 @@ export function ModuleCard({ title, description, href, icon: Icon, variant = "pr
     secondary: "bg-secondary",
     accent: "bg-accent",
   }
-  
+
   const iconTextColors = {
     primary: "text-primary-foreground",
     secondary: "text-secondary-foreground",
     accent: "text-accent-foreground",
   }
-  
+
   const titleColors = {
     primary: "text-primary",
     secondary: "text-secondary",
@@ -37,16 +37,16 @@ export function ModuleCard({ title, description, href, icon: Icon, variant = "pr
       )}>
         <Icon className={cn("h-6 w-6", iconTextColors[variant])} />
       </div>
-      
+
       <h3 className={cn("text-lg font-semibold mb-2", titleColors[variant])}>
         {title}
       </h3>
-      
+
       <p className="text-sm text-muted-foreground leading-relaxed mb-4">
         {description}
       </p>
-      
-      <Link 
+
+      <Link
         href={href}
         className={cn(
           "inline-flex items-center gap-1 text-sm font-medium transition-colors",

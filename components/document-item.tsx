@@ -10,13 +10,13 @@ interface DocumentItemProps {
   variant?: "default" | "bordered"
 }
 
-export function DocumentItem({ 
-  title, 
-  description, 
-  date, 
-  downloadUrl, 
+export function DocumentItem({
+  title,
+  description,
+  date,
+  downloadUrl,
   externalUrl,
-  variant = "default" 
+  variant = "default"
 }: DocumentItemProps) {
   return (
     <div className={cn(
@@ -26,7 +26,7 @@ export function DocumentItem({
       <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
         <FileText className="h-5 w-5 text-primary" />
       </div>
-      
+
       <div className="flex-1 min-w-0">
         <h4 className="text-sm font-medium text-foreground truncate">{title}</h4>
         {description && (
@@ -36,11 +36,13 @@ export function DocumentItem({
           <p className="text-xs text-muted-foreground mt-1">{date}</p>
         )}
       </div>
-      
+
       <div className="flex items-center gap-2">
         {downloadUrl && (
           <a
             href={downloadUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-2 text-muted-foreground hover:text-primary transition-colors"
             title="Descargar"
           >

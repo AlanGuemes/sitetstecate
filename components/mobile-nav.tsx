@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { usePathname, useRouter } from "next/navigation"
 import {
   Home, Search, ClipboardList, LayoutGrid, Navigation,
   LayoutDashboard, Eye, Building2, Users, Wallet, Scale, X
@@ -28,13 +29,15 @@ const modules = [
   { label: "Administración", href: "/administracion", icon: Users },
   { label: "Finanzas", href: "/finanzas", icon: Wallet },
   { label: "Normatividad", href: "/normatividad", icon: Scale },
-  { label: "Recursos Humanos", href: "/administracion#recursos", icon: LayoutDashboard },
+  { label: "Inicio", href: "/", icon: Home },
 ]
 
 export function MobileNav() {
   const [active, setActive] = useState<string>("top")
   const [visible, setVisible] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 80)
@@ -71,12 +74,21 @@ export function MobileNav() {
   const handleNav = (item: NavItem) => {
     setMenuOpen(false)
     if (item.scrollTop) {
-      window.scrollTo({ top: 0, behavior: "smooth" })
-      setActive("top")
+      if (pathname === "/") {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+        setActive("top")
+      } else {
+        router.push("/")
+      }
       return
     }
-    const el = document.getElementById(item.id)
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
+    
+    if (pathname === "/") {
+      const el = document.getElementById(item.id)
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
+    } else {
+      router.push(`/#${item.id}`)
+    }
   }
 
   return (
