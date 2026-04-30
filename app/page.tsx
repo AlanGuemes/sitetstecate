@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border">
               <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none">48+</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none">40+</p>
                 <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Artículos Publicados</p>
               </div>
               <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
