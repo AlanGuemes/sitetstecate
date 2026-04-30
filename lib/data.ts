@@ -1,4 +1,4 @@
-﻿import {
+import {
   FileText,
   Search,
   Users,
@@ -2919,7 +2919,6 @@ export const siteData = {
     { art: "Artículo 81", href: "/articulos?tab=81" },
     { art: "Artículo 82", href: "/articulos?tab=82" },
     { art: "Artículo 83", href: "/articulos?tab=83" },
-    { art: "Artículo 85", href: "/articulos?tab=85" },
   ],
   solicitudes: [
     { label: "Solicitud de Acceso a la Información", href: "https://www.plataformadetransparencia.org.mx/Inicio", icon: FileText },
@@ -2928,7 +2927,7 @@ export const siteData = {
     { label: "Material de Apoyo", href: "/transparencia#material", icon: Users, disabled: true },
   ],
   recursos: [
-    { label: "Tabla de Aplicabilidad", href: "https://s3-public-presigner-production-ed97.up.railway.app/2025_TablaAplicabilidad_AytoTecate.pdf", icon: LayoutGrid, external: true },
+    { label: "Tabla de Aplicabilidad", href: "https://s3-public-presigner-production-ed97.up.railway.app/67._AYTO_TE_TA.pdf", icon: LayoutGrid, external: true },
     { label: "Archivo de Sesiones Anteriores", href: "/transparencia#sesiones", icon: FileText, disabled: true },
     { label: "¿Cómo presentar una solicitud?", href: "/autoridad-garante#solicitud", icon: FileText },
     { label: "¿Cómo presentar una denuncia ciudadana?", href: "/autoridad-garante#denuncia", icon: Eye },

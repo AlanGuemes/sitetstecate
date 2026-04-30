@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { SectionHeader } from "@/components/section-header"
 import { ScrollIndexGeneric } from "@/components/scroll-index"
 import { Users, Info, Building2, Table, FileText, CheckCircle2, Scale, ExternalLink, MapPin, Mail, Phone, Clock, ChevronRight, Shield } from "lucide-react"
-import { contactoPrincipal } from "@/lib/data"
+import { contactoPrincipal, siteData } from "@/lib/data"
 import Link from "next/link"
 
 const navSections = [
@@ -318,15 +318,20 @@ export default function TransparenciaPage() {
                   Dictaminada por el ITAIPBC. Especifica los artículos y fracciones de la LTAIPBC aplicables a este sujeto obligado.
                 </p>
               </div>
-              <a
-                href="https://s3-public-presigner-production-ed97.up.railway.app/2025_TablaAplicabilidad_AytoTecate.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors shrink-0"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Ver documento
-              </a>
+              {(() => {
+                const recurso = siteData.recursos.find(r => r.label === "Tabla de Aplicabilidad");
+                return (
+                  <a
+                    href={recurso?.href || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors shrink-0"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Ver documento
+                  </a>
+                );
+              })()}
             </div>
           </div>
         </section>
