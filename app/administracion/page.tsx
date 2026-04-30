@@ -123,11 +123,18 @@ const seccionConfig: Record<
     bg: "bg-muted",
     icon: HeartHandshake,
   },
-  LICENCIAS: {
-    label: "Licencias",
+  "LICENCIAS DE CONSTRUCCION": {
+    label: "Licencias de Construcción — DGIT — 1er Trimestre 2026",
     description:
-      "Registro público de licencias de construcción y uso de suelo emitidas por la Dirección de Gestión Integral del Territorio (DGIT).",
+      "Registro público de licencias de construcción emitidas por la Dirección de Gestión Integral del Territorio (DGIT).",
     bg: "bg-background",
+    icon: Key,
+  },
+  "LICENCIAS DE USO DE SUELO": {
+    label: "LICENCIAS DE USO DE SUELO / DGIT / 1ER TRIMESTRE 2026",
+    description:
+      "Registro público de licencias de uso de suelo emitidas por la Dirección de Gestión Integral del Territorio (DGIT).",
+    bg: "bg-muted",
     icon: Key,
   },
 }
@@ -141,7 +148,8 @@ const seccionOrder = [
   "DECLARACION PATRIMONIAL",
   "TRAMITES OFRECIDOS",
   "SERVICIOS OFRECIDOS",
-  "LICENCIAS",
+  "LICENCIAS DE CONSTRUCCION",
+  "LICENCIAS DE USO DE SUELO",
 ]
 
 export default function AdministracionPage() {
@@ -215,7 +223,7 @@ export default function AdministracionPage() {
             // Build sub-groups if needed
             const subGroups: Record<string, DocWithSub[]> = {}
             if (hasSubgroups) {
-              ;(docs as DocWithSub[]).forEach((doc) => {
+              ; (docs as DocWithSub[]).forEach((doc) => {
                 const sub = doc.subsubsection ?? "General"
                 if (!subGroups[sub]) subGroups[sub] = []
                 subGroups[sub].push(doc)

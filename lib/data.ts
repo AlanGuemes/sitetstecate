@@ -1,4 +1,4 @@
-import {
+﻿import {
   FileText,
   Search,
   Users,
@@ -1192,10 +1192,10 @@ const documentos = [
     category: "documento",
     title: "Licencias de Construcción — DGIT — 1er Trimestre 2026",
     description: "Registro de licencias de construcción emitidas por la DGIT en el 1er Trimestre 2026.",
-    url: "#",
+    url: "https://docs.google.com/spreadsheets/d/1pVU8xNduyEh5tcMvESl2HgfhVDwZX9nX/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
     date: "2026",
     section: "Administracion",
-    subsection: "LICENCIAS",
+    subsection: "LICENCIAS DE CONSTRUCCION",
     subsubsection: "LICENCIAS DE CONSTRUCCION / DGIT / 1ER TRIMESTRE 2026",
     type: "PDF",
     ambito: "Municipal"
@@ -1204,10 +1204,10 @@ const documentos = [
     category: "documento",
     title: "Licencias de Uso de Suelo — DGIT — 1er Trimestre 2026",
     description: "Registro de licencias de uso de suelo emitidas por la DGIT en el 1er Trimestre 2026.",
-    url: "#",
+    url: "https://docs.google.com/spreadsheets/d/11V4rX5HRKM88lNTmQYC08vSR_RPY7ZxM/edit?usp=drive_link&ouid=107626160719506934016&rtpof=true&sd=true",
     date: "2026",
     section: "Administracion",
-    subsection: "LICENCIAS",
+    subsection: "LICENCIAS DE USO DE SUELO",
     subsubsection: "LICENCIAS DE USO DE SUELO / DGIT / 1ER TRIMESTRE 2026",
     type: "PDF",
     ambito: "Municipal"
