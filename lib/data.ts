@@ -1,4 +1,4 @@
-import {
+﻿import {
   FileText,
   Search,
   Users,
@@ -2648,13 +2648,85 @@ const documentos = [
   // Trámites Ofrecidos
   {
     category: "documento",
-    title: "Trámites Ofrecidos — Protección Civil y Bomberos",
-    description: "Catálogo de trámites ofrecidos por la Coordinación de Protección Civil y Bomberos.",
-    url: "#",
+    title: "Acta de Inspección — 2026 — Bomberos",
+    description: "Formato de acta de inspección para la coordinación de bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Acta_de_Inspeccion-2026-BOMBEROS.pdf",
     date: "2026",
     section: "Administracion",
     subsection: "TRAMITES OFRECIDOS",
-    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
+    subsubsection: "BOMBEROS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Formato de Inspección — 2026 — Bomberos",
+    description: "Formato oficial de inspección de bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Formato_de_Inspeccion_2026-BOMBEROS.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "TRAMITES OFRECIDOS",
+    subsubsection: "BOMBEROS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Para Venta / Renta — 2026 — Bomberos",
+    description: "Trámite de bomberos para venta o renta de inmuebles.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Para_venta-renta-2026-BOMBEROS.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "TRAMITES OFRECIDOS",
+    subsubsection: "BOMBEROS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Registro para Empresas Comerciales — 2026",
+    description: "Registro oficial para empresas comerciales.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Registro_para_empresas_comerciales-2026.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "TRAMITES OFRECIDOS",
+    subsubsection: "BOMBEROS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Solicitud de Factibilidad de Proyecto — 2026 — Bomberos",
+    description: "Solicitud de factibilidad de proyecto para bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Solicitud_de_factibilidad_de_proyecto-BOMBEROS-2026.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "TRAMITES OFRECIDOS",
+    subsubsection: "BOMBEROS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Solicitud de Factibilidad de Servicio — 2026 — Bomberos",
+    description: "Solicitud de factibilidad de servicio para bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Solicitud_de_factibilidad_de_servicio-2026-BOMBEROS.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "TRAMITES OFRECIDOS",
+    subsubsection: "BOMBEROS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Termografía — 2026 — Bomberos",
+    description: "Documento sobre el trámite de termografía para bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/termogra-2026-BOMBEROS.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "TRAMITES OFRECIDOS",
+    subsubsection: "BOMBEROS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2662,9 +2734,33 @@ const documentos = [
   // Servicios Ofrecidos
   {
     category: "documento",
-    title: "Servicios Ofrecidos — Bienestar",
-    description: "Catálogo de servicios ofrecidos por la Dirección de Bienestar Municipal.",
-    url: "#",
+    title: "Alcalde en tu Colonia",
+    description: "Programa de atención ciudadana Alcalde en tu Colonia.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Alcalde_En_tu_Colonia.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "SERVICIOS OFRECIDOS",
+    subsubsection: "BIENESTAR",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Jornadas de Bienestar",
+    description: "Calendario e información de las Jornadas de Bienestar.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Jornadas_de_Bienestar.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "SERVICIOS OFRECIDOS",
+    subsubsection: "BIENESTAR",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Tardes de Café",
+    description: "Encuentros ciudadanos Tardes de Café.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/Tardes_De_Cafe.pdf",
     date: "2026",
     section: "Administracion",
     subsection: "SERVICIOS OFRECIDOS",
