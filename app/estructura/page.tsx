@@ -1,11 +1,14 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { DocumentItem } from "@/components/document-item"
+import { DocumentCard } from "@/components/document-card"
 import {
   Phone, Mail, MapPin, Download, Network, Scale, ListChecks,
   ChevronDown, Building2, BookOpen, FileText,
 } from "lucide-react"
-import { contactos, contactosParamunicipales } from "@/lib/data"
+import { contactos, contactosParamunicipales, nominas } from "@/lib/data"
+
+const GRID_THRESHOLD = 4;
 
 const organigramas = [
   {
@@ -76,32 +79,7 @@ const organigramas = [
   }
 ]
 
-const atribuciones = [
-  {
-    title: "Manual de Organización General",
-    description: "Documento que describe la estructura, funciones y responsabilidades de cada área.",
-    date: "Actualizado: Enero 2025",
-    url: "#"
-  },
-  {
-    title: "Reglamento Interior de la Administración",
-    description: "Normativa que regula la organización y funcionamiento de las dependencias.",
-    date: "Actualizado: Diciembre 2024",
-    url: "#"
-  },
-  {
-    title: "Catálogo de Puestos",
-    description: "Descripción de los puestos y perfiles de la administración municipal.",
-    date: "Actualizado: Enero 2025",
-    url: "#"
-  },
-  {
-    title: "Tabulador de Sueldos",
-    description: "Tabulador de sueldos y salarios del personal de la administración.",
-    date: "Actualizado: Enero 2025",
-    url: "#"
-  },
-]
+
 
 type Contacto = {
   nombre: string
@@ -218,6 +196,7 @@ function CollapsibleSection({
   title,
   description,
   badge,
+  gridBadge,
   children,
 }: {
   id: string
@@ -225,6 +204,7 @@ function CollapsibleSection({
   title: string
   description: string
   badge: string
+  gridBadge?: boolean
   children: React.ReactNode
 }) {
   return (
@@ -239,6 +219,11 @@ function CollapsibleSection({
             <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
               {badge}
             </span>
+            {gridBadge && (
+              <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-primary/10 text-primary hidden sm:inline">
+                Vista en cuadrícula
+              </span>
+            )}
           </div>
           <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1 hidden sm:block">
             {description}
@@ -309,34 +294,34 @@ export default function EstructuraPage() {
             title="Organigramas"
             description="Descarga los organigramas de las diferentes áreas de la administración municipal. Actualizados al ejercicio fiscal 2026."
             badge={`${organigramas.length} documentos`}
+            gridBadge={organigramas.length > GRID_THRESHOLD}
           >
-            <div className="divide-y divide-border">
-              {organigramas.map((org, index) => (
-                <a
-                  key={index}
-                  href={org.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-3.5 hover:bg-primary/5 transition-colors group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
-                    <Network className="h-5 w-5 text-secondary" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-semibold text-foreground text-sm leading-tight group-hover:text-primary transition-colors">{org.title}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5 truncate">{org.description}</p>
-                  </div>
-                  <div className="hidden sm:block w-px h-8 bg-border shrink-0" />
-                  <div className="hidden sm:flex items-center w-36 shrink-0">
-                    <span className="text-xs text-muted-foreground">{org.date}</span>
-                  </div>
-                  <div className="w-px h-8 bg-border shrink-0" />
-                  <div className="flex items-center justify-center w-10 h-10 shrink-0 bg-primary/10 text-primary rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <Download className="h-4 w-4" />
-                  </div>
-                </a>
-              ))}
-            </div>
+            {organigramas.length > GRID_THRESHOLD ? (
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
+                {organigramas.map((org, index) => (
+                  <DocumentCard
+                    key={index}
+                    title={org.title}
+                    description={org.description}
+                    date={org.date}
+                    downloadUrl={org.url}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="divide-y divide-border">
+                {organigramas.map((org, index) => (
+                  <DocumentItem
+                    key={index}
+                    title={org.title}
+                    description={org.description}
+                    date={org.date}
+                    downloadUrl={org.url}
+                    variant="default"
+                  />
+                ))}
+              </div>
+            )}
           </CollapsibleSection>
 
           {/* Directorio Municipal */}
@@ -382,26 +367,41 @@ export default function EstructuraPage() {
             </div>
           </CollapsibleSection>
 
-          {/* Atribuciones y Funciones */}
+          {/* Nominas */}
           <CollapsibleSection
-            id="section-atribuciones"
+            id="section-nominas"
             icon={BookOpen}
-            title="Atribuciones y Funciones"
+            title="Nominas"
             description="Documentos que describen las atribuciones, funciones y perfiles de cada área de la administración municipal."
-            badge={`${atribuciones.length} documentos`}
+            badge={`${nominas.length} documentos`}
+            gridBadge={nominas.length > GRID_THRESHOLD}
           >
-            <div className="divide-y divide-border">
-              {atribuciones.map((doc, i) => (
-                <DocumentItem
-                  key={i}
-                  title={doc.title}
-                  description={doc.description}
-                  date={doc.date}
-                  downloadUrl={doc.url}
-                  variant="default"
-                />
-              ))}
-            </div>
+            {nominas.length > GRID_THRESHOLD ? (
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
+                {nominas.map((doc, i) => (
+                  <DocumentCard
+                    key={i}
+                    title={doc.title}
+                    description={doc.description}
+                    date={doc.date}
+                    downloadUrl={doc.url}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="divide-y divide-border">
+                {nominas.map((doc, i) => (
+                  <DocumentItem
+                    key={i}
+                    title={doc.title}
+                    description={doc.description}
+                    date={doc.date}
+                    downloadUrl={doc.url}
+                    variant="default"
+                  />
+                ))}
+              </div>
+            )}
           </CollapsibleSection>
         </div>
 

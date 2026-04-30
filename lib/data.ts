@@ -1,4 +1,4 @@
-﻿import {
+import {
   FileText,
   Search,
   Users,
@@ -743,9 +743,9 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Gastos de Publicidad — Facturas — Sindicatura",
-    description: "Facturas de gastos de publicidad de Sindicatura.",
-    url: "#",
+    title: "Gastos de Publicidad — SAM 47122 Codice FactEne",
+    description: "Facturas de gastos de publicidad: SAM 47122 Codice FactEne",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47122_Codice_FactEne.pdf",
     date: "2026",
     section: "Finanzas",
     subsection: "GASTOS",
@@ -755,13 +755,565 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Gastos de Representación y Viáticos — Peajes y Viáticos 1er 2026",
-    description: "Gastos de representación y viáticos del 1er trimestre 2026.",
-    url: "#",
+    title: "Gastos de Publicidad — SAM 47158 Veraz FactEne",
+    description: "Facturas de gastos de publicidad: SAM 47158 Veraz FactEne",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47158_Veraz_FactEne.pdf",
     date: "2026",
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "GASTOS DE REPRESENTACION Y VIATICOS / 1ER. TRIMESTRE 2026 / PEAJES Y VIATICOS 1ER 2026",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 47167 Conexion FactEne",
+    description: "Facturas de gastos de publicidad: SAM 47167 Conexion FactEne",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47167_Conexion_FactEne.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 47171 Radio FactEne",
+    description: "Facturas de gastos de publicidad: SAM 47171 Radio FactEne",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47171_Radio_FactEne.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 47189 Portavoz Factenero",
+    description: "Facturas de gastos de publicidad: SAM 47189 Portavoz Factenero",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47189_Portavoz_Factenero.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 47525 Veraz FactFeb",
+    description: "Facturas de gastos de publicidad: SAM 47525 Veraz FactFeb",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47525_Veraz_FactFeb.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 47527 Codice FactFeb",
+    description: "Facturas de gastos de publicidad: SAM 47527 Codice FactFeb",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47527_Codice_FactFeb.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 47543 Radio FactFeb6341",
+    description: "Facturas de gastos de publicidad: SAM 47543 Radio FactFeb6341",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47543_Radio_FactFeb6341.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 47568 Conexion FactFeb",
+    description: "Facturas de gastos de publicidad: SAM 47568 Conexion FactFeb",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47568_Conexion_FactFeb.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 47584 Portavoz FactFeb",
+    description: "Facturas de gastos de publicidad: SAM 47584 Portavoz FactFeb",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_47584_Portavoz_FactFeb.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 48023 Radio FactMzo6354",
+    description: "Facturas de gastos de publicidad: SAM 48023 Radio FactMzo6354",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_48023_Radio_FactMzo6354.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 48029 Codice FactMzo",
+    description: "Facturas de gastos de publicidad: SAM 48029 Codice FactMzo",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_48029_Codice_FactMzo.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 48039 Veraz FactMzo",
+    description: "Facturas de gastos de publicidad: SAM 48039 Veraz FactMzo",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_48039_Veraz_FactMzo.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 48106 Conexion FactMzo",
+    description: "Facturas de gastos de publicidad: SAM 48106 Conexion FactMzo",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_48106_Conexion_FactMzo.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Publicidad — SAM 48201 Portavoz FactMzo",
+    description: "Facturas de gastos de publicidad: SAM 48201 Portavoz FactMzo",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/SAM_48201_Portavoz_FactMzo.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "GASTOS DE PUBLICIDAD / FACTURAS / SINDICATURA",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47174",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47174",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47174.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47276",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47276",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47276.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47287",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47287",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47287.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47288",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47288",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47288.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47480",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47480",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47480.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47481",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47481",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47481.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47494",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47494",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47494.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47495",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47495",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47495.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47500",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47500",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47500.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47536",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47536",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47536.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47537",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47537",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47537.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47538",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47538",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47538.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47571",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47571",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47571.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47630",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47630",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47630.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47632",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47632",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47632.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47640",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47640",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47640.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47688",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47688",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47688.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47692",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47692",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47692.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47801",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47801",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47801.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47849",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47849",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47849.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47944",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47944",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47944.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47945",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47945",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47945.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47956",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47956",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47956.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47979",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47979",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47979.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V47981",
+    description: "Gastos de representación y viáticos: 2026 F GR&V47981",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V47981.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V48013",
+    description: "Gastos de representación y viáticos: 2026 F GR&V48013",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V48013.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V48015",
+    description: "Gastos de representación y viáticos: 2026 F GR&V48015",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V48015.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V48036",
+    description: "Gastos de representación y viáticos: 2026 F GR&V48036",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V48036.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V48125",
+    description: "Gastos de representación y viáticos: 2026 F GR&V48125",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V48125.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V48126",
+    description: "Gastos de representación y viáticos: 2026 F GR&V48126",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V48126.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V48136",
+    description: "Gastos de representación y viáticos: 2026 F GR&V48136",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V48136.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V48165",
+    description: "Gastos de representación y viáticos: 2026 F GR&V48165",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V48165.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Gastos de Representación y Viáticos — 2026 F GR&V48166",
+    description: "Gastos de representación y viáticos: 2026 F GR&V48166",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_F_GR&V48166.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "GASTOS",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1780,5 +2332,87 @@ export const contactosParamunicipales = [
       ""
     ],
     fundamento: "Reglamento de la Administración Pública Municipal – Artículos"
+  }
+];
+
+
+export const nominas = [
+  {
+    "title": "Nómina — Cabildo",
+    "description": "Nómina de Cabildo.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_CABILDO.pdf"
+  },
+  {
+    "title": "Nómina — Coordinación General de Gabinete",
+    "description": "Nómina de Coordinación General de Gabinete.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_COORDINACION_GENERAL_DE_GABINETE.pdf"
+  },
+  {
+    "title": "Nómina — Coordinación Municipal de Protección Civil y Bomberos",
+    "description": "Nómina de Coordinación Municipal de Protección Civil y Bomberos.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_COORDINACION_MUNICIPAL_DE_PROTECCION_CIVIL_Y_BOMBEROS.pdf"
+  },
+  {
+    "title": "Nómina — Dirección de Atención Ciudadana",
+    "description": "Nómina de Dirección de Atención Ciudadana.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_ATENCION_CIUDADANA.pdf"
+  },
+  {
+    "title": "Nómina — Dirección de Bienestar",
+    "description": "Nómina de Dirección de Bienestar.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_BIENESTAR.pdf"
+  },
+  {
+    "title": "Nómina — Dirección de Comunicación Social",
+    "description": "Nómina de Dirección de Comunicación Social.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_COMUNICACION_SOCIAL.pdf"
+  },
+  {
+    "title": "Nómina — Dirección de Desarrollo Económico",
+    "description": "Nómina de Dirección de Desarrollo Económico.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_DESARROLLO_ECONOMICO.pdf"
+  },
+  {
+    "title": "Nómina — Dirección de Gestión Integral del Territorio",
+    "description": "Nómina de Dirección de Gestión Integral del Territorio.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_GESTION_INTEGRAL_DEL_TERRITORIO.pdf"
+  },
+  {
+    "title": "Nómina — Dirección de Seguridad Ciudadana y Tránsito Municipal",
+    "description": "Nómina de Dirección de Seguridad Ciudadana y Tránsito Municipal.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_SEGURIDAD_CIUDADANA_Y_TRANSITO_MUNICIPAL.pdf"
+  },
+  {
+    "title": "Nómina — Oficialía Mayor",
+    "description": "Nómina de Oficialía Mayor.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_OFICIALIA_MAYOR.pdf"
+  },
+  {
+    "title": "Nómina — Secretaría del Ayuntamiento",
+    "description": "Nómina de Secretaría del Ayuntamiento.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_SECRETARIA_DEL_AYUNTAMIENTO.pdf"
+  },
+  {
+    "title": "Nómina — Sindicatura Municipal",
+    "description": "Nómina de Sindicatura Municipal.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_SINDICATURA_MUNICIPAL.pdf"
+  },
+  {
+    "title": "Nómina — Tesorería Municipal",
+    "description": "Nómina de Tesorería Municipal.",
+    "date": "2026",
+    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_TESORERIA_MUNICIPAL.pdf"
   }
 ];
