@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { DocumentItem } from "@/components/document-item"
+import { DocumentCard } from "@/components/document-card"
 import { administracionData } from "@/lib/data"
 import {
   BookOpen,
@@ -16,6 +17,46 @@ import {
   ChevronDown,
   ChevronRight,
 } from "lucide-react"
+
+/** Threshold: above this count, switch to compact card grid */
+const GRID_THRESHOLD = 4
+
+/** Renders a document list or compact grid depending on item count */
+function DocList({
+  docs,
+}: {
+  docs: Array<{ title: string; description?: string; date?: string; url?: string }>
+}) {
+  if (docs.length > GRID_THRESHOLD) {
+    return (
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
+        {docs.map((doc, i) => (
+          <DocumentCard
+            key={i}
+            title={doc.title}
+            description={doc.description}
+            date={doc.date}
+            downloadUrl={doc.url}
+          />
+        ))}
+      </div>
+    )
+  }
+
+  return (
+    <div className="divide-y divide-border">
+      {docs.map((doc, i) => (
+        <DocumentItem
+          key={i}
+          title={doc.title}
+          description={doc.description}
+          date={doc.date}
+          downloadUrl={doc.url}
+        />
+      ))}
+    </div>
+  )
+}
 
 const seccionConfig: Record<
   string,
@@ -201,6 +242,11 @@ export default function AdministracionPage() {
                       <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
                         {docs.length} {docs.length === 1 ? "doc." : "docs."}
                       </span>
+                      {docs.length > GRID_THRESHOLD && (
+                        <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-primary/10 text-primary hidden sm:inline">
+                          Vista en cuadrícula
+                        </span>
+                      )}
                     </div>
                     <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1 hidden sm:block">
                       {config.description}
@@ -213,10 +259,11 @@ export default function AdministracionPage() {
 
                 {/* ── Content ── */}
                 <div className="border-t border-border">
-                  {!hasSubgroups ? (
-                    <div className="divide-y divide-border">
+                  {docs.length > GRID_THRESHOLD ? (
+                    /* ── Flat grid for large sections ── */
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
                       {docs.map((doc, i) => (
-                        <DocumentItem
+                        <DocumentCard
                           key={i}
                           title={doc.title}
                           description={doc.description}
@@ -225,28 +272,24 @@ export default function AdministracionPage() {
                         />
                       ))}
                     </div>
+                  ) : !hasSubgroups ? (
+                    /* ── Small flat list ── */
+                    <DocList docs={docs} />
                   ) : (
+                    /* ── Sub-grouped list (few docs total) ── */
                     <div className="divide-y divide-border">
                       {Object.entries(subGroups).map(([subKey, subDocs]) => (
                         <div key={subKey}>
-                          {/* Sub-group label */}
                           <div className="flex items-center gap-2 px-5 py-2.5 bg-primary/5">
                             <ChevronRight className="h-3.5 w-3.5 text-primary" />
                             <span className="text-xs font-bold uppercase tracking-wider text-primary">
                               {subKey}
                             </span>
+                            <span className="text-[10px] text-muted-foreground ml-auto">
+                              {subDocs.length} {subDocs.length === 1 ? "doc." : "docs."}
+                            </span>
                           </div>
-                          <div className="divide-y divide-border">
-                            {subDocs.map((doc, i) => (
-                              <DocumentItem
-                                key={i}
-                                title={doc.title}
-                                description={doc.description}
-                                date={doc.date}
-                                downloadUrl={doc.url}
-                              />
-                            ))}
-                          </div>
+                          <DocList docs={subDocs} />
                         </div>
                       ))}
                     </div>
