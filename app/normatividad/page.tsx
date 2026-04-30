@@ -2,6 +2,7 @@
 
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import Link from "next/link"
 import { SectionHeader } from "@/components/section-header"
 import { DocumentItem } from "@/components/document-item"
 import { useState } from "react"
@@ -19,7 +20,7 @@ import {
   BookOpen
 } from "lucide-react"
 
-import { normatividadData } from "@/lib/data"
+import { normatividadData, siteData } from "@/lib/data"
 
 const { categories, documentos, enlacesExternos } = normatividadData
 
@@ -28,9 +29,9 @@ export default function NormatividadPage() {
   const [searchQuery, setSearchQuery] = useState("")
 
   const filteredDocuments = documentos.filter(doc => {
-    const matchesCategory = selectedCategory === "all" || 
-      (selectedCategory === "sesiones" 
-        ? (doc as any).subsection === "SESIONES DE CABILDO" 
+    const matchesCategory = selectedCategory === "all" ||
+      (selectedCategory === "sesiones"
+        ? (doc as any).subsection === "SESIONES DE CABILDO"
         : doc.category === selectedCategory)
     const searchLower = normalizeSearch(searchQuery)
     const matchesSearch = normalizeSearch(doc.title).includes(searchLower) ||
@@ -98,12 +99,12 @@ export default function NormatividadPage() {
                 </span>
                 {(doc as any).ambito && (
                   <span className={`inline-block px-2 py-0.5 text-[10px] font-bold rounded uppercase ${(doc as any).ambito === 'Constitucional'
-                      ? 'bg-slate-800 text-slate-100'
-                      : (doc as any).ambito === 'Federal'
-                        ? 'bg-accent text-accent-foreground'
-                        : (doc as any).ambito === 'Estatal'
-                          ? 'bg-secondary text-secondary-foreground'
-                          : 'bg-primary text-primary-foreground'
+                    ? 'bg-slate-800 text-slate-100'
+                    : (doc as any).ambito === 'Federal'
+                      ? 'bg-accent text-accent-foreground'
+                      : (doc as any).ambito === 'Estatal'
+                        ? 'bg-secondary text-secondary-foreground'
+                        : 'bg-primary text-primary-foreground'
                     }`}>
                     {(doc as any).ambito}
                   </span>
@@ -289,9 +290,12 @@ export default function NormatividadPage() {
                     <p className="text-sm text-muted-foreground mb-4">
                       Si necesitas algún documento que no está disponible, puedes solicitarlo a través de la Unidad de Transparencia.
                     </p>
-                    <button className="w-full text-sm px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
+                    <Link
+                      href={siteData.recursos.find(r => r.label === "¿Cómo presentar una solicitud?")?.href || "/autoridad-garante#solicitud"}
+                      className="block w-full text-center text-sm px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                    >
                       Solicitar información
-                    </button>
+                    </Link>
                   </div>
 
                   {/* Estadísticas */}

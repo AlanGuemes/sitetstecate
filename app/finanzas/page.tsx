@@ -205,13 +205,9 @@ export default function FinanzasPage() {
                   <p className="text-3xl font-bold text-primary-foreground">{totalDocs}</p>
                   <p className="text-xs text-primary-foreground/70 mt-1">Documentos</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-4 text-center min-w-[90px]">
-                  <p className="text-3xl font-bold text-primary-foreground">{totalSecciones}</p>
-                  <p className="text-xs text-primary-foreground/70 mt-1">Secciones</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-4 text-center min-w-[90px]">
-                  <p className="text-3xl font-bold text-primary-foreground">2026</p>
-                  <p className="text-xs text-primary-foreground/70 mt-1">Ejercicio</p>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-4 text-center min-w-[100px]">
+                  <p className="text-3xl font-bold text-primary-foreground">Abril 2026</p>
+                  <p className="text-xs text-primary-foreground/70 mt-1">Actualización</p>
                 </div>
               </div>
             </div>
@@ -233,7 +229,7 @@ export default function FinanzasPage() {
             // Build sub-groups if needed
             const subGroups: Record<string, DocWithSub[]> = {}
             if (hasSubgroups) {
-              ;(docs as DocWithSub[]).forEach((doc) => {
+              ; (docs as DocWithSub[]).forEach((doc) => {
                 const sub = doc.subsubsection ?? "General"
                 if (!subGroups[sub]) subGroups[sub] = []
                 subGroups[sub].push(doc)
