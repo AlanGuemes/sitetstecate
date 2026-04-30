@@ -28,7 +28,10 @@ export default function NormatividadPage() {
   const [searchQuery, setSearchQuery] = useState("")
 
   const filteredDocuments = documentos.filter(doc => {
-    const matchesCategory = selectedCategory === "all" || doc.category === selectedCategory
+    const matchesCategory = selectedCategory === "all" || 
+      (selectedCategory === "sesiones" 
+        ? (doc as any).subsection === "SESIONES DE CABILDO" 
+        : doc.category === selectedCategory)
     const searchLower = searchQuery.toLowerCase()
     const matchesSearch = doc.title.toLowerCase().includes(searchLower) ||
       doc.description.toLowerCase().includes(searchLower) ||
@@ -36,7 +39,24 @@ export default function NormatividadPage() {
     return matchesCategory && matchesSearch
   })
 
-  const cabildoDocs = filteredDocuments.filter(d => (d as any).subsection === "SESIONES DE CABILDO")
+  const cabildoDocs = filteredDocuments
+    .filter(d => (d as any).subsection === "SESIONES DE CABILDO")
+    .sort((a, b) => {
+      const titleA = a.title.toUpperCase();
+      const titleB = b.title.toUpperCase();
+
+      // Prioridad por Ayuntamiento (XXV > XXIV)
+      const ayunA = titleA.includes("XXV") ? 25 : titleA.includes("XXIV") ? 24 : 0;
+      const ayunB = titleB.includes("XXV") ? 25 : titleB.includes("XXIV") ? 24 : 0;
+
+      if (ayunA !== ayunB) return ayunB - ayunA;
+
+      // Orden descendente por número de sesión
+      const numA = parseInt(titleA.match(/NO\.\s*(\d+)/)?.[1] || "0");
+      const numB = parseInt(titleB.match(/NO\.\s*(\d+)/)?.[1] || "0");
+
+      return numB - numA;
+    })
   const actasDocs = filteredDocuments.filter(d => (d as any).subsection === "ACTAS DE SESION DE COMISION")
   const generalDocs = filteredDocuments.filter(d => (d as any).subsection !== "SESIONES DE CABILDO" && (d as any).subsection !== "ACTAS DE SESION DE COMISION")
 
