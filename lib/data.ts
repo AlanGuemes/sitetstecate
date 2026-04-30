@@ -11,6 +11,160 @@ import {
 const documentos = [
   {
     category: "documento",
+    title: "Acta No. 13 - Comisión Medio Ambiente, Bienestar Animal y Desarrollo Sustentable",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_13_COMISION_MEDIO_AMBIENTE,_BIENESTAR_ANIMAL_Y_DESARROLLO_SUSTENTABLE.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 6 - Comisión de Obras y Servicios Públicos",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_6_COMISION_DE_OBRAS_Y_SERVICIOS_PUBLICOS.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 5 - Protección a las Infancias y Adolescencia",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO.5_PROTECCION_A_LAS_INFANCIAS_Y_ADOLESCENCIA.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 6 - Protección a las Infancias y Adolescencia",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO.6_PROTECCION_A_LAS_INFANCIAS_Y_ADOLESCENCIA.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 7 - Protección a las Infancias y Adolescencia",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO.7_PROTECCION_A_LAS_INFANCIAS_Y_ADOLESCENCIA.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 8 - Bienestar",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO.8_BIENESTAR.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 8 - Protección a las Infancias y Adolescencia",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO.8_PROTECCION_A_LAS_INFANCIAS_Y_ADOLESCENCIA.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 9 - de Comisión de Protección Civil y Bomberos",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO.9_DE_COMISION_DE_PROTECCION_CIVIL_Y_BOMBEROS.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 9 - Protección a las Infancias y Adolescencia",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO.9_PROTECCION_A_LAS_INFANCIAS_Y_ADOLESCENCIA.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 3 - Comisión de Obras y Servicios Públicos",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO._3_COMISION_DE_OBRAS_Y_SERVICIOS_PUBLICOS.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 4 - Comisión de Obras y Servicios Públicos",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO._4_COMISION_DE_OBRAS_Y_SERVICIOS_PUBLICOS.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 5 - Comisión Obras y Servicios Públicos",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO._5_COMISION_OBRAS_Y_SERVICIOS_PUBLICOS.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 8 - Comisión de Protección Civil y Bomberos",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_NO._8_COMISION_DE_PROTECCION_CIVIL_Y_BOMBEROS.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
+    title: "Acta No. 12 - Comisión Educación Cultura Ciencia y Tecnología",
+    description: "Acta de sesión de comisión.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_SESION_12_COMISION_EDUCACION_CULTURA_CIENCIA_Y_TECNOLOGIA.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+    subsection: "ACTAS DE SESION DE COMISION"
+  },
+  {
+    category: "documento",
     title: "Sesion De Cabildo No. 55 Ordinaria - XXV Ayuntamiento",
     description: "Acta de la sesión de Cabildo del XXV Ayuntamiento.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/ACTA_DE_CABILDO_55_ORDINARIA.zip",
@@ -2547,30 +2701,6 @@ const documentos = [
   // ─── SESIONES DE CABILDO Y ACTAS DE SESION DE COMISION (Normatividad) ───
   {
     category: "documento",
-    title: "Sesiones de Cabildo - XXV Ayuntamiento",
-    description: "Actas y documentos de las Sesiones de Cabildo correspondientes al XXV Ayuntamiento.",
-    url: "#",
-    date: "2026",
-    section: "Normatividad",
-    subsection: "SESIONES DE CABILDO",
-    subsubsection: "XXV AYUNTAMIENTO",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Sesiones de Cabildo - XXIV Ayuntamiento",
-    description: "Actas y documentos de las Sesiones de Cabildo correspondientes al XXIV Ayuntamiento.",
-    url: "#",
-    date: "2026",
-    section: "Normatividad",
-    subsection: "SESIONES DE CABILDO",
-    subsubsection: "XXIV",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
     title: "Actas de Sesión - 18 Comisión de Protección Civil y Bomberos",
     description: "Actas de sesión de la 18 Comisión de Protección Civil y Bomberos.",
     url: "#",
@@ -2602,6 +2732,50 @@ const documentos = [
     section: "Normatividad",
     subsection: "ACTAS DE SESION DE COMISION",
     subsubsection: "3 COMISION DE OBRAS Y SERVICIOS PUBLICOS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Pensionados y Jubilados — 1er Trimestre",
+    description: "Listado de pensionados y jubilados correspondiente al 1er Trimestre.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/PENSIONADOS_Y_JUBILADOS_1ER_TRIMESTRE.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "PENSIONADOS Y JUBILADOS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Pensionados y Jubilados — 2do Trimestre",
+    description: "Listado de pensionados y jubilados correspondiente al 2do Trimestre.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/PENSIONADOS_Y_JUBILADOS_2DO_TRIMESTRE.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "PENSIONADOS Y JUBILADOS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Pensionados y Jubilados — 3er Trimestre",
+    description: "Listado de pensionados y jubilados correspondiente al 3er Trimestre.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/PENSIONADOS_Y_JUBILADOS_3ER_TRIMESTRE.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "PENSIONADOS Y JUBILADOS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Pensionados y Jubilados — 4to Trimestre",
+    description: "Listado de pensionados y jubilados correspondiente al 4to Trimestre.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/PENSIONADOS_Y_JUBILADOS_4TO_TRIMESTRE.pdf",
+    date: "2026",
+    section: "Administracion",
+    subsection: "PENSIONADOS Y JUBILADOS",
     type: "PDF",
     ambito: "Municipal"
   }

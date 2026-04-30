@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { SectionHeader } from "@/components/section-header"
 import { DocumentItem } from "@/components/document-item"
 import { useState } from "react"
-import { cn } from "@/lib/utils"
+import { cn, normalizeSearch } from "@/lib/utils"
 import {
   Scale,
   FileText,
@@ -32,10 +32,10 @@ export default function NormatividadPage() {
       (selectedCategory === "sesiones" 
         ? (doc as any).subsection === "SESIONES DE CABILDO" 
         : doc.category === selectedCategory)
-    const searchLower = searchQuery.toLowerCase()
-    const matchesSearch = doc.title.toLowerCase().includes(searchLower) ||
-      doc.description.toLowerCase().includes(searchLower) ||
-      ((doc as any).ambito && (doc as any).ambito.toLowerCase().includes(searchLower))
+    const searchLower = normalizeSearch(searchQuery)
+    const matchesSearch = normalizeSearch(doc.title).includes(searchLower) ||
+      normalizeSearch(doc.description).includes(searchLower) ||
+      ((doc as any).ambito && normalizeSearch((doc as any).ambito).includes(searchLower))
     return matchesCategory && matchesSearch
   })
 
@@ -57,7 +57,26 @@ export default function NormatividadPage() {
 
       return numB - numA;
     })
-  const actasDocs = filteredDocuments.filter(d => (d as any).subsection === "ACTAS DE SESION DE COMISION")
+  const actasDocs = filteredDocuments
+    .filter(d => (d as any).subsection === "ACTAS DE SESION DE COMISION")
+    .sort((a, b) => {
+      const titleA = a.title.toUpperCase();
+      const titleB = b.title.toUpperCase();
+
+      // Extraer nombre de la comisión (texto después del guion)
+      const comisionA = titleA.split("-")[1]?.trim() || titleA;
+      const comisionB = titleB.split("-")[1]?.trim() || titleB;
+
+      // Primero ordenar alfabéticamente por Comisión
+      if (comisionA < comisionB) return -1;
+      if (comisionA > comisionB) return 1;
+
+      // Si es la misma comisión, ordenar por número de acta (descendente)
+      const numA = parseInt(titleA.match(/NO\.\s*(\d+)/)?.[1] || "0");
+      const numB = parseInt(titleB.match(/NO\.\s*(\d+)/)?.[1] || "0");
+
+      return numB - numA;
+    })
   const generalDocs = filteredDocuments.filter(d => (d as any).subsection !== "SESIONES DE CABILDO" && (d as any).subsection !== "ACTAS DE SESION DE COMISION")
 
   const renderDocumentCard = (doc: any, index: number) => (

@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Search, FileText, ExternalLink, ChevronRight, BookOpen } from "lucide-react"
+import { normalizeSearch } from "@/lib/utils"
 
 // ─── Datos por artículo ──────────────────────────────────────────────────────
 
@@ -408,12 +409,12 @@ function ArticulosContent() {
 
   const fraccionesFiltradas = useMemo(() => {
     if (!filtro.trim()) return articuloActual.fracciones
-    const q = filtro.toLowerCase()
+    const q = normalizeSearch(filtro)
     return articuloActual.fracciones.filter(
       (f) =>
-        f.titulo.toLowerCase().includes(q) ||
-        f.descripcion.toLowerCase().includes(q) ||
-        f.fraccion.toLowerCase().includes(q)
+        normalizeSearch(f.titulo).includes(q) ||
+        normalizeSearch(f.descripcion).includes(q) ||
+        normalizeSearch(f.fraccion).includes(q)
     )
   }, [filtro, articuloActual])
 

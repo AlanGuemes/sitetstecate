@@ -137,6 +137,12 @@ const seccionConfig: Record<
     bg: "bg-muted",
     icon: Key,
   },
+  "PENSIONADOS Y JUBILADOS": {
+    label: "Pensionados y Jubilados",
+    description: "Listado de pensionados y jubilados del municipio, organizado por periodos trimestrales.",
+    bg: "bg-background",
+    icon: UserCheck,
+  },
 }
 
 const seccionOrder = [
@@ -144,6 +150,7 @@ const seccionOrder = [
   "SERVIDORES PUBLICOS CON SANCIONES",
   "ESTADISTICAS",
   "CURRICULUMS",
+  "PENSIONADOS Y JUBILADOS",
   "METAS Y OBJETIVOS",
   "DECLARACION PATRIMONIAL",
   "TRAMITES OFRECIDOS",

@@ -8,6 +8,8 @@ import { getAllSearchableItems } from "@/lib/data"
 import { FileText, ExternalLink, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
+import { normalizeSearch } from "@/lib/utils"
+
 function BusquedaContent() {
   const searchParams = useSearchParams()
   const q = searchParams.get("q") || ""
@@ -16,11 +18,11 @@ function BusquedaContent() {
   const results = q.trim() === "" 
     ? [] 
     : allItems.filter(item => {
-        const query = q.toLowerCase();
-        return item.title.toLowerCase().includes(query) || 
-               item.description.toLowerCase().includes(query) ||
-               item.type.toLowerCase().includes(query) ||
-               (item.ambito && item.ambito.toLowerCase().includes(query));
+        const query = normalizeSearch(q);
+        return normalizeSearch(item.title).includes(query) || 
+               normalizeSearch(item.description).includes(query) ||
+               normalizeSearch(item.type).includes(query) ||
+               (item.ambito && normalizeSearch(item.ambito).includes(query));
       })
 
   return (
