@@ -13,17 +13,19 @@ import { normalizeSearch } from "@/lib/utils"
 function BusquedaContent() {
   const searchParams = useSearchParams()
   const q = searchParams.get("q") || ""
-  
+
   const allItems = getAllSearchableItems()
-  const results = q.trim() === "" 
-    ? [] 
+  const results = q.trim() === ""
+    ? []
     : allItems.filter(item => {
-        const query = normalizeSearch(q);
-        return normalizeSearch(item.title).includes(query) || 
-               normalizeSearch(item.description).includes(query) ||
-               normalizeSearch(item.type).includes(query) ||
-               (item.ambito && normalizeSearch(item.ambito).includes(query));
-      })
+      const query = normalizeSearch(q);
+      return normalizeSearch(item.title).includes(query) ||
+        normalizeSearch(item.description).includes(query) ||
+        normalizeSearch(item.type).includes(query) ||
+        (item.ambito && normalizeSearch(item.ambito).includes(query)) ||
+        (item.subsection && normalizeSearch(item.subsection).includes(query)) ||
+        (item.subsubsection && normalizeSearch(item.subsubsection).includes(query));
+    })
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -56,20 +58,18 @@ function BusquedaContent() {
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex flex-col">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className={`w-fit px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase ${
-                            result.type === 'Documento' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
-                            result.type === 'Artículo' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
-                            result.type === 'Sección' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400' :
-                            'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
-                          }`}>
+                          <span className={`w-fit px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase ${result.type === 'Documento' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
+                              result.type === 'Artículo' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
+                                result.type === 'Sección' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400' :
+                                  'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
+                            }`}>
                             {result.type}
                           </span>
                           {result.ambito && (
-                            <span className={`w-fit px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase ${
-                              result.ambito === 'Federal' ? 'bg-accent text-accent-foreground' : 
-                              result.ambito === 'Estatal' ? 'bg-secondary text-secondary-foreground' : 
-                              'bg-primary text-primary-foreground'
-                            }`}>
+                            <span className={`w-fit px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase ${result.ambito === 'Federal' ? 'bg-accent text-accent-foreground' :
+                                result.ambito === 'Estatal' ? 'bg-secondary text-secondary-foreground' :
+                                  'bg-primary text-primary-foreground'
+                              }`}>
                               {result.ambito}
                             </span>
                           )}
@@ -77,16 +77,15 @@ function BusquedaContent() {
                         <h3 className="text-lg font-bold text-foreground mb-1">{result.title}</h3>
                         <p className="text-sm text-muted-foreground">{result.description}</p>
                       </div>
-                      
-                      <a 
+
+                      <a
                         href={result.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full transition-colors ${
-                          result.type === "Documento" 
+                        target={result.url.startsWith("http") ? "_blank" : "_self"}
+                        rel={result.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className={`flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full transition-colors ${result.type === "Documento"
                             ? "bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground"
                             : "bg-secondary/10 text-secondary hover:bg-secondary hover:text-secondary-foreground"
-                        }`}
+                          }`}
                         title={result.type === "Documento" ? "Abrir documento" : "Ir a la sección"}
                       >
                         {result.type === "Documento" ? (
@@ -104,7 +103,7 @@ function BusquedaContent() {
                 <FileText className="h-12 w-12 text-muted-foreground/30 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-foreground mb-2">Sin resultados</h3>
                 <p className="text-muted-foreground text-sm max-w-md mx-auto">
-                  No pudimos encontrar ningún documento, artículo o trámite que coincida con tu búsqueda. 
+                  No pudimos encontrar ningún documento, artículo o trámite que coincida con tu búsqueda.
                   Intenta utilizar términos más generales o verifica la ortografía.
                 </p>
               </div>

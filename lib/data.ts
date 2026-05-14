@@ -10,6 +10,16 @@ import {
 
 const documentos = [
   {
+    category: "reglamentos",
+    title: "Reglamento Interior para la Sindicatura Procuradora",
+    description: "Reglamento Interior para la Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_REGLAMENTO_INTERIOR_PARA_LA_SINDICATURA_PROCURADORA.pdf",
+    date: "2026",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Normatividad",
+  },
+  {
     category: "documento",
     title: "Acta No. 13 - Comisión Medio Ambiente, Bienestar Animal y Desarrollo Sustentable",
     description: "Acta de sesión de comisión.",
@@ -1369,6 +1379,798 @@ const documentos = [
     ambito: "Municipal"
   },
   // ─── FINANZAS ─────────────────────────────────────────────────────────────
+  {
+    category: "documento",
+    title: "A) Estado de Situación Financiera — LDF",
+    description: "Estado de Situación Financiera — Ley de Disciplina Financiera — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/EFI_A)_ESTADO_DE_SITUACION_FINANCIERA_LDF.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) Estado Analítico de la Deuda y Otros Pasivos — LDF",
+    description: "Estado Analítico de la Deuda y Otros Pasivos — Ley de Disciplina Financiera — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/EFI_B)_ESTADO_ANALITICO_DE_LA_DEUDAS_Y_OTROS_PASIVOS_LDF.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "C) Estado Analítico del Ingreso — LDF",
+    description: "Estado Analítico del Ingreso — Ley de Disciplina Financiera — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/EFI_C)_ESTADO_ANALITICO_DEL_INGRESO_LDF.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) 1 Clasificación Administrativa — LDF",
+    description: "Clasificación Administrativa — Ley de Disciplina Financiera — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/EFI_D)_1_CLASIFICACION_ADMINISTRATIVA_LDF.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) 2 Clasificación por Objeto del Gasto — LDF",
+    description: "Clasificación por Objeto del Gasto — Ley de Disciplina Financiera — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/EFI_D)_2_CLASIFICACION_POR_OBJETO_DEL_GASTO_LDF.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) 3 Clasificación Funcional — LDF",
+    description: "Clasificación Funcional — Ley de Disciplina Financiera — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/EFI_D)_3_CLASIFICACION_FUNCIONAL_LDF.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) 4 Clasificación de Servicios Personales — LDF",
+    description: "Clasificación de Servicios Personales — Ley de Disciplina Financiera — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/EFI_D)_4_CLASIFICACION_DE_SERVICIOS_PERSONALES_LDF.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "E) Balance Presupuestario — LDF",
+    description: "Balance Presupuestario — Ley de Disciplina Financiera — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/EFI_E)_BALANCE_PESUPUESTARIO_LDF.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "F) Obligaciones Diferentes de Financiamiento — LDF",
+    description: "Obligaciones Diferentes de Financiamiento — Ley de Disciplina Financiera — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/EFI_F)_OBLIGACIONES_DIFERENTES_DE_FINANCIAMIENTO_LDF.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "A) Estado Analítico del Ingreso",
+    description: "Estado Analítico del Ingreso — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_A)_ESTADO_ANALITICO_DEL_INGRESO.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) 1 Clasificación Administrativa",
+    description: "Clasificación Administrativa — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_B)_1_CLASIFICACION_ADMINISTRATIVA.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) 2 Clasificación Económica",
+    description: "Clasificación Económica — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_B)_2_CLASIFICACION_ECONOMICA.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) 3 Clasificación por Objeto del Gasto",
+    description: "Clasificación por Objeto del Gasto — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_B)_3_CLASIFICACION_POR_OBJETO_DEL_GASTO.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) 4 Clasificación Funcional",
+    description: "Clasificación Funcional — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_B)_4_CLASIFICACION_FUNCIONAL.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) Estado Analítico del Ejercicio del Presupuesto de Egresos",
+    description: "Estado Analítico del Ejercicio del Presupuesto de Egresos — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_B)_ESTADO_ANALITICO_DEL_EJERCICIO_DEL_PRESUPUESTO_DE_EGRESOS.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "C) Endeudamiento Neto",
+    description: "Endeudamiento Neto — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_C)_ENDEUDAMIENTO_NETO.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) Intereses de la Deuda",
+    description: "Intereses de la Deuda — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_D)_INTERESES_DE_LA_DEUDA.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "E) Indicadores de Postura Fiscal",
+    description: "Indicadores de Postura Fiscal — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_E)_INDICADORES_DE_POSTURA_FISCAL.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "F) Conciliaciones entre los Ingresos y Egresos Presupuestarios y Contables",
+    description: "Conciliaciones entre los Ingresos y Egresos Presupuestarios y Contables — Información Presupuestaria — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRE_F)_CONCILIACIONES_ENTRE_LOS_INGRESOS_Y_EGRESOS_PRESUPUESTARIOS_Y_CONTABLES.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "A) Gasto por Categoría Programática",
+    description: "Gasto por Categoría Programática — Información Programática — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRO_A)_GASTO_POR_CATEGORIA_PROGRAMATICA.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) Programas y Proyectos de Inversión",
+    description: "Programas y Proyectos de Inversión — Información Programática — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRO_B)_PROGRAMAS_Y_PROYECTOS_DE_INVERSION.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "C) Indicadores de Resultados",
+    description: "Indicadores de Resultados — Información Programática — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRO_C)_INDICADORES_DE_RESULTADOS.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) Programa Operativo Anual",
+    description: "Programa Operativo Anual — Información Programática — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFIPRO_D)_PROGRAMA_OPERATIVO_ANUAL.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "A) Estado de Actividades",
+    description: "Estado de Actividades — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_A)_ESTADO_DE_ACTIVIDADES.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) Estado de Situación Financiera",
+    description: "Estado de Situación Financiera — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_B)_ESTADO_DE_SITUACION_FINANCIERA.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "C) Estado de Variación en la Hacienda Pública",
+    description: "Estado de Variación en la Hacienda Pública — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_C)ESTADO_DE_VARIACION_EN_LA_HACIENDA_PUBLICA.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) Estado de Cambios en la Situación Financiera",
+    description: "Estado de Cambios en la Situación Financiera — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_D)_ESTADO_DE_CAMBIOS_EN_LA_SITUACION_FINANCIERA.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "E) Estado de Flujos de Efectivo",
+    description: "Estado de Flujos de Efectivo — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_E)_ESTADO_DE_FLUJOS_DE_EFECTIVO.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "F) Informe sobre Pasivos Contingentes",
+    description: "Informe sobre Pasivos Contingentes — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_F)_INFORME_SOBRE_PASIVOS_CONTINGENTES.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "G) Notas a los Estados Financieros",
+    description: "Notas a los Estados Financieros — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_G)_NOTAS_A_LOS_ESTADOS_FINANCIEROS.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "H) Estado Analítico del Activo",
+    description: "Estado Analítico del Activo — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_H)_ESTADO_ANALITICO_DEL_ACTIVO.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "I) Estado Analítico de la Deuda y Otros Pasivos",
+    description: "Estado Analítico de la Deuda y Otros Pasivos — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_I)_ESTADO_ANALITICO_DE_LA_DEUDA_Y_OTROS_PASIVOS.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "J) Relación de Cuentas Bancarias",
+    description: "Relación de Cuentas Bancarias — Información Contable — 1er Trimestre 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_EFICON_J)_RELACION_DE_CUENTAS_BANCARIAS.pdf",
+    date: "2026",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "A) Estado de Actividades",
+    description: "Estado de Actividades — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_A)_ESTADO_DE_ACTIVIDADES.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) Estado de Situación Financiera",
+    description: "Estado de Situación Financiera — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_B)_ESTADO_DE_SITUACION_FINANCIERA.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "C) Estado de Variación en la Hacienda Pública",
+    description: "Estado de Variación en la Hacienda Pública — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_C)_ESTADO_DE_VARIACION_EN_LA_HACIENDA_PUBLICA.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) Estado de Cambios en la Situación Financiera",
+    description: "Estado de Cambios en la Situación Financiera — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_D)_ESTADO_DE_CAMBIOS_EN_LA_SITUACION_FINANCIERA.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "E) Estado de Flujos de Efectivo",
+    description: "Estado de Flujos de Efectivo — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_E)_ESTADO_DE_FLUJO_DE_EFECTIIVO.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "F) Informe sobre Pasivos Contingentes",
+    description: "Informe sobre Pasivos Contingentes — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_F)_INFORME_SOBRE_PASIVOS_CONTINGENTES.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "G) Notas a los Estados Financieros",
+    description: "Notas a los Estados Financieros — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_G)_NOTAS_A_LOS_ESTADOS_FINANCIEROS.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "H) Estado Analítico del Activo",
+    description: "Estado Analítico del Activo — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_H)_ESTADO_ANALITICO_DEL_ACTIVO.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "I) Estado Analítico de la Deuda y Otros Pasivos",
+    description: "Estado Analítico de la Deuda y Otros Pasivos — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_I)_ESTADO_ANALITICO_DE_LA_DEUDA_Y_OTROS_PASIVOS.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "J) Relación de Cuentas Bancarias",
+    description: "Relación de Cuentas Bancarias — Información Contable — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFICON_J)_RELACION_DE_CUENTAS_BANCARIAS.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "A) Estado de Situación Financiera — LDF",
+    description: "Estado de Situación Financiera — Ley de Disciplina Financiera — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFILDF_A)_ESTADO_DE_SITUACION_FINANCIERA_LDF.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) Informe Analítico de la Deuda y Otros Pasivos — LDF",
+    description: "Informe Analítico de la Deuda y Otros Pasivos — Ley de Disciplina Financiera — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFILDF_B)_INFORME_ANALITICO_DE_LA_DEUDA_Y_OTROS_PASIVOS_LDF.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "C) Estado Analítico del Ingreso — LDF",
+    description: "Estado Analítico del Ingreso — Ley de Disciplina Financiera — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFILDF_C)_ESTADO_ANALITICO_DEL_INGRESO_LDF.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) 1 Clasificación Administrativa — LDF",
+    description: "Clasificación Administrativa — Ley de Disciplina Financiera — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFILDF_D)_1_CLASIFICACION_ADMINISTRATIVA_LDF.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) 2 Clasificación por Objeto del Gasto — LDF",
+    description: "Clasificación por Objeto del Gasto — Ley de Disciplina Financiera — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFILDF_D)_2_CLASIFICACION_POR_OBJETO_DEL_GASTO_LDF.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) 3 Clasificación Funcional — LDF",
+    description: "Clasificación Funcional — Ley de Disciplina Financiera — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFILDF_D)_3_CLASIFICACION_FUNCIONAL_LDF.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) 4 Clasificación de Servicios Personales — LDF",
+    description: "Clasificación de Servicios Personales — Ley de Disciplina Financiera — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFILDF_D)_4_CLASIFICACION_DE_SERVICIOS_PERSONALES_LDF.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "E) Balance Presupuestario — LDF",
+    description: "Balance Presupuestario — Ley de Disciplina Financiera — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFILDF_E)_BALANCE_PRESUPUESTARIO_LDF.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "F) Informe Analítico de Obligaciones Diferentes de Financiamiento — LDF",
+    description: "Informe Analítico de Obligaciones Diferentes de Financiamiento — Ley de Disciplina Financiera — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFILDF_F)_INFORME_ANALITICO_DE_OBLIGACIONES_DIFERENTES_DE_FINANCIAMIENTO_LDF.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "A) Estado Analítico del Ingreso",
+    description: "Estado Analítico del Ingreso — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_A)_ESTADO_ANALITICO_DEL_INGRESO.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) 1 Clasificación Administrativa",
+    description: "Clasificación Administrativa — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_B)_1_CLASIFICACION_ADMINISTRATIVA.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) 2 Clasificación Económica",
+    description: "Clasificación Económica — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_B)_2_CLASIFICACION_ECONOMICA.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) 3 Clasificación por Objeto del Gasto",
+    description: "Clasificación por Objeto del Gasto — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_B)_3_CLASIFICACION_POR_OBJETO_DEL_GASTO.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) 4 Clasificación Funcional",
+    description: "Clasificación Funcional — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_B)_4_CLASIFICACION_FUNCIONAL.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) Estado Analítico del Ejercicio del Presupuesto de Egresos",
+    description: "Estado Analítico del Ejercicio del Presupuesto de Egresos — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_B)_ESTADO_ANALITICO_DEL_EJERCICIO_DEL_PRESUPUESTO_DE_EGRESOS.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "C) Endeudamiento Neto",
+    description: "Endeudamiento Neto — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_C)_ENDEUDAMIENTO_NETO.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) Intereses de la Deuda",
+    description: "Intereses de la Deuda — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_D)_INTERESES_DE_LA_DEUDA.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "E) Indicadores de Postura Fiscal",
+    description: "Indicadores de Postura Fiscal — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_E)_INDICADORES_DE_POSTURA_FISCAL.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "F) Conciliación entre los Ingresos y Egresos Presupuestarios",
+    description: "Conciliación entre los Ingresos y Egresos Presupuestarios — Información Presupuestaria — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRE_F)_CONCILIACION_ENTRE_LOS_INGRESOS_Y_EGRESOS_PRESUPUESTARIOS.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "A) Gastos por Categoría Programática",
+    description: "Gastos por Categoría Programática — Información Programática — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRO_A)_GASTOS_POR_CATEGORIA_PROGRAMATICA.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "B) Programas y Proyectos de Inversión",
+    description: "Programas y Proyectos de Inversión — Información Programática — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRO_B)_PROGRAMAS_Y_PROYECTOS_DE_INVERSION.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "C) Indicadores de Resultados",
+    description: "Indicadores de Resultados — Información Programática — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRO_C)_INDICADORES_DE_RESULTADOS.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "D) Programa Operativo Anual",
+    description: "Programa Operativo Anual — Información Programática — 4to Trimestre 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/2025_4_EFIPRO_D)_PROGRAMA_OPERATIVO_ANUAL.pdf",
+    date: "2025",
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA 4TO TRIMESTRE 2025",
+    type: "PDF",
+    ambito: "Municipal"
+  },
   {
     category: "documento",
     title: "Auditoría AUD_CON-003-2026",
@@ -2969,41 +3771,80 @@ export type SearchableItem = {
   type: "Documento" | "Artículo" | "Solicitud" | "Recurso" | "Sección";
   url: string;
   ambito?: string;
+  subsection?: string;
+  subsubsection?: string;
 };
 
-export const getAllSearchableItems = (): SearchableItem[] => [
-  ...siteData.secciones.map(s => ({
-    title: s.title,
-    description: s.description,
-    type: "Sección" as const,
-    url: s.href
-  })),
-  ...documentos.map(d => ({
-    title: d.title,
-    description: d.description,
-    type: "Documento" as const,
-    url: d.url || "#",
-    ambito: d.ambito
-  })),
-  ...siteData.articulos.map(a => ({
-    title: a.art,
-    description: "Artículo de transparencia",
-    type: "Artículo" as const,
-    url: a.href
-  })),
-  ...siteData.solicitudes.filter(s => !s.disabled).map(s => ({
-    title: s.label,
-    description: "Trámites y solicitudes",
-    type: "Solicitud" as const,
-    url: s.href
-  })),
-  ...siteData.recursos.filter(r => !r.disabled).map(r => ({
-    title: r.label,
-    description: "Recursos y plataformas",
-    type: "Recurso" as const,
-    url: r.href
-  }))
-];
+export const getAllSearchableItems = (): SearchableItem[] => {
+  const dynamicSections = new Map<string, SearchableItem>();
+
+  documentos.forEach(d => {
+    if (!d.section) return;
+
+    const parentUrl = `/${d.section.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
+
+    if (d.subsection) {
+      const key = `sub-${d.subsection}`;
+      if (!dynamicSections.has(key)) {
+        dynamicSections.set(key, {
+          title: d.subsection,
+          description: `Sección de ${d.section}`,
+          type: "Sección",
+          url: parentUrl,
+        });
+      }
+    }
+
+    if (d.subsubsection) {
+      const key = `subsub-${d.subsubsection}`;
+      if (!dynamicSections.has(key)) {
+        dynamicSections.set(key, {
+          title: d.subsubsection,
+          description: `Subsección de ${d.subsection || d.section}`,
+          type: "Sección",
+          url: parentUrl,
+        });
+      }
+    }
+  });
+
+  return [
+    ...siteData.secciones.map(s => ({
+      title: s.title,
+      description: s.description,
+      type: "Sección" as const,
+      url: s.href
+    })),
+    ...Array.from(dynamicSections.values()),
+    ...documentos.map(d => ({
+      title: d.title,
+      description: d.description,
+      type: "Documento" as const,
+      url: d.url || "#",
+      ambito: d.ambito,
+      subsection: d.subsection,
+      subsubsection: d.subsubsection
+    })),
+    ...siteData.articulos.map(a => ({
+      title: a.art,
+      description: "Artículo de transparencia",
+      type: "Artículo" as const,
+      url: a.href
+    })),
+    ...siteData.solicitudes.filter(s => !s.disabled).map(s => ({
+      title: s.label,
+      description: "Trámites y solicitudes",
+      type: "Solicitud" as const,
+      url: s.href
+    })),
+    ...siteData.recursos.filter(r => !r.disabled).map(r => ({
+      title: r.label,
+      description: "Recursos y plataformas",
+      type: "Recurso" as const,
+      url: r.href
+    }))
+  ];
+};
 
 export const contactoPrincipal = {
   titular: "Lic. Katya A. Escobar A.",

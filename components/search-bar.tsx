@@ -5,6 +5,8 @@ import { Search, FileText, ArrowRight } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { getAllSearchableItems } from "@/lib/data"
 
+import { normalizeSearch } from "@/lib/utils"
+
 const suggestions = [
   "Acceso a la Información",
   "Avisos de Privacidad",
@@ -25,11 +27,13 @@ export function SearchBar() {
   const filteredResults = query.trim() === ""
     ? []
     : allSearchableItems.filter(item => {
-      const q = query.toLowerCase();
-      return item.title.toLowerCase().includes(q) ||
-        item.description.toLowerCase().includes(q) ||
-        item.type.toLowerCase().includes(q) ||
-        (item.ambito && item.ambito.toLowerCase().includes(q));
+      const q = normalizeSearch(query);
+      return normalizeSearch(item.title).includes(q) ||
+        normalizeSearch(item.description).includes(q) ||
+        normalizeSearch(item.type).includes(q) ||
+        (item.ambito && normalizeSearch(item.ambito).includes(q)) ||
+        (item.subsection && normalizeSearch(item.subsection).includes(q)) ||
+        (item.subsubsection && normalizeSearch(item.subsubsection).includes(q));
     }).slice(0, 6);
 
   const handleSearch = (e: React.FormEvent) => {
@@ -108,7 +112,11 @@ export function SearchBar() {
                       onMouseDown={(e) => {
                         e.preventDefault(); // Evitar el blur del input
                         setFocused(false);
-                        window.open(result.url, "_blank", "noopener,noreferrer");
+                        if (result.url.startsWith('http')) {
+                          window.open(result.url, "_blank", "noopener,noreferrer");
+                        } else {
+                          router.push(result.url);
+                        }
                       }}
                       className="w-full text-left px-5 py-3 hover:bg-muted transition-colors flex items-center justify-between group"
                     >
