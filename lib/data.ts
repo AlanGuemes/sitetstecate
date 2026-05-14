@@ -3676,6 +3676,149 @@ const documentos = [
     subsection: "PENSIONADOS Y JUBILADOS",
     type: "PDF",
     ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Cabildo",
+    description: "Nómina de Cabildo.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_CABILDO.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Coordinación General de Gabinete",
+    description: "Nómina de Coordinación General de Gabinete.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_COORDINACION_GENERAL_DE_GABINETE.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Coordinación Municipal de Protección Civil y Bomberos",
+    description: "Nómina de Coordinación Municipal de Protección Civil y Bomberos.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_COORDINACION_MUNICIPAL_DE_PROTECCION_CIVIL_Y_BOMBEROS.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Dirección de Atención Ciudadana",
+    description: "Nómina de Dirección de Atención Ciudadana.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_ATENCION_CIUDADANA.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Dirección de Bienestar",
+    description: "Nómina de Dirección de Bienestar.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_BIENESTAR.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Dirección de Comunicación Social",
+    description: "Nómina de Dirección de Comunicación Social.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_COMUNICACION_SOCIAL.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Dirección de Desarrollo Económico",
+    description: "Nómina de Dirección de Desarrollo Económico.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_DESARROLLO_ECONOMICO.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Dirección de Gestión Integral del Territorio",
+    description: "Nómina de Dirección de Gestión Integral del Territorio.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_GESTION_INTEGRAL_DEL_TERRITORIO.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Dirección de Seguridad Ciudadana y Tránsito Municipal",
+    description: "Nómina de Dirección de Seguridad Ciudadana y Tránsito Municipal.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_SEGURIDAD_CIUDADANA_Y_TRANSITO_MUNICIPAL.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Oficialía Mayor",
+    description: "Nómina de Oficialía Mayor.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_OFICIALIA_MAYOR.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Secretaría del Ayuntamiento",
+    description: "Nómina de Secretaría del Ayuntamiento.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_SECRETARIA_DEL_AYUNTAMIENTO.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Sindicatura Municipal",
+    description: "Nómina de Sindicatura Municipal.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_SINDICATURA_MUNICIPAL.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
+  },
+  {
+    category: "documento",
+    title: "Nómina — Tesorería Municipal",
+    description: "Nómina de Tesorería Municipal.",
+    date: "2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/NOM_TESORERIA_MUNICIPAL.pdf",
+    type: "PDF",
+    ambito: "Municipal",
+    section: "Estructura",
+    subsection: "NOMINAS"
   }
 ];
 
@@ -3858,7 +4001,7 @@ export const contactoPrincipal = {
   actualizacion: "20 de abril de 2026"
 };
 
-export const contactos = [
+const rawContactos = [
   {
     nombre: "Dirección de Bienestar Municipal",
     titular: "Monserrat Landeros",
@@ -4045,7 +4188,7 @@ export const contactos = [
   }
 ];
 
-export const contactosParamunicipales = [
+const rawContactosParamunicipales = [
   {
     nombre: "Instituto Municipal de Arte y Cultura (IMACTE)",
     titular: "Alfredo Ochoa Álamos",
@@ -4226,83 +4369,12 @@ export const contactosParamunicipales = [
 ];
 
 
-export const nominas = [
-  {
-    "title": "Nómina — Cabildo",
-    "description": "Nómina de Cabildo.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_CABILDO.pdf"
-  },
-  {
-    "title": "Nómina — Coordinación General de Gabinete",
-    "description": "Nómina de Coordinación General de Gabinete.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_COORDINACION_GENERAL_DE_GABINETE.pdf"
-  },
-  {
-    "title": "Nómina — Coordinación Municipal de Protección Civil y Bomberos",
-    "description": "Nómina de Coordinación Municipal de Protección Civil y Bomberos.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_COORDINACION_MUNICIPAL_DE_PROTECCION_CIVIL_Y_BOMBEROS.pdf"
-  },
-  {
-    "title": "Nómina — Dirección de Atención Ciudadana",
-    "description": "Nómina de Dirección de Atención Ciudadana.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_ATENCION_CIUDADANA.pdf"
-  },
-  {
-    "title": "Nómina — Dirección de Bienestar",
-    "description": "Nómina de Dirección de Bienestar.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_BIENESTAR.pdf"
-  },
-  {
-    "title": "Nómina — Dirección de Comunicación Social",
-    "description": "Nómina de Dirección de Comunicación Social.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_COMUNICACION_SOCIAL.pdf"
-  },
-  {
-    "title": "Nómina — Dirección de Desarrollo Económico",
-    "description": "Nómina de Dirección de Desarrollo Económico.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_DESARROLLO_ECONOMICO.pdf"
-  },
-  {
-    "title": "Nómina — Dirección de Gestión Integral del Territorio",
-    "description": "Nómina de Dirección de Gestión Integral del Territorio.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_GESTION_INTEGRAL_DEL_TERRITORIO.pdf"
-  },
-  {
-    "title": "Nómina — Dirección de Seguridad Ciudadana y Tránsito Municipal",
-    "description": "Nómina de Dirección de Seguridad Ciudadana y Tránsito Municipal.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_DIRECCION_DE_SEGURIDAD_CIUDADANA_Y_TRANSITO_MUNICIPAL.pdf"
-  },
-  {
-    "title": "Nómina — Oficialía Mayor",
-    "description": "Nómina de Oficialía Mayor.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_OFICIALIA_MAYOR.pdf"
-  },
-  {
-    "title": "Nómina — Secretaría del Ayuntamiento",
-    "description": "Nómina de Secretaría del Ayuntamiento.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_SECRETARIA_DEL_AYUNTAMIENTO.pdf"
-  },
-  {
-    "title": "Nómina — Sindicatura Municipal",
-    "description": "Nómina de Sindicatura Municipal.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_SINDICATURA_MUNICIPAL.pdf"
-  },
-  {
-    "title": "Nómina — Tesorería Municipal",
-    "description": "Nómina de Tesorería Municipal.",
-    "date": "2026",
-    "url": "https://s3-public-presigner-production-ed97.up.railway.app/NOM_TESORERIA_MUNICIPAL.pdf"
-  }
+export const nominas = documentos.filter(d => d.subsection === "NOMINAS");
+
+export const dependencias = [
+  ...rawContactos.map(c => ({ ...c, isParamunicipal: false })),
+  ...rawContactosParamunicipales.map(c => ({ ...c, isParamunicipal: true }))
 ];
+
+export const contactos = dependencias.filter(d => !d.isParamunicipal);
+export const contactosParamunicipales = dependencias.filter(d => d.isParamunicipal);
