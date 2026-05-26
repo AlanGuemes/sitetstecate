@@ -76,7 +76,7 @@ const seccionConfig: Record<
   },
   "GASTOS": {
     label: "Gastos",
-    description: "Registro de gastos operativos, viáticos, representation y publicidad.",
+    description: "Registro de gastos operativos, viáticos, representación y publicidad.",
     icon: Wallet,
   },
   "LEY DE INGRESOS": {
