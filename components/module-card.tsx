@@ -1,16 +1,39 @@
-import Link from "next/link"
-import { LucideIcon, ArrowRight } from "lucide-react"
+"use client"
+
+import { useRouter } from "next/navigation"
+import {
+  ArrowRight,
+  Eye,
+  Building2,
+  Users,
+  Wallet,
+  Scale,
+  LayoutGrid,
+  type LucideIcon,
+} from "lucide-react"
 import { cn } from "@/lib/utils"
+
+const iconMap: Record<string, LucideIcon> = {
+  Eye,
+  Building2,
+  Users,
+  Wallet,
+  Scale,
+  LayoutGrid,
+}
 
 interface ModuleCardProps {
   title: string
   description: string
   href: string
-  icon: LucideIcon
+  iconName: string
   variant?: "primary" | "secondary" | "accent"
 }
 
-export function ModuleCard({ title, description, href, icon: Icon, variant = "primary" }: ModuleCardProps) {
+export function ModuleCard({ title, description, href, iconName, variant = "primary" }: ModuleCardProps) {
+  const router = useRouter()
+  const Icon = iconMap[iconName] ?? Eye
+
   const iconBgColors = {
     primary: "bg-primary",
     secondary: "bg-secondary",
@@ -27,6 +50,12 @@ export function ModuleCard({ title, description, href, icon: Icon, variant = "pr
     primary: "text-primary",
     secondary: "text-secondary",
     accent: "text-primary",
+  }
+
+  const buttonBgColors = {
+    primary: "bg-primary hover:bg-primary/90 text-primary-foreground",
+    secondary: "bg-secondary hover:bg-secondary/90 text-secondary-foreground",
+    accent: "bg-primary hover:bg-primary/90 text-primary-foreground",
   }
 
   return (
@@ -46,17 +75,18 @@ export function ModuleCard({ title, description, href, icon: Icon, variant = "pr
         {description}
       </p>
 
-      <Link
-        href={href}
+      <button
+        type="button"
+        onClick={() => router.push(href)}
         className={cn(
-          "inline-flex items-center gap-1 text-sm font-medium transition-colors",
-          titleColors[variant],
-          "hover:underline"
+          "inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer",
+          buttonBgColors[variant]
         )}
       >
         Acceder
         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-      </Link>
+      </button>
     </div>
   )
 }
+

@@ -6,12 +6,8 @@ import { SearchBar } from "@/components/search-bar"
 import { TransparencyCard } from "@/components/transparency-card"
 import { ScrollIndex } from "@/components/scroll-index"
 import {
-  Building2,
   FileText,
   Users,
-  Wallet,
-  Scale,
-  LayoutGrid,
   Search,
   ArrowRight,
   Shield,
@@ -119,42 +115,42 @@ export default function HomePage() {
                 title="Transparencia"
                 description="Consulta las obligaciones de transparencia, avisos de privacidad y tabla de aplicabilidad."
                 href="/transparencia"
-                icon={Eye}
+                iconName="Eye"
                 variant="primary"
               />
               <ModuleCard
                 title="Estructura"
                 description="Conoce la estructura organizacional, organigramas y directorio de servidores públicos."
                 href="/estructura"
-                icon={Building2}
+                iconName="Building2"
                 variant="secondary"
               />
               <ModuleCard
                 title="Administración"
                 description="Información sobre trámites, servicios, programas sociales y atención ciudadana."
                 href="/administracion"
-                icon={Users}
+                iconName="Users"
                 variant="accent"
               />
               <ModuleCard
                 title="Finanzas"
                 description="Consulta el presupuesto, estados financieros, cuenta pública y gastos operativos."
                 href="/finanzas"
-                icon={Wallet}
+                iconName="Wallet"
                 variant="primary"
               />
               <ModuleCard
                 title="Normatividad"
                 description="Accede a leyes, reglamentos, manuales administrativos y marco jurídico aplicable."
                 href="/normatividad"
-                icon={Scale}
+                iconName="Scale"
                 variant="secondary"
               />
               <ModuleCard
                 title="Recursos Humanos"
                 description="Información sobre nóminas, plazas, tabuladores y plantilla de personal."
                 href="/administracion#recursos"
-                icon={LayoutGrid}
+                iconName="LayoutGrid"
                 variant="accent"
               />
             </div>
@@ -224,12 +220,12 @@ export default function HomePage() {
                   <Link
                     key={art}
                     href={href}
-                    className="group flex items-center gap-3 bg-card border border-border rounded-xl px-4 py-4 shadow-sm hover:border-primary/50 hover:shadow-md transition-all duration-200"
+                    className="group flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 sm:gap-3 bg-card border border-border rounded-xl p-3 sm:px-4 sm:py-4 shadow-sm hover:border-primary/50 hover:shadow-md transition-all duration-200"
                   >
-                    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                      <BookOpen className="h-5 w-5 text-primary" />
+                    <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                      <BookOpen className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                     </div>
-                    <span className="text-sm font-bold text-primary uppercase tracking-wide leading-tight">{art}</span>
+                    <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-wide leading-tight break-words">{art}</span>
                   </Link>
                 ))}
               </div>
