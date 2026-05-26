@@ -2,9 +2,10 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { DocumentItem } from "@/components/document-item"
 import { DocumentCard } from "@/components/document-card"
+import { NominasSection } from "@/components/estructura-nominas"
 import {
   Phone, Mail, MapPin, Download, Network, Scale, ListChecks,
-  ChevronDown, Building2, BookOpen, FileText,
+  ChevronDown, Building2, FileText,
 } from "lucide-react"
 import { contactos, contactosParamunicipales, nominas } from "@/lib/data"
 
@@ -357,42 +358,8 @@ export default function EstructuraPage() {
             </div>
           </CollapsibleSection>
 
-          {/* Nominas */}
-          <CollapsibleSection
-            id="section-nominas"
-            icon={BookOpen}
-            title="Nominas"
-            description="Documentos que describen las atribuciones, funciones y perfiles de cada área de la administración municipal."
-            badge={`${nominas.length} documentos`}
-            gridBadge={nominas.length > GRID_THRESHOLD}
-          >
-            {nominas.length > GRID_THRESHOLD ? (
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
-                {nominas.map((doc, i) => (
-                  <DocumentCard
-                    key={i}
-                    title={doc.title}
-                    description={doc.description}
-                    date={doc.date}
-                    downloadUrl={doc.url}
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="divide-y divide-border">
-                {nominas.map((doc, i) => (
-                  <DocumentItem
-                    key={i}
-                    title={doc.title}
-                    description={doc.description}
-                    date={doc.date}
-                    downloadUrl={doc.url}
-                    variant="default"
-                  />
-                ))}
-              </div>
-            )}
-          </CollapsibleSection>
+          {/* Nominas con tabulador de años */}
+          <NominasSection nominas={nominas} />
         </div>
 
         {/* ── Footer CTA ────────────────────────────────────────────── */}
