@@ -3488,9 +3488,34 @@ const documentos = [
   },
   {
     category: "documento",
+    title: "Información Anual de la Aplicación del FAIS — 2025",
+    description: "Información anual sobre la aplicación del Fondo de Aportaciones para la Infraestructura Social (FAIS) para el ejercicio 2025.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/INFORMACION_ANUAL_APLICACION_FAIS_2025.pdf",
+    date: "2025",
+    trimestre: null,
+    section: "Finanzas",
+    subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
+    subsubsection: "Información de Reporte del Gasto Federalizado",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
     title: "Ingreso Calendarizado — 2026",
     description: "Calendario de Ingresos de la administración pública municipal para el ejercicio fiscal 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/INGRESO_CALENDARIZADO_2026_01.pdf",
+    date: "2026",
+    trimestre: 1,
+    section: "Finanzas",
+    subsection: "LEY DE INGRESOS",
+    type: "PDF",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Ley de Ingresos 2026 — Oficio Congreso 0837/2025",
+    description: "Oficio Congreso 0837/2025 relativo a la Ley de Ingresos del municipio para el ejercicio fiscal 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/LEY_DE_ING_2026_OFICIO_0837_2025.pdf",
     date: "2026",
     trimestre: 1,
     section: "Finanzas",
@@ -3516,10 +3541,22 @@ const documentos = [
     description: "Presentación del Presupuesto Ciudadano correspondiente al ejercicio fiscal 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/PRESUPUESTO_CIUDADANO_2026.pptx",
     date: "2026",
-    trimestre: null,
+    trimestre: 1,
     section: "Finanzas",
     subsection: "PRESUPUESTOS",
     type: "PPTX",
+    ambito: "Municipal"
+  },
+  {
+    category: "documento",
+    title: "Presupuesto 2026 — Oficio Congreso 0901/2025",
+    description: "Oficio Congreso 0901/2025 relativo al Presupuesto de Egresos 2026.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CONGRESO_PRESUPUESTO_2026_OFICIO_0901_2025.pdf",
+    date: "2026",
+    trimestre: 1,
+    section: "Finanzas",
+    subsection: "PRESUPUESTOS",
+    type: "PDF",
     ambito: "Municipal"
   },
   {
