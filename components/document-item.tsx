@@ -7,7 +7,7 @@ interface DocumentItemProps {
   date?: string
   downloadUrl?: string
   externalUrl?: string
-  variant?: "default" | "bordered"
+  variant?: "default" | "bordered" | "compact"
 }
 
 export function DocumentItem({
@@ -18,32 +18,49 @@ export function DocumentItem({
   externalUrl,
   variant = "default"
 }: DocumentItemProps) {
+  const isCompact = variant === "compact"
+
   return (
     <div className={cn(
-      "flex items-start gap-4 p-4 rounded-lg transition-colors hover:bg-muted",
+      "flex items-center gap-4 transition-colors hover:bg-muted/80",
+      isCompact ? "p-2.5 px-4" : "p-4 rounded-lg",
       variant === "bordered" && "border border-border"
     )}>
-      <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-        <FileText className="h-5 w-5 text-primary" />
+      <div className={cn(
+        "flex-shrink-0 bg-primary/10 rounded-lg flex items-center justify-center",
+        isCompact ? "w-8 h-8" : "w-10 h-10"
+      )}>
+        <FileText className={cn("text-primary", isCompact ? "h-4 w-4" : "h-5 w-5")} />
       </div>
 
       <div className="flex-1 min-w-0">
-        <h4 className="text-sm font-medium text-foreground truncate">{title}</h4>
+        <h4 className={cn(
+          "font-medium text-foreground truncate",
+          isCompact ? "text-xs" : "text-sm"
+        )}>{title}</h4>
         {description && (
-          <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{description}</p>
+          <p className={cn(
+            "text-muted-foreground",
+            isCompact ? "text-[11px] mt-0.5 line-clamp-1" : "text-sm mt-1 line-clamp-2"
+          )}>{description}</p>
         )}
-        {date && (
+        {date && !isCompact && (
           <p className="text-xs text-muted-foreground mt-1">{date}</p>
         )}
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-3">
+        {date && isCompact && (
+          <span className="text-[10px] font-medium text-muted-foreground/80 bg-muted px-1.5 py-0.5 rounded border border-border/40 select-none hidden sm:inline-block">
+            {date}
+          </span>
+        )}
         {downloadUrl && (
           <a
             href={downloadUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-muted-foreground hover:text-primary transition-colors"
+            className="p-1.5 text-muted-foreground hover:text-primary transition-colors hover:bg-primary/5 rounded-md"
             title="Descargar"
           >
             <Download className="h-4 w-4" />
@@ -54,7 +71,7 @@ export function DocumentItem({
             href={externalUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-muted-foreground hover:text-primary transition-colors"
+            className="p-1.5 text-muted-foreground hover:text-primary transition-colors hover:bg-primary/5 rounded-md"
             title="Ver documento"
           >
             <ExternalLink className="h-4 w-4" />

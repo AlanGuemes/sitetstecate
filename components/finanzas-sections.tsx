@@ -1,5 +1,7 @@
 "use client"
 
+import { useState } from "react"
+import { cn } from "@/lib/utils"
 import { YearTabs } from "@/components/year-tabs"
 import { DocumentItem } from "@/components/document-item"
 import { DocumentCard } from "@/components/document-card"
@@ -16,6 +18,9 @@ import {
   Scale,
   ChevronDown,
   ChevronRight,
+  Folder,
+  Search,
+  X,
 } from "lucide-react"
 
 /** Threshold: above this count, switch to compact card grid */
@@ -122,38 +127,311 @@ const seccionOrder = [
   "INVENTARIO DE BIENES"
 ]
 
-/** Renders a document list or compact grid depending on item count */
+/** Renders a unified vertical list for documents with alternating backgrounds and optional search/filter */
 function DocList({
   docs,
+  showFilters = false,
 }: {
   docs: Array<{ title: string; description?: string; date?: string; url?: string }>
+  showFilters?: boolean
 }) {
-  if (docs.length > GRID_THRESHOLD) {
-    return (
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
-        {docs.map((doc, i) => (
-          <DocumentCard
-            key={i}
-            title={doc.title}
-            description={doc.description}
-            date={doc.date}
-            downloadUrl={doc.url}
-          />
-        ))}
-      </div>
-    )
+  const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState("")
+  const isLargeGroup = showFilters && docs.length >= 10
+
+  // Extract first letter of each document title
+  const getFirstLetter = (t: string): string => {
+    const match = t.match(/[a-zA-ZáéíóúñÁÉÍÓÚÑ]/)
+    return match ? match[0].toUpperCase() : "#"
   }
 
+  // Get unique letters that have documents
+  const availableLetters = Array.from(
+    new Set(docs.map((doc) => getFirstLetter(doc.title)))
+  ).sort()
+
+  // Normalize text for accent-insensitive search
+  const normalizeText = (text: string) =>
+    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+
+  // Filter documents by selected letter AND search query
+  const filteredDocs = docs.filter((doc) => {
+    const matchesLetter = selectedLetter ? getFirstLetter(doc.title) === selectedLetter : true
+    const matchesQuery = searchQuery
+      ? normalizeText(doc.title).includes(normalizeText(searchQuery)) ||
+      (doc.description && normalizeText(doc.description).includes(normalizeText(searchQuery)))
+      : true
+    return matchesLetter && matchesQuery
+  })
+
   return (
-    <div className="divide-y divide-border">
-      {docs.map((doc, i) => (
-        <DocumentItem
-          key={i}
-          title={doc.title}
-          description={doc.description}
-          date={doc.date}
-          downloadUrl={doc.url}
-        />
+    <div className="flex flex-col">
+      {/* Search Bar + Alphabet Filter Container (only if enabled and 15+ documents) */}
+      {isLargeGroup && (
+        <div className="flex flex-col gap-2 p-3 bg-muted/15 border-b border-border/50 select-none">
+          {/* Intelligent Search Input */}
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Buscar por título o descripción..."
+              className="w-full pl-9 pr-8 py-1.5 bg-background border border-border rounded-lg text-xs outline-none focus:border-primary/45 transition-colors placeholder:text-muted-foreground/60 text-foreground"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 p-0.5 text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+              >
+                <X className="h-3 w-3" />
+              </button>
+            )}
+          </div>
+
+          {/* Alphabet Filter */}
+          {availableLetters.length > 1 && (
+            <div className="flex flex-wrap items-center gap-1 mt-1 select-none">
+              <span className="text-[10px] font-semibold text-muted-foreground mr-1.5">
+                Inicial:
+              </span>
+              <button
+                onClick={() => setSelectedLetter(null)}
+                className={cn(
+                  "px-2 py-0.5 rounded text-[10px] font-bold transition-colors border",
+                  selectedLetter === null
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-background text-muted-foreground border-border hover:bg-muted hover:text-foreground"
+                )}
+              >
+                Todos
+              </button>
+              {availableLetters.map((letter) => (
+                <button
+                  key={letter}
+                  onClick={() => setSelectedLetter(letter)}
+                  className={cn(
+                    "px-2 py-0.5 rounded text-[10px] font-bold transition-colors border",
+                    selectedLetter === letter
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "bg-background text-muted-foreground border-border hover:bg-muted hover:text-foreground"
+                  )}
+                >
+                  {letter}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Render Document List */}
+      <div className="animate-in fade-in duration-200">
+        {filteredDocs.length > 0 ? (
+          <div className="divide-y divide-border/60">
+            {filteredDocs.map((doc, i) => (
+              <div
+                key={i}
+                className={i % 2 === 0 ? "bg-card" : "bg-muted/15"}
+              >
+                <DocumentItem
+                  title={doc.title}
+                  description={doc.description}
+                  date={doc.date}
+                  downloadUrl={doc.url}
+                  variant="compact"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="p-8 text-center text-xs text-muted-foreground select-none">
+            No se encontraron documentos que coincidan con la búsqueda.
+            <button
+              onClick={() => {
+                setSearchQuery("")
+                setSelectedLetter(null)
+              }}
+              className="block mx-auto mt-2 text-primary font-bold hover:underline"
+            >
+              Restablecer filtros
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+/** Formats a string to Title Case, leaving standard Spanish prepositions and conjunctions in lowercase */
+function formatTitleCase(str: string): string {
+  const lowercaseWords = ["al", "del", "de", "para", "en", "con", "y", "la", "el", "los", "las", "a", "o"];
+  return str
+    .toLowerCase()
+    .split(/\s+/)
+    .map((word, index) => {
+      if (index > 0 && lowercaseWords.includes(word)) {
+        return word;
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+}
+
+/** Renders an individual folder card with optional alphabetical filtering and intelligent search (if 15+ documents) */
+function FolderCard({
+  title,
+  docs,
+}: {
+  title: string
+  docs: DocType[]
+}) {
+  const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState("")
+  const isLargeGroup = docs.length >= 10
+
+  // Extract first letter of each document title
+  const getFirstLetter = (t: string): string => {
+    const match = t.match(/[a-zA-ZáéíóúñÁÉÍÓÚÑ]/)
+    return match ? match[0].toUpperCase() : "#"
+  }
+
+  // Get unique letters that have documents
+  const availableLetters = Array.from(
+    new Set(docs.map((doc) => getFirstLetter(doc.title)))
+  ).sort()
+
+  // Normalize text for accent-insensitive search
+  const normalizeText = (text: string) =>
+    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+
+  // Filter documents by selected letter AND search query
+  const filteredDocs = docs.filter((doc) => {
+    const matchesLetter = selectedLetter ? getFirstLetter(doc.title) === selectedLetter : true
+    const matchesQuery = searchQuery
+      ? normalizeText(doc.title).includes(normalizeText(searchQuery)) ||
+      (doc.description && normalizeText(doc.description).includes(normalizeText(searchQuery)))
+      : true
+    return matchesLetter && matchesQuery
+  })
+
+  return (
+    <details
+      className="group/sub select-none border border-border bg-muted/30 hover:bg-muted/50 open:bg-card rounded-xl shadow-sm hover:shadow hover:border-primary/25 transition-all duration-200 overflow-hidden border-l-4 border-l-primary"
+      open={isLargeGroup}
+    >
+      {/* Folder Header */}
+      <summary className="flex items-center gap-3 px-4 py-3.5 cursor-pointer list-none select-none">
+        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+          <Folder className="h-4 w-4 text-primary" />
+        </div>
+        <span className="text-xs font-bold text-foreground/80 flex-1 truncate">
+          {formatTitleCase(title)}
+        </span>
+        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/15 shrink-0 select-none mr-1">
+          {docs.length} {docs.length === 1 ? "doc." : "docs."}
+        </span>
+        <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0 transition-transform duration-200 group-open/sub:rotate-90" />
+      </summary>
+
+      {/* Document container */}
+      <div className="border-t border-border/50 bg-card">
+        {/* Search Bar + Alphabet Filter Container (only if 10+ documents) */}
+        {isLargeGroup && (
+          <div className="flex flex-col gap-2 p-3 bg-muted/15 border-b border-border/50 select-none">
+            {/* Intelligent Search Input */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Buscar por título o descripción..."
+                className="w-full pl-9 pr-8 py-1.5 bg-background border border-border rounded-lg text-xs outline-none focus:border-primary/45 transition-colors placeholder:text-muted-foreground/60 text-foreground"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 p-0.5 text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                >
+                  <X className="h-3 w-3" />
+                </button>
+              )}
+            </div>
+
+            {/* Alphabet Filter */}
+            {availableLetters.length > 1 && (
+              <div className="flex flex-wrap items-center gap-1 mt-1 select-none">
+                <span className="text-[10px] font-semibold text-muted-foreground mr-1.5">
+                  Inicial:
+                </span>
+                <button
+                  onClick={() => setSelectedLetter(null)}
+                  className={cn(
+                    "px-2 py-0.5 rounded text-[10px] font-bold transition-colors border",
+                    selectedLetter === null
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "bg-background text-muted-foreground border-border hover:bg-muted hover:text-foreground"
+                  )}
+                >
+                  Todos
+                </button>
+                {availableLetters.map((letter) => (
+                  <button
+                    key={letter}
+                    onClick={() => setSelectedLetter(letter)}
+                    className={cn(
+                      "px-2 py-0.5 rounded text-[10px] font-bold transition-colors border",
+                      selectedLetter === letter
+                        ? "bg-primary text-primary-foreground border-primary"
+                        : "bg-background text-muted-foreground border-border hover:bg-muted hover:text-foreground"
+                    )}
+                  >
+                    {letter}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        <div className="animate-in fade-in duration-200">
+          {filteredDocs.length > 0 ? (
+            <DocList docs={filteredDocs} />
+          ) : (
+            <div className="p-8 text-center text-xs text-muted-foreground select-none">
+              No se encontraron documentos que coincidan con la búsqueda.
+              <button
+                onClick={() => {
+                  setSearchQuery("")
+                  setSelectedLetter(null)
+                }}
+                className="block mx-auto mt-2 text-primary font-bold hover:underline"
+              >
+                Restablecer filtros
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </details>
+  )
+}
+
+/** Renders collapsible subsubsections as card folders with left primary accents (Option A + C Combined) */
+function SubGroupFolders({
+  subGroups,
+}: {
+  subGroups: Record<string, DocType[]>
+}) {
+  const keys = Object.keys(subGroups)
+
+  if (keys.length === 0) return null
+
+  return (
+    <div className="flex flex-col space-y-3 p-4 bg-muted/10">
+      {keys.map((key) => (
+        <FolderCard key={key} title={key} docs={subGroups[key] || []} />
       ))}
     </div>
   )
@@ -212,7 +490,7 @@ export function FinanzasSections({ documentos }: { documentos: DocType[] }) {
                         </span>
                         {docs.length > GRID_THRESHOLD && (
                           <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-primary/10 text-primary hidden sm:inline">
-                            Vista en cuadrícula
+                            Lista compacta
                           </span>
                         )}
                       </div>
@@ -226,24 +504,9 @@ export function FinanzasSections({ documentos }: { documentos: DocType[] }) {
                   {/* ── Content ── */}
                   <div className="border-t border-border">
                     {!hasSubgroups ? (
-                      <DocList docs={docs} />
+                      <DocList docs={docs} showFilters={true} />
                     ) : (
-                      <div className="divide-y divide-border">
-                        {Object.entries(subGroups).map(([subKey, subDocs]) => (
-                          <div key={subKey}>
-                            <div className="flex items-center gap-2 px-5 py-2.5 bg-primary/5">
-                              <ChevronRight className="h-3.5 w-3.5 text-primary" />
-                              <span className="text-xs font-bold uppercase tracking-wider text-primary">
-                                {subKey}
-                              </span>
-                              <span className="text-[10px] text-muted-foreground ml-auto">
-                                {subDocs.length} {subDocs.length === 1 ? "doc." : "docs."}
-                              </span>
-                            </div>
-                            <DocList docs={subDocs} />
-                          </div>
-                        ))}
-                      </div>
+                      <SubGroupFolders subGroups={subGroups} />
                     )}
                   </div>
                 </details>
