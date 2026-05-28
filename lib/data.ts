@@ -3488,7 +3488,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Información Anual de la Aplicación del FAIS — 2025",
+    title: "E) Información Anual de la Aplicación del FAIS — 2025",
     description: "Información anual sobre la aplicación del Fondo de Aportaciones para la Infraestructura Social (FAIS) para el ejercicio 2025.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/INFORMACION_ANUAL_APLICACION_FAIS_2025.pdf",
     date: "2026",
