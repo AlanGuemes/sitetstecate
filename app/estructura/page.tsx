@@ -1,3 +1,7 @@
+"use client"
+
+import { useState } from "react"
+import { cn } from "@/lib/utils"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { DocumentItem } from "@/components/document-item"
@@ -5,80 +9,13 @@ import { DocumentCard } from "@/components/document-card"
 import { NominasSection } from "@/components/estructura-nominas"
 import {
   Phone, Mail, MapPin, Download, Network, Scale, ListChecks,
-  ChevronDown, Building2, FileText,
+  ChevronDown, Building2, FileText, Search, X,
 } from "lucide-react"
-import { contactos, contactosParamunicipales, nominas } from "@/lib/data"
+import { contactos, contactosParamunicipales, nominas, organigramas } from "@/lib/data"
 
 const GRID_THRESHOLD = 4;
 
-const organigramas = [
-  {
-    title: "Organigrama Central XXV Ayuntamiento",
-    description: "ORGANIGRAMA CENTRAL XXV AYUNTAMIENTO.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_CENTRAL_XXV_AYUNTAMIENTO.pdf"
-  },
-  {
-    title: "Organigrama Coordinación de Gabinete",
-    description: "COORDINACION DE GABINETE ORGANIGRAMA.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/COORDINACION_DE_GABINETE_ORGANIGRAMA.pdf"
-  },
-  {
-    title: "Organigrama Coordinación de Gabinete (Versión 2)",
-    description: "COORDINACION DE GABINETE ORGANIGRAMA2.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/COORDINACION_DE_GABINETE_ORGANIGRAMA2.pdf"
-  },
-  {
-    title: "Organigrama Coordinación de Gabinete XXV Ayuntamiento",
-    description: "ORGANIGRAMA COORDINACION DE GABINETE XXV AYUNTAMIENTO.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_COORDINACION_DE_GABINETE_XXV_AYUNTAMIENTO.pdf"
-  },
-  {
-    title: "Organigrama Desarrollo Económico",
-    description: "DESARROLLO ECONOMICO ORGANIGRAMA 2025.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/DESARROLLO_ECONOMICO_ORGANIGRAMA_2025.pdf"
-  },
-  {
-    title: "Organigrama DGIT",
-    description: "DGIT ORGANIGRAMA.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/DGIT_ORGANIGRAMA.pdf"
-  },
-  {
-    title: "Organigrama DSCTM",
-    description: "DSCTM ORGANIGRAMA.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/DSCTM_ORGANIGRAMA.pdf"
-  },
-  {
-    title: "Organigrama Tesorería",
-    description: "ORGANIGRAMA 2025 TESORERIA.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_2025_TESORERIA.pdf"
-  },
-  {
-    title: "Organigrama Bienestar",
-    description: "ORGANIGRAMA BIENESTAR.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_BIENESTAR.pdf"
-  },
-  {
-    title: "Organigrama Protección Civil y Bomberos",
-    description: "PROTECCION CIVIL Y BOMBEROS ORGANIGRAMA.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_PROTECCION_CIVIL_Y_BOMBEROS.pdf"
-  },
-  {
-    title: "Organigrama Secretaría del Ayuntamiento",
-    description: "SECRETARÍA DEL AYUNTAMIENTO ORGANIGRAMA.pdf",
-    date: "Actualizado: Abril 2026",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_SECRETARIA_DEL_AYUNTAMIENTO.pdf"
-  }
-]
+
 
 
 
@@ -222,7 +159,7 @@ function CollapsibleSection({
             </span>
             {gridBadge && (
               <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-primary/10 text-primary hidden sm:inline">
-                Vista en cuadrícula
+                Lista compacta
               </span>
             )}
           </div>
@@ -236,6 +173,142 @@ function CollapsibleSection({
         {children}
       </div>
     </details>
+  )
+}
+
+/** Renders a unified vertical list for documents with alternating backgrounds and optional search/filter */
+function DocList({
+  docs,
+  showFilters = false,
+}: {
+  docs: Array<{ title: string; description?: string; date?: string; url?: string }>
+  showFilters?: boolean
+}) {
+  const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState("")
+  const isLargeGroup = showFilters && docs.length >= 10
+
+  // Extract first letter of each document title
+  const getFirstLetter = (t: string): string => {
+    const match = t.match(/[a-zA-ZáéíóúñÁÉÍÓÚÑ]/)
+    return match ? match[0].toUpperCase() : "#"
+  }
+
+  // Get unique letters that have documents
+  const availableLetters = Array.from(
+    new Set(docs.map((doc) => getFirstLetter(doc.title)))
+  ).sort()
+
+  // Normalize text for accent-insensitive search
+  const normalizeText = (text: string) =>
+    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+
+  // Filter documents by selected letter AND search query
+  const filteredDocs = docs.filter((doc) => {
+    const matchesLetter = selectedLetter ? getFirstLetter(doc.title) === selectedLetter : true
+    const matchesQuery = searchQuery
+      ? normalizeText(doc.title).includes(normalizeText(searchQuery)) ||
+      (doc.description && normalizeText(doc.description).includes(normalizeText(searchQuery)))
+      : true
+    return matchesLetter && matchesQuery
+  })
+
+  return (
+    <div className="flex flex-col">
+      {/* Search Bar + Alphabet Filter Container (only if enabled and 10+ documents) */}
+      {isLargeGroup && (
+        <div className="flex flex-col gap-2 p-3 bg-muted/15 border-b border-border/50 select-none">
+          {/* Intelligent Search Input */}
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Buscar por título o descripción..."
+              className="w-full pl-9 pr-8 py-1.5 bg-background border border-border rounded-lg text-xs outline-none focus:border-primary/45 transition-colors placeholder:text-muted-foreground/60 text-foreground"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 p-0.5 text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+              >
+                <X className="h-3 w-3" />
+              </button>
+            )}
+          </div>
+
+          {/* Alphabet Filter */}
+          {availableLetters.length > 1 && (
+            <div className="flex flex-wrap items-center gap-1 mt-1 select-none">
+              <span className="text-[10px] font-semibold text-muted-foreground mr-1.5">
+                Inicial:
+              </span>
+              <button
+                onClick={() => setSelectedLetter(null)}
+                className={cn(
+                  "px-2 py-0.5 rounded text-[10px] font-bold transition-colors border",
+                  selectedLetter === null
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-background text-muted-foreground border-border hover:bg-muted hover:text-foreground"
+                )}
+              >
+                Todos
+              </button>
+              {availableLetters.map((letter) => (
+                <button
+                  key={letter}
+                  onClick={() => setSelectedLetter(letter)}
+                  className={cn(
+                    "px-2 py-0.5 rounded text-[10px] font-bold transition-colors border",
+                    selectedLetter === letter
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "bg-background text-muted-foreground border-border hover:bg-muted hover:text-foreground"
+                  )}
+                >
+                  {letter}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Render Document List */}
+      <div className="animate-in fade-in duration-200">
+        {filteredDocs.length > 0 ? (
+          <div className="divide-y divide-border/60">
+            {filteredDocs.map((doc, i) => (
+              <div
+                key={i}
+                className={i % 2 === 0 ? "bg-card" : "bg-muted/15"}
+              >
+                <DocumentItem
+                  title={doc.title}
+                  description={doc.description}
+                  date={doc.date}
+                  downloadUrl={doc.url}
+                  variant="compact"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="p-8 text-center text-xs text-muted-foreground select-none">
+            No se encontraron documentos que coincidan con la búsqueda.
+            <button
+              onClick={() => {
+                setSearchQuery("")
+                setSelectedLetter(null)
+              }}
+              className="block mx-auto mt-2 text-primary font-bold hover:underline"
+            >
+              Restablecer filtros
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
   )
 }
 
@@ -287,32 +360,7 @@ export default function EstructuraPage() {
             badge={`${organigramas.length} documentos`}
             gridBadge={organigramas.length > GRID_THRESHOLD}
           >
-            {organigramas.length > GRID_THRESHOLD ? (
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
-                {organigramas.map((org, index) => (
-                  <DocumentCard
-                    key={index}
-                    title={org.title}
-                    description={org.description}
-                    date={org.date}
-                    downloadUrl={org.url}
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="divide-y divide-border">
-                {organigramas.map((org, index) => (
-                  <DocumentItem
-                    key={index}
-                    title={org.title}
-                    description={org.description}
-                    date={org.date}
-                    downloadUrl={org.url}
-                    variant="default"
-                  />
-                ))}
-              </div>
-            )}
+            <DocList docs={organigramas} showFilters={true} />
           </CollapsibleSection>
 
           {/* Directorio Municipal */}

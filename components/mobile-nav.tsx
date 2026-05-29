@@ -93,14 +93,14 @@ export function MobileNav() {
 
   return (
     <div
-      className={`lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-3 transition-all duration-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6 pointer-events-none"
+      className={`lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-3 pointer-events-none transition-all duration-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       aria-label="Navegación móvil"
     >
       {/* Panel de módulos */}
       <div
         className={`transition-all duration-300 origin-bottom ${menuOpen
-          ? "opacity-100 scale-100 translate-y-0"
+          ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
           : "opacity-0 scale-95 translate-y-2 pointer-events-none"
           }`}
       >
@@ -136,7 +136,7 @@ export function MobileNav() {
       </div>
 
       {/* Píldora principal */}
-      <div className="flex items-center gap-1 bg-foreground/90 backdrop-blur-md rounded-full px-2 py-2 shadow-2xl border border-white/10">
+      <div className="flex items-center gap-1 bg-foreground/90 backdrop-blur-md rounded-full px-2 py-2 shadow-2xl border border-white/10 pointer-events-auto">
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = item.scrollTop ? active === "top" : active === item.observeId

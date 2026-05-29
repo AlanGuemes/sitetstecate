@@ -82,8 +82,8 @@ export function YearTabs<T extends DocWithDate>({ documentos, children }: YearTa
     return docs
   }, [yearDocs, noYear, activeTrimestre, availableQuarters])
 
-  /* 6. Don't render tabs if there's only one year (or none) ──────────── */
-  if (years.length <= 1) {
+  /* 6. Don't render tabs if there are no years ──────────── */
+  if (years.length === 0) {
     return <>{children(documentos, activeYear)}</>
   }
 

@@ -1576,7 +1576,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1589,7 +1589,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1602,7 +1602,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1615,7 +1615,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1628,7 +1628,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1641,7 +1641,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1654,7 +1654,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1667,7 +1667,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1680,7 +1680,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA CORRESPONDIENTE AL 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1693,7 +1693,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1706,7 +1706,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1719,7 +1719,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1732,7 +1732,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1745,7 +1745,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1758,7 +1758,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1771,7 +1771,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1784,7 +1784,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1797,7 +1797,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1810,7 +1810,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1823,7 +1823,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PROGRAMÁTICA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1836,7 +1836,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PROGRAMÁTICA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1849,7 +1849,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PROGRAMÁTICA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1862,7 +1862,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PROGRAMÁTICA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1875,7 +1875,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1888,7 +1888,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1901,7 +1901,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1914,7 +1914,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1927,7 +1927,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1940,7 +1940,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1953,7 +1953,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1966,7 +1966,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1979,7 +1979,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -1992,7 +1992,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACION CONTABLE 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACION CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2005,7 +2005,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2018,7 +2018,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2031,7 +2031,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2044,7 +2044,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2057,7 +2057,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2070,7 +2070,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2083,7 +2083,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2096,7 +2096,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2109,7 +2109,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2122,7 +2122,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN CONTABLE 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN CONTABLE",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2135,7 +2135,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2148,7 +2148,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2161,7 +2161,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2174,7 +2174,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2187,7 +2187,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2200,7 +2200,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2213,7 +2213,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2226,7 +2226,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2239,7 +2239,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN LEY DE DISCIPLINA FINANCIERA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2252,7 +2252,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2265,7 +2265,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2278,7 +2278,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2291,7 +2291,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2304,7 +2304,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2317,7 +2317,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2330,7 +2330,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2343,7 +2343,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2356,7 +2356,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2369,7 +2369,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2382,7 +2382,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PROGRAMÁTICA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2395,7 +2395,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PROGRAMÁTICA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2408,7 +2408,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PROGRAMÁTICA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2421,7 +2421,7 @@ const documentos = [
     trimestre: 4,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PROGRAMÁTICA 4TO TRIMESTRE 2025",
+    subsubsection: "INFORMACIÓN PROGRAMÁTICA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2643,7 +2643,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Ayudas Sociales — Presidencia",
+    title: "Ayudas Sociales - Presidencia",
     description: "Ayudas sociales otorgadas por Presidencia.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/AYUDAS_SOCIALES_PRESIDENCIA_TRIMESTRE_1-2026.pdf",
     date: "2026",
@@ -2656,7 +2656,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Ayudas Sociales — Regidora Claudia Cota — 1er Trimestre 2026",
+    title: "Ayudas Sociales - Regidora Claudia Cota",
     description: "Relación de ayudas sociales otorgadas por la Regidora Claudia Cota.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/AYUDAS_SOCIALES_01-2026_REGIDORA_CLAUDIA_COTA.pdf",
     date: "2026",
@@ -2669,7 +2669,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Ayudas Sociales — Regidor Samuel Eduardo Real Murillo — 1er Trimestre 2026",
+    title: "Ayudas Sociales - Regidor Samuel Eduardo Real Murillo",
     description: "Relación de ayudas sociales otorgadas por el Regidor Samuel Eduardo Real Murillo.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/AYUDAS_SOCIALES_1ER_TRIMESTRE_2026_REGIDOR_SAMUEL_EDUARDO_REAL_MURILLO.pdf",
     date: "2026",
@@ -2682,7 +2682,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Ayudas Sociales — Regidor Josué Abel Martínez — 1er Trimestre 2026",
+    title: "Ayudas Sociales - Regidor Josué Abel Martínez",
     description: "Relación de ayudas sociales otorgadas por el Regidor Josué Abel Martínez.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/AYUDAS_SOCIALES_1er_TRIM_2026_Regidor_Josue_Abel_Martinez.pdf",
     date: "2026",
@@ -2695,7 +2695,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Ayudas Sociales — Regidor Isaac Contreras — 1er Trimestre 2026",
+    title: "Ayudas Sociales - Regidor Isaac Contreras",
     description: "Relación de ayudas sociales otorgadas por el Regidor Isaac Contreras.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/AYUDAS_SOCIALES_2026_Regidor_Isaac_Contreras.pdf",
     date: "2026",
@@ -2708,7 +2708,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Ayudas Sociales — Regidora María Quijada — 1er Trimestre 2026",
+    title: "Ayudas Sociales - Regidora María Quijada",
     description: "Relación de ayudas sociales otorgadas por la Regidora María Quijada.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/AYUDAS_SOCIALES_ENERO-MARZO_2026_MARIA_QUIJADA.pdf",
     date: "2026",
@@ -2721,7 +2721,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Ayudas Sociales — Sindicatura",
+    title: "Ayudas Sociales - Sindicatura",
     description: "Ayudas sociales otorgadas por Sindicatura.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/AYUDAS_SOCIALES_ENE-MZO26_SINDICATURA.pdf",
     date: "2026",
@@ -2734,7 +2734,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Ayudas Sociales — Bienestar",
+    title: "Ayudas Sociales - Bienestar",
     description: "Ayudas sociales otorgadas por Bienestar.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/AYUDAS_SOCIALES_1ER_TRIMESTRE_2026_BIENESTAR.pdf",
     date: "2026",
@@ -2747,7 +2747,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Gastos de Publicidad — Facturas — Presidencia",
+    title: "Gastos de Publicidad - Presidencia",
     description: "Facturas de gastos de publicidad de Presidencia.",
     url: "#",
     date: "2026",
@@ -2962,7 +2962,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2975,7 +2975,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -2988,7 +2988,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3001,7 +3001,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3014,7 +3014,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3027,7 +3027,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3040,7 +3040,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3053,7 +3053,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3066,7 +3066,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3079,7 +3079,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3092,7 +3092,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3105,7 +3105,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3118,7 +3118,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3131,7 +3131,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3144,7 +3144,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3157,7 +3157,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3170,7 +3170,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3183,7 +3183,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3196,7 +3196,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3209,7 +3209,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3222,7 +3222,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3235,7 +3235,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3248,7 +3248,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3261,7 +3261,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3274,7 +3274,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3287,7 +3287,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3300,7 +3300,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3313,7 +3313,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3326,7 +3326,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3339,7 +3339,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3352,7 +3352,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3365,7 +3365,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3378,7 +3378,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "GASTOS",
-    subsubsection: "COSTOS / PEAJES Y VIATICOS 1ER TRIMESTRE 2026",
+    subsubsection: "COSTOS / PEAJES Y VIATICOS",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3391,52 +3391,52 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "PADRON DE PROVEEDORES",
-    subsubsection: "1ER TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Aportaciones Federales (FORTAMUN-TECATE) — 1er Trimestre 2026",
+    title: "Aportaciones Federales (FORTAMUN-TECATE)",
     description: "Reporte de Aportaciones Federales (FORTAMUN-TECATE) correspondiente al 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/1ER_TRIMESTRE_APORTACIONES_FEDERALES_(FORTAMUN-TECATE).pdf",
     date: "2026",
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "SISTEMA DE RECURSOS FEDERALES TRANSFERIDOS (SRFT) — 1ER TRIMESTRE 2026",
+    subsubsection: "SISTEMA DE RECURSOS FEDERALES TRANSFERIDOS",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Obligaciones Garantizadas con Fondos Federales — 1er Trimestre 2026",
+    title: "Obligaciones Garantizadas con Fondos Federales",
     description: "Formato de Obligaciones Garantizadas con Fondos Federales correspondiente al 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/FORMATO_OBLIG_GARANTIZADAS_CON_FF_2026_1ER_TRIMESTRE.pdf",
     date: "2026",
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "SISTEMA DE RECURSOS FEDERALES TRANSFERIDOS (SRFT) — 1ER TRIMESTRE 2026",
+    subsubsection: "SISTEMA DE RECURSOS FEDERALES TRANSFERIDOS",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Gasto Federalizado y Reintegros — 1er Trimestre 2026",
+    title: "Gasto Federalizado y Reintegros",
     description: "Reporte de Gasto Federalizado y Reintegros correspondiente al 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/GASTO_FEDERALIZADO_Y_REINTEGROS_1ER_TRIM_2026.pdf",
     date: "2026",
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "SISTEMA DE RECURSOS FEDERALES TRANSFERIDOS (SRFT) — 1ER TRIMESTRE 2026",
+    subsubsection: "SISTEMA DE RECURSOS FEDERALES TRANSFERIDOS",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "A) Ejercicio del Gasto — 1er Trimestre 2026",
+    title: "A) Ejercicio del Gasto",
     description: "Reporte del Ejercicio del Gasto del Sistema de Recursos Federales Transferidos (SRFT) — 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/A)_EJERCICIO_DEL_GASTO_-1ER_TRIM_2026.pdf",
     date: "2026",
@@ -3449,7 +3449,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "B) Destino del Gasto — 1er Trimestre 2026",
+    title: "B) Destino del Gasto",
     description: "Reporte del Destino del Gasto del Sistema de Recursos Federales Transferidos (SRFT) — 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/B)_DESTINO_DEL_GASTO_-1ER_TRIM_2026.pdf",
     date: "2026",
@@ -3462,7 +3462,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "C) Indicadores — 1er Trimestre 2026",
+    title: "C) Indicadores",
     description: "Reporte de Indicadores del Sistema de Recursos Federales Transferidos (SRFT) — 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/C)_INDICADORES_-1ER_TRIM_2026.pdf",
     date: "2026",
@@ -3475,7 +3475,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "D) Recursos FAIS — 1er Trimestre 2026",
+    title: "D) Recursos FAIS",
     description: "Reporte de Recursos FAIS (Fondo de Aportaciones para la Infraestructura Social) del Sistema de Recursos Federales Transferidos (SRFT) — 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/D)_RECURSOS_FAIS_-_1ER_TRIMESTRE_DE_2026_-_FAIS.pdf",
     date: "2026",
@@ -3568,7 +3568,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3581,7 +3581,7 @@ const documentos = [
     trimestre: 1,
     section: "Finanzas",
     subsection: "ESTADOS FINANCIEROS Y CUENTAS PUBLICAS",
-    subsubsection: "INFORMACIÓN PRESUPUESTARIA 1ER TRIMESTRE 2026",
+    subsubsection: "INFORMACIÓN PRESUPUESTARIA",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3605,14 +3605,14 @@ const documentos = [
   // Servidores Públicos con Sanciones
   {
     category: "documento",
-    title: "Servidores Públicos con Sanciones — 1er Trimestre 2026",
+    title: "Servidores Públicos con Sanciones",
     description: "Relación de servidores públicos sancionados correspondiente al 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/2026_Sanciones_primer_trimestre_2026.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "SERVIDORES PUBLICOS CON SANCIONES",
-    subsubsection: "2026 / 1ER. TRIMESTRE",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3620,14 +3620,14 @@ const documentos = [
   // Estadísticas — Atención Ciudadana
   {
     category: "documento",
-    title: "Estadísticas Atención Ciudadana — 1er Trimestre 2026",
-    description: "Estadísticas de atención ciudadana correspondientes al 1er Trimestre 2026.",
+    title: "Estadísticas - Atención Ciudadana",
+    description: "Estadísticas de atención ciudadana correspondiente al 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/ESTADISTICAS_Informe_TKTIENDE_1ER__TRIMESTRE_2026.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "ESTADISTICAS",
-    subsubsection: "ATENCION CIUDADANA / 1ER TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3635,14 +3635,14 @@ const documentos = [
   // Estadísticas — Seguridad Ciudadana y Tránsito Municipal
   {
     category: "documento",
-    title: "Estadísticas Seguridad Ciudadana y Tránsito Municipal — 1er Trimestre 2026",
+    title: "Estadísticas - Seguridad Ciudadana y Tránsito Municipal",
     description: "Estadísticas de seguridad ciudadana y tránsito municipal del 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/ESTADISTICAS_SEGURIDAD_CIUDADANA_1er_trimestre_2026.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "ESTADISTICAS",
-    subsubsection: "SEGURIDAD CIUDADANA Y TRANSITO MUNICIPAL / 1ER. TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3650,14 +3650,14 @@ const documentos = [
   // Estadísticas — Bienestar
   {
     category: "documento",
-    title: "Estadísticas Bienestar — 1er Trimestre 2026",
+    title: "Estadísticas - Bienestar",
     description: "Estadísticas de bienestar municipal correspondientes al 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/ESTADISTICAS_AYUDAS_SOCIALES_1ER_TRIMESTRE_2026_BIENESTAR.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "ESTADISTICAS",
-    subsubsection: "BIENESTAR / 1ER. TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3665,14 +3665,14 @@ const documentos = [
   // Estadísticas — Unidad Coordinadora de Delegaciones
   {
     category: "documento",
-    title: "Estadísticas Unidad Coordinadora de Delegaciones — 1er Trimestre 2026",
+    title: "Estadísticas - Unidad Coordinadora de Delegaciones",
     description: "Estadísticas de la Unidad Coordinadora de Delegaciones del 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/ESTADISTICAS_1ER_TRIM_26_UNIDAD_COORDINADORA_DE_DELEGACIONES.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "ESTADISTICAS",
-    subsubsection: "UNIDAD COORDINADORA DE DELEGACIONES / 1ER. TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3680,14 +3680,14 @@ const documentos = [
   // Estadísticas — DGIT
   {
     category: "documento",
-    title: "Estadísticas DGIT — 1er Trimestre 2026",
+    title: "Estadísticas - DGIT",
     description: "Estadísticas de la Dirección de Gestión Integral del Territorio del 1er Trimestre.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/ESTADISTICAS_1_ER_2026_DGIT.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "ESTADISTICAS",
-    subsubsection: "DGIT / 1ER TRIMESTRE",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3845,7 +3845,7 @@ const documentos = [
     trimestre: 1,
     section: "Administracion",
     subsection: "CURRICULUMS",
-    subsubsection: "DESARROLLOECONOMICO",
+    subsubsection: "DESARROLLO ECONOMICO",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3866,105 +3866,105 @@ const documentos = [
   // Metas y Objetivos 2026
   {
     category: "documento",
-    title: "Metas y Objetivos — Atención Ciudadana — 1er Trimestre 2026",
+    title: "Metas y Objetivos - Atención Ciudadana",
     description: "Metas y objetivos de Atención Ciudadana correspondientes al 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/POA_1er_Trimeste_2026_ATC.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "METAS Y OBJETIVOS",
-    subsubsection: "2026 / ATENCION CIUDADANA / 1ER TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Metas y Objetivos — Bienestar — 1er Trimestre 2026",
+    title: "Metas y Objetivos - Bienestar",
     description: "Metas y objetivos de Bienestar Municipal correspondientes al 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/POA_BIENESTAR_2026.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "METAS Y OBJETIVOS",
-    subsubsection: "2026 / BIENESTAR / 1ER. TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Metas y Objetivos — Protección Civil y Bomberos — 1er Trimestre 2026",
+    title: "Metas y Objetivos - Protección Civil y Bomberos",
     description: "Metas y objetivos de Protección Civil y Bomberos del 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/POA_1ER_TRIMESTRE_2026_BOMBEROS.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "METAS Y OBJETIVOS",
-    subsubsection: "2026 / PROTECCION CIVIL Y BOMBEROS / 1ER TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Metas y Objetivos — Oficialía Mayor",
+    title: "Metas y Objetivos - Oficialía Mayor",
     description: "Metas y objetivos de la Oficialía Mayor para el ejercicio 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/POA_1er_2026_oficialia.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "METAS Y OBJETIVOS",
-    subsubsection: "2026 / OFICIALIA MAYOR",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Metas y Objetivos — Gestión Integral — 1er Trimestre 2026",
+    title: "Metas y Objetivos - Gestión Integral",
     description: "Metas y objetivos de la Dirección de Gestión Integral del Territorio del 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/POA_DGIT_1ER_TRIM_2026.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "METAS Y OBJETIVOS",
-    subsubsection: "2026 / GESTION INTEGRAL / 1ER. TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Metas y Objetivos — Desarrollo Económico — 1er Trimestre 2026",
+    title: "Metas y Objetivos - Desarrollo Económico",
     description: "Metas y objetivos de la Dirección de Desarrollo Económico del 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/POA_desarollo_economico_2026.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "METAS Y OBJETIVOS",
-    subsubsection: "2026 / DESARROLLOECONOMICO / 1er TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Metas y Objetivos — Sindicatura — 1er Trimestre 2026",
+    title: "Metas y Objetivos - Sindicatura",
     description: "Metas y objetivos de la Sindicatura Procuradora correspondientes al 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/POA_Sindicatura_1er_Trim_2026.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "METAS Y OBJETIVOS",
-    subsubsection: "2026 / SINDICATURA / 1ER TRIMESTRE",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Metas y Objetivos — Seguridad Ciudadana — 1er Trimestre 2026",
+    title: "Metas y Objetivos - Seguridad Ciudadana",
     description: "Metas y objetivos de Seguridad Ciudadana y Tránsito del 1er Trimestre 2026.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/POA_1ER_TRIMESTRE_2026_SEGURIDAD_CIUDADANA.pdf",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "METAS Y OBJETIVOS",
-    subsubsection: "2026 / SEGURIDAD CIUDADANA / 1ER TRIMESTRE 2026",
+    subsubsection: "",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -3972,7 +3972,7 @@ const documentos = [
   // Declaración Patrimonial
   {
     category: "documento",
-    title: "Declaración Patrimonial — Segundo Trimestre",
+    title: "Declaración Patrimonial",
     description: "Declaraciones patrimoniales de servidores públicos correspondientes al segundo trimestre.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/DECPAT_2DO_TRIM_2025.pdf",
     date: "2025",
@@ -3985,7 +3985,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Declaración Patrimonial — Tercer Trimestre",
+    title: "Declaración Patrimonial",
     description: "Declaraciones patrimoniales de servidores públicos correspondientes al tercer trimestre.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/DECPAT_3ER_TRIM_2025.pdf",
     date: "2025",
@@ -4000,7 +4000,7 @@ const documentos = [
   // Trámites Ofrecidos
   {
     category: "documento",
-    title: "Acta de Inspección — 2026 — Bomberos",
+    title: "Acta de Inspección",
     description: "Formato de acta de inspección para la coordinación de bomberos.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/Acta_de_Inspeccion-2026-BOMBEROS.pdf",
     date: "2026",
@@ -4013,7 +4013,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Formato de Inspección — 2026 — Bomberos",
+    title: "Formato de Inspección",
     description: "Formato oficial de inspección de bomberos.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/Formato_de_Inspeccion_2026-BOMBEROS.pdf",
     date: "2026",
@@ -4026,7 +4026,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Para Venta / Renta — 2026 — Bomberos",
+    title: "Para Venta / Renta",
     description: "Trámite de bomberos para venta o renta de inmuebles.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/Para_venta-renta-2026-BOMBEROS.pdf",
     date: "2026",
@@ -4039,7 +4039,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Registro para Empresas Comerciales — 2026",
+    title: "Registro para Empresas Comerciales",
     description: "Registro oficial para empresas comerciales.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/Registro_para_empresas_comerciales-2026.pdf",
     date: "2026",
@@ -4052,7 +4052,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Solicitud de Factibilidad de Proyecto — 2026 — Bomberos",
+    title: "Solicitud de Factibilidad de Proyecto",
     description: "Solicitud de factibilidad de proyecto para bomberos.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/Solicitud_de_factibilidad_de_proyecto-BOMBEROS-2026.pdf",
     date: "2026",
@@ -4065,7 +4065,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Solicitud de Factibilidad de Servicio — 2026 — Bomberos",
+    title: "Solicitud de Factibilidad de Servicio",
     description: "Solicitud de factibilidad de servicio para bomberos.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/Solicitud_de_factibilidad_de_servicio-2026-BOMBEROS.pdf",
     date: "2026",
@@ -4078,7 +4078,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Termografía — 2026 — Bomberos",
+    title: "Termografía",
     description: "Documento sobre el trámite de termografía para bomberos.",
     url: "https://s3-public-presigner-production-ed97.up.railway.app/termogra-2026-BOMBEROS.pdf",
     date: "2026",
@@ -4134,27 +4134,27 @@ const documentos = [
   // Licencias
   {
     category: "documento",
-    title: "Licencias de Construcción — DGIT — 1er Trimestre 2026",
+    title: "Licencias de Construcción",
     description: "Registro de licencias de construcción emitidas por la DGIT en el 1er Trimestre 2026.",
     url: "https://docs.google.com/spreadsheets/d/1pVU8xNduyEh5tcMvESl2HgfhVDwZX9nX/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "LICENCIAS DE CONSTRUCCION",
-    subsubsection: "LICENCIAS DE CONSTRUCCION / DGIT / 1ER TRIMESTRE 2026",
+    subsubsection: "DGIT",
     type: "PDF",
     ambito: "Municipal"
   },
   {
     category: "documento",
-    title: "Licencias de Uso de Suelo — DGIT — 1er Trimestre 2026",
+    title: "Licencias de Uso de Suelo",
     description: "Registro de licencias de uso de suelo emitidas por la DGIT en el 1er Trimestre 2026.",
     url: "https://docs.google.com/spreadsheets/d/11V4rX5HRKM88lNTmQYC08vSR_RPY7ZxM/edit?usp=drive_link&ouid=107626160719506934016&rtpof=true&sd=true",
     date: "2026",
     trimestre: 1,
     section: "Administracion",
     subsection: "LICENCIAS DE USO DE SUELO",
-    subsubsection: "LICENCIAS DE USO DE SUELO / DGIT / 1ER TRIMESTRE 2026",
+    subsubsection: "DGIT",
     type: "PDF",
     ambito: "Municipal"
   },
@@ -4248,7 +4248,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Cabildo",
+    title: "Cabildo",
     description: "Nómina de Cabildo.",
     date: "2026",
     trimestre: 1,
@@ -4260,7 +4260,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Coordinación General de Gabinete",
+    title: "Coordinación General de Gabinete",
     description: "Nómina de Coordinación General de Gabinete.",
     date: "2026",
     trimestre: 1,
@@ -4272,7 +4272,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Coordinación Municipal de Protección Civil y Bomberos",
+    title: "Coordinación Municipal de Protección Civil y Bomberos",
     description: "Nómina de Coordinación Municipal de Protección Civil y Bomberos.",
     date: "2026",
     trimestre: 1,
@@ -4284,7 +4284,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Dirección de Atención Ciudadana",
+    title: "Dirección de Atención Ciudadana",
     description: "Nómina de Dirección de Atención Ciudadana.",
     date: "2026",
     trimestre: 1,
@@ -4296,7 +4296,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Dirección de Bienestar",
+    title: "Dirección de Bienestar",
     description: "Nómina de Dirección de Bienestar.",
     date: "2026",
     trimestre: 1,
@@ -4308,7 +4308,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Dirección de Comunicación Social",
+    title: "Dirección de Comunicación Social",
     description: "Nómina de Dirección de Comunicación Social.",
     date: "2026",
     trimestre: 1,
@@ -4320,7 +4320,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Dirección de Desarrollo Económico",
+    title: "Dirección de Desarrollo Económico",
     description: "Nómina de Dirección de Desarrollo Económico.",
     date: "2026",
     trimestre: 1,
@@ -4332,7 +4332,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Dirección de Gestión Integral del Territorio",
+    title: "Dirección de Gestión Integral del Territorio",
     description: "Nómina de Dirección de Gestión Integral del Territorio.",
     date: "2026",
     trimestre: 1,
@@ -4344,7 +4344,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Dirección de Seguridad Ciudadana y Tránsito Municipal",
+    title: "Dirección de Seguridad Ciudadana y Tránsito Municipal",
     description: "Nómina de Dirección de Seguridad Ciudadana y Tránsito Municipal.",
     date: "2026",
     trimestre: 1,
@@ -4356,7 +4356,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Oficialía Mayor",
+    title: "Oficialía Mayor",
     description: "Nómina de Oficialía Mayor.",
     date: "2026",
     trimestre: 1,
@@ -4368,7 +4368,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Secretaría del Ayuntamiento",
+    title: "Secretaría del Ayuntamiento",
     description: "Nómina de Secretaría del Ayuntamiento.",
     date: "2026",
     trimestre: 1,
@@ -4380,7 +4380,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Sindicatura Municipal",
+    title: "Sindicatura Municipal",
     description: "Nómina de Sindicatura Municipal.",
     date: "2026",
     trimestre: 1,
@@ -4392,7 +4392,7 @@ const documentos = [
   },
   {
     category: "documento",
-    title: "Nómina — Tesorería Municipal",
+    title: "Tesorería Municipal",
     description: "Nómina de Tesorería Municipal.",
     date: "2026",
     trimestre: 1,
@@ -4954,6 +4954,75 @@ const rawContactosParamunicipales = [
   }
 ];
 
+
+export const organigramas = [
+  {
+    title: "Central XXV Ayuntamiento",
+    description: "ORGANIGRAMA CENTRAL XXV AYUNTAMIENTO.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_CENTRAL_XXV_AYUNTAMIENTO.pdf"
+  },
+  {
+    title: "Coordinación de Gabinete",
+    description: "COORDINACION DE GABINETE ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/COORDINACION_DE_GABINETE_ORGANIGRAMA.pdf"
+  },
+  {
+    title: "Coordinación de Gabinete (Versión 2)",
+    description: "COORDINACION DE GABINETE ORGANIGRAMA2.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/COORDINACION_DE_GABINETE_ORGANIGRAMA2.pdf"
+  },
+  {
+    title: "Coordinación de Gabinete XXV Ayuntamiento",
+    description: "ORGANIGRAMA COORDINACION DE GABINETE XXV AYUNTAMIENTO.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_COORDINACION_DE_GABINETE_XXV_AYUNTAMIENTO.pdf"
+  },
+  {
+    title: "Desarrollo Económico",
+    description: "DESARROLLO ECONOMICO ORGANIGRAMA 2025.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/DESARROLLO_ECONOMICO_ORGANIGRAMA_2025.pdf"
+  },
+  {
+    title: "DGIT",
+    description: "DGIT ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/DGIT_ORGANIGRAMA.pdf"
+  },
+  {
+    title: "DSCTM",
+    description: "DSCTM ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/DSCTM_ORGANIGRAMA.pdf"
+  },
+  {
+    title: "Tesorería",
+    description: "ORGANIGRAMA 2025 TESORERIA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_2025_TESORERIA.pdf"
+  },
+  {
+    title: "Bienestar",
+    description: "ORGANIGRAMA BIENESTAR.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_BIENESTAR.pdf"
+  },
+  {
+    title: "Protección Civil y Bomberos",
+    description: "PROTECCION CIVIL Y BOMBEROS ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_PROTECCION_CIVIL_Y_BOMBEROS.pdf"
+  },
+  {
+    title: "Secretaría del Ayuntamiento",
+    description: "SECRETARÍA DEL AYUNTAMIENTO ORGANIGRAMA.pdf",
+    date: "Actualizado: Abril 2026",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/ORGANIGRAMA_SECRETARIA_DEL_AYUNTAMIENTO.pdf"
+  }
+];
 
 export const nominas = documentos.filter(d => d.subsection === "NOMINAS");
 

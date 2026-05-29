@@ -5,6 +5,7 @@ interface DocumentItemProps {
   title: string
   description?: string
   date?: string
+  trimestre?: number
   downloadUrl?: string
   externalUrl?: string
   variant?: "default" | "bordered" | "compact"
@@ -14,6 +15,7 @@ export function DocumentItem({
   title,
   description,
   date,
+  trimestre,
   downloadUrl,
   externalUrl,
   variant = "default"
@@ -50,8 +52,13 @@ export function DocumentItem({
       </div>
 
       <div className="flex items-center gap-3">
+        {trimestre && isCompact && (
+          <span className="text-[10px] font-semibold text-primary bg-primary/10 border border-primary/20 dark:bg-primary/20 px-1.5 py-0.5 rounded select-none hidden sm:inline-block">
+            {trimestre === 1 ? "1er" : trimestre === 2 ? "2do" : trimestre === 3 ? "3er" : trimestre === 4 ? "4to" : trimestre} Trimestre
+          </span>
+        )}
         {date && isCompact && (
-          <span className="text-[10px] font-medium text-muted-foreground/80 bg-muted px-1.5 py-0.5 rounded border border-border/40 select-none hidden sm:inline-block">
+          <span className="text-[10px] font-semibold text-[#B58150] bg-[#B58150]/10 border border-[#B58150]/20 dark:text-[#DDC9A3] dark:bg-[#DDC9A3]/10 dark:border-[#DDC9A3]/20 px-1.5 py-0.5 rounded select-none hidden sm:inline-block">
             {date}
           </span>
         )}

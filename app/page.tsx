@@ -16,7 +16,9 @@ import {
   BookOpen,
   Navigation as NavigationIcon,
   Mail,
-  Phone
+  Phone,
+  Scale,
+  Wallet
 } from "lucide-react"
 import Link from "next/link"
 import { contactoPrincipal } from "@/lib/data"
@@ -110,49 +112,52 @@ export default function HomePage() {
             {/* Buscador rápido */}
             <SearchBar />
             {/* Módulos */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ModuleCard
-                title="Transparencia"
-                description="Consulta las obligaciones de transparencia, avisos de privacidad y tabla de aplicabilidad."
-                href="/transparencia"
-                iconName="Eye"
-                variant="primary"
-              />
-              <ModuleCard
-                title="Estructura"
-                description="Conoce la estructura organizacional, organigramas y directorio de servidores públicos."
-                href="/estructura"
-                iconName="Building2"
-                variant="secondary"
-              />
-              <ModuleCard
-                title="Administración"
-                description="Información sobre trámites, servicios, programas sociales y atención ciudadana."
-                href="/administracion"
-                iconName="Users"
-                variant="accent"
-              />
-              <ModuleCard
-                title="Finanzas"
-                description="Consulta el presupuesto, estados financieros, cuenta pública y gastos operativos."
-                href="/finanzas"
-                iconName="Wallet"
-                variant="primary"
-              />
-              <ModuleCard
-                title="Normatividad"
-                description="Accede a leyes, reglamentos, manuales administrativos y marco jurídico aplicable."
-                href="/normatividad"
-                iconName="Scale"
-                variant="secondary"
-              />
-              <ModuleCard
-                title="Recursos Humanos"
-                description="Información sobre nóminas, plazas, tabuladores y plantilla de personal."
-                href="/administracion#recursos"
-                iconName="LayoutGrid"
-                variant="accent"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
+              <div className="md:col-span-3 transition-transform hover:-translate-y-1 duration-300">
+                <ModuleCard
+                  title="Transparencia"
+                  description="Consulta las obligaciones de transparencia, avisos de privacidad y tabla de aplicabilidad."
+                  href="/transparencia"
+                  iconName="Eye"
+                  variant="primary"
+                />
+              </div>
+              <div className="md:col-span-3 transition-transform hover:-translate-y-1 duration-300">
+                <ModuleCard
+                  title="Estructura"
+                  description="Conoce la estructura organizacional, organigramas y directorio de servidores públicos."
+                  href="/estructura"
+                  iconName="Building2"
+                  variant="secondary"
+                />
+              </div>
+              <div className="md:col-span-2 transition-transform hover:-translate-y-1 duration-300">
+                <ModuleCard
+                  title="Administración"
+                  description="Información sobre trámites, servicios, programas sociales y atención ciudadana."
+                  href="/administracion"
+                  iconName="Users"
+                  variant="accent"
+                />
+              </div>
+              <div className="md:col-span-2 transition-transform hover:-translate-y-1 duration-300">
+                <ModuleCard
+                  title="Finanzas"
+                  description="Consulta el presupuesto, estados financieros, cuenta pública y gastos operativos."
+                  href="/finanzas"
+                  iconName="Wallet"
+                  variant="primary"
+                />
+              </div>
+              <div className="md:col-span-2 transition-transform hover:-translate-y-1 duration-300">
+                <ModuleCard
+                  title="Normatividad"
+                  description="Accede a leyes, reglamentos, manuales administrativos y marco jurídico aplicable."
+                  href="/normatividad"
+                  iconName="Scale"
+                  variant="secondary"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -390,39 +395,47 @@ export default function HomePage() {
                 <div className="lg:col-span-3 bg-card grid grid-cols-2">
                   {[
                     {
-                      icon: Shield,
+                      icon: BookOpen,
                       color: "text-primary",
                       bg: "bg-primary/10",
-                      title: "Protección de Datos",
-                      desc: "Tus datos personales están protegidos conforme a la ley.",
-                      badge: "ARCO",
-                    },
-                    {
-                      icon: FileText,
-                      color: "text-secondary",
-                      bg: "bg-secondary/10",
-                      title: "Documentos Oficiales",
-                      desc: "Información verificada y publicada por el sujeto obligado.",
-                      badge: "Verificado",
-                    },
-                    {
-                      icon: Eye,
-                      color: "text-primary",
-                      bg: "bg-primary/10",
-                      title: "Acceso Público 24/7",
-                      desc: "Toda la información disponible en línea, sin restricciones.",
-                      badge: "En línea",
+                      title: "Sesiones de Cabildo",
+                      desc: "Consulta las actas, acuerdos y resolutivos de las sesiones del cabildo municipal.",
+                      badge: "Cabildo",
+                      href: "/normatividad",
                     },
                     {
                       icon: Users,
                       color: "text-secondary",
                       bg: "bg-secondary/10",
-                      title: "Atención Ciudadana",
-                      desc: "Soporte y orientación para ejercer tus derechos de acceso.",
-                      badge: "Soporte",
+                      title: "Directorio Municipal",
+                      desc: "Contacta a los titulares y consulta las funciones de las dependencias municipales.",
+                      badge: "Directorio",
+                      href: "/estructura#section-directorio",
                     },
-                  ].map(({ icon: Icon, color, bg, title, desc, badge }) => (
-                    <div key={title} className="p-6 border-b border-r border-border last:border-b-0 [&:nth-child(2)]:border-r-0 [&:nth-child(4)]:border-b-0 [&:nth-child(3)]:border-b-0 hover:bg-muted/30 transition-colors">
+                    {
+                      icon: Scale,
+                      color: "text-primary",
+                      bg: "bg-primary/10",
+                      title: "Ley de Ingresos",
+                      desc: "Consulta las disposiciones sobre el ingreso público del municipio de Tecate.",
+                      badge: "Finanzas",
+                      href: "/finanzas#section-LEY DE INGRESOS",
+                    },
+                    {
+                      icon: Wallet,
+                      color: "text-secondary",
+                      bg: "bg-secondary/10",
+                      title: "Presupuestos",
+                      desc: "Consulta el presupuesto de egresos, egresos operativos y cuenta pública municipal.",
+                      badge: "Presupuestos",
+                      href: "/finanzas#section-PRESUPUESTOS",
+                    },
+                  ].map(({ icon: Icon, color, bg, title, desc, badge, href }) => (
+                    <Link
+                      key={title}
+                      href={href}
+                      className="p-6 border-b border-r border-border last:border-b-0 [&:nth-child(2)]:border-r-0 [&:nth-child(4)]:border-b-0 [&:nth-child(3)]:border-b-0 hover:bg-muted/30 transition-colors block"
+                    >
                       <div className="flex items-start justify-between mb-3">
                         <div className={`flex items-center justify-center w-9 h-9 rounded-lg ${bg}`}>
                           <Icon className={`h-5 w-5 ${color}`} />
@@ -433,7 +446,7 @@ export default function HomePage() {
                       </div>
                       <h3 className="font-semibold text-foreground text-sm">{title}</h3>
                       <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{desc}</p>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>

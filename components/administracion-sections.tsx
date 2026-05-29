@@ -30,6 +30,7 @@ type DocType = {
   description?: string
   date?: string
   url?: string
+  trimestre?: number
   subsection?: string
   subsubsection?: string
   [key: string]: unknown
@@ -129,7 +130,7 @@ function DocList({
   docs,
   showFilters = false,
 }: {
-  docs: Array<{ title: string; description?: string; date?: string; url?: string }>
+  docs: DocType[]
   showFilters?: boolean
 }) {
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
@@ -156,7 +157,7 @@ function DocList({
     const matchesLetter = selectedLetter ? getFirstLetter(doc.title) === selectedLetter : true
     const matchesQuery = searchQuery
       ? normalizeText(doc.title).includes(normalizeText(searchQuery)) ||
-        (doc.description && normalizeText(doc.description).includes(normalizeText(searchQuery)))
+      (doc.description && normalizeText(doc.description).includes(normalizeText(searchQuery)))
       : true
     return matchesLetter && matchesQuery
   })
@@ -235,6 +236,7 @@ function DocList({
                   title={doc.title}
                   description={doc.description}
                   date={doc.date}
+                  trimestre={doc.trimestre}
                   downloadUrl={doc.url}
                   variant="compact"
                 />
@@ -307,7 +309,7 @@ function FolderCard({
     const matchesLetter = selectedLetter ? getFirstLetter(doc.title) === selectedLetter : true
     const matchesQuery = searchQuery
       ? normalizeText(doc.title).includes(normalizeText(searchQuery)) ||
-        (doc.description && normalizeText(doc.description).includes(normalizeText(searchQuery)))
+      (doc.description && normalizeText(doc.description).includes(normalizeText(searchQuery)))
       : true
     return matchesLetter && matchesQuery
   })
