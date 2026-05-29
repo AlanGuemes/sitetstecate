@@ -3692,176 +3692,7 @@ const documentos = [
     ambito: "Municipal"
   },
 
-  // Currículums
-  {
-    category: "documento",
-    title: "Currículums — Sindicatura",
-    description: "Currículum vitae del personal de la Sindicatura Procuradora.",
-    url: "https://docs.google.com/spreadsheets/d/18M-U9dv5J3kpVm-YuUExX733CCUle3yl/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "SINDICATURA",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Seguridad Ciudadana",
-    description: "Currículum vitae del personal de la Secretaría de Seguridad Ciudadana y Tránsito Municipal.",
-    url: "https://docs.google.com/spreadsheets/d/15Bks42yA_KtmRWFH8VCelTZ0KvGT1pB4/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "SEGURIDAD CIUDADANA",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Tesorería",
-    description: "Currículum vitae del personal de la Tesorería Municipal.",
-    url: "https://docs.google.com/spreadsheets/d/1pmX6cE7zztA2o2YEK3wMU3N5B-5r5lPp/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "TESORERIA",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Secretaría del Ayuntamiento",
-    description: "Currículum vitae del personal de la Secretaría del Ayuntamiento.",
-    url: "https://docs.google.com/spreadsheets/d/1TP4rxWI55ItE4H3yO2vqIZnI5KVsGSa6/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Regidores",
-    description: "Currículums vitae de los Regidores del H. Ayuntamiento de Tecate.",
-    url: "https://docs.google.com/spreadsheets/d/1iZybgB3dz1kL0bmfUS1ApdkH7e8gIF8e/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "REGIDORES",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Protección Civil y Bomberos",
-    description: "Currículum vitae del personal de la Coordinación de Protección Civil y Bomberos.",
-    url: "https://docs.google.com/spreadsheets/d/1qKq40NSbGagWSdev2lYYI585_dWORexN/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Presidencia",
-    description: "Currículum vitae del Presidente Municipal de Tecate, B.C.",
-    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_RCM.pdf",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "PRESIDENCIA",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Oficialía Mayor",
-    description: "Currículum vitae de los servidores públicos de la Oficialía Mayor.",
-    url: "https://docs.google.com/spreadsheets/d/18yU97kcfGvK2Bg-LBHzoc6abPmaQFyao/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "OFICIALIA MAYOR",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Bienestar",
-    description: "Currículum vitae de los servidores públicos de la Dirección de Bienestar Municipal.",
-    url: "https://docs.google.com/spreadsheets/d/1lMdWEPNsvRoRY8oInq8PZxLIPbNrt4ZO/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "BIENESTAR",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Coordinación General de Gabinete",
-    description: "Currículum vitae de los servidores públicos de la Coordinación General de Gabinete.",
-    url: "https://docs.google.com/spreadsheets/d/1gqPm8m4Q0aIKLA_NuUznh7bvMq_8vadW/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "COORDINACION GENERAL DE GABINETE",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Gestión Integral del Territorio",
-    description: "Currículum vitae de los servidores públicos de la Dirección de Gestión Integral del Territorio.",
-    url: "https://docs.google.com/spreadsheets/d/18srLXg_L_Kus8n4EaSOa7yfvUhlDIYhZ/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "GESTION INTEGRAL",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Desarrollo Económico",
-    description: "Currículum vitae de los servidores públicos de la Dirección de Desarrollo Económico.",
-    url: "https://docs.google.com/spreadsheets/d/1U48fPNgxCnLx6UFW4m-M16Cka9LAqr9P/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "DESARROLLO ECONOMICO",
-    type: "PDF",
-    ambito: "Municipal"
-  },
-  {
-    category: "documento",
-    title: "Currículums — Atención Ciudadana",
-    description: "Currículum vitae de los servidores públicos de la Dirección de Atención Ciudadana.",
-    url: "https://docs.google.com/spreadsheets/d/1DAF6Oe57uoBojb7gmhiOI5i9rb349PmY/edit?usp=sharing&ouid=107626160719506934016&rtpof=true&sd=true",
-    date: "2026",
-    trimestre: 1,
-    section: "Administracion",
-    subsection: "CURRICULUMS",
-    subsubsection: "ATENCION CIUDADANA",
-    type: "PDF",
-    ambito: "Municipal"
-  },
+  // Currículums extraídos a constante independiente
 
   // Metas y Objetivos 2026
   {
@@ -5025,6 +4856,639 @@ export const organigramas = [
 ];
 
 export const nominas = documentos.filter(d => d.subsection === "NOMINAS");
+
+export const curriculums = [
+  {
+    title: "Currículum — Rey David Sánchez Figueroa",
+    description: "Currículum vitae de Rey David Sánchez Figueroa, personal de Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_RDSF.pdf",
+    subsubsection: "SINDICATURA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Gabriela Vázquez Ortega",
+    description: "Currículum vitae de Gabriela Vázquez Ortega, personal de Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_GVO.pdf",
+    subsubsection: "SINDICATURA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Luis Fernando de la Torre Castañeda",
+    description: "Currículum vitae de Luis Fernando de la Torre Castañeda, personal de Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_LFTC.pdf",
+    subsubsection: "SINDICATURA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Guido Edgard Pinkus Ruelas",
+    description: "Currículum vitae de Guido Edgard Pinkus Ruelas, personal de Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_GEPR.pdf",
+    subsubsection: "SINDICATURA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Héctor Lemus Vela",
+    description: "Currículum vitae de Héctor Lemus Vela, personal de Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_HLV.pdf",
+    subsubsection: "SINDICATURA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Sarahí Osuna Acevedo",
+    description: "Currículum vitae de Sarahí Osuna Acevedo, personal de Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_SOA.pdf",
+    subsubsection: "SINDICATURA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Rubén Arce Pineda",
+    description: "Currículum vitae de Rubén Arce Pineda, personal de Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_RAP.pdf",
+    subsubsection: "SINDICATURA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Edgar Aldana Solís",
+    description: "Currículum vitae de Edgar Aldana Solís, personal de Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_EAS.pdf",
+    subsubsection: "SINDICATURA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Guillermo Arturo Sandoval de la Torre",
+    description: "Currículum vitae de Guillermo Arturo Sandoval de la Torre, personal de Sindicatura Procuradora.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_GAST.pdf",
+    subsubsection: "SINDICATURA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — C.P. Krystian Castro Martínez",
+    description: "Currículum vitae de C.P. Krystian Castro Martínez, personal de Seguridad Ciudadana.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_KCM.pdf",
+    subsubsection: "SEGURIDAD CIUDADANA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Lic. Juan Carlos Fraijo Lino",
+    description: "Currículum vitae de Lic. Juan Carlos Fraijo Lino, personal de Seguridad Ciudadana.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JCFL.pdf",
+    subsubsection: "SEGURIDAD CIUDADANA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — José Luis Sarmiento Monje",
+    description: "Currículum vitae de José Luis Sarmiento Monje, personal de Seguridad Ciudadana.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JOSE_LUIS_SARMIENTO_MONJE.pdf",
+    subsubsection: "SEGURIDAD CIUDADANA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Miguel Ángel Ayala Torres",
+    description: "Currículum vitae de Miguel Ángel Ayala Torres, personal de Tesorería Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MIGUEL_ANGEL_AYALA_TRRES.pdf",
+    subsubsection: "TESORERIA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — César Raymundo Herrera Lizárraga",
+    description: "Currículum vitae de César Raymundo Herrera Lizárraga, personal de Tesorería Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Cesar_Raymundo_Herrera_Lizarraga.pdf",
+    subsubsection: "TESORERIA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Angélica López Ortega",
+    description: "Currículum vitae de Angélica López Ortega, personal de Tesorería Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Angelica_Lopez_Ortega.pdf",
+    subsubsection: "TESORERIA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — María Rosa Ramírez",
+    description: "Currículum vitae de María Rosa Ramírez, personal de Tesorería Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Maria_Rosa_Ramirez.pdf",
+    subsubsection: "TESORERIA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Yolanda Faviola Amaro Rosales",
+    description: "Currículum vitae de Yolanda Faviola Amaro Rosales, personal de Tesorería Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Yolanda_Faviola_Amaro_Rosales.pdf",
+    subsubsection: "TESORERIA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Miguel Lima Cuevas",
+    description: "Currículum vitae de Miguel Lima Cuevas, personal de Tesorería Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Miguel_Lima_Cuevas_(1).pdf",
+    subsubsection: "TESORERIA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Raúl Alfredo Ferreiro Guillén",
+    description: "Currículum vitae de Raúl Alfredo Ferreiro Guillén, Jefe de Reglamentos de la Secretaría del Ayuntamiento.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Jefe_de_Reglamentos.pdf",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Eduardo Macías Flores (Coordinador de Cabildo)",
+    description: "Currículum vitae de Eduardo Macías Flores, Coordinador de Cabildo de la Secretaría del Ayuntamiento.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Coordinador_cabildo.pdf",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Andrey Abraham Torres Guzmán",
+    description: "Currículum vitae de Andrey Abraham Torres Guzmán, Jefe de Justicia de la Secretaría del Ayuntamiento.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Jefe_de_Justicia.pdf",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Ismael Chavarín Rebolledo",
+    description: "Currículum vitae de Ismael Chavarín Rebolledo, Jefe de Acción Cívica de la Secretaría del Ayuntamiento.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Jefe_de_Accion_Civica.pdf",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Héctor Humberto León Gutiérrez",
+    description: "Currículum vitae de Héctor Humberto León Gutiérrez, Jefe Administrativo de la Secretaría del Ayuntamiento.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Jefe_Administrativo.pdf",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Dra. Mirna Elisa Bejarano Ahumada",
+    description: "Currículum vitae de Dra. Mirna Elisa Bejarano Ahumada, Oficial del Registro Civil de la Secretaría del Ayuntamiento.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Oficial_de_Registro_Civil.pdf",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Eduardo Macías Flores (Secretario del Ayuntamiento)",
+    description: "Currículum vitae de Eduardo Macías Flores, Secretario del Ayuntamiento de la Secretaría del Ayuntamiento.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_N_Secretario_del_Ayuntamiento.pdf",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Elena Zarahiel Dueñas Kim",
+    description: "Currículum vitae de Elena Zarahiel Dueñas Kim, Coordinadora de Asuntos de Cabildo y Gobierno de la Secretaría del Ayuntamiento.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_N_Coordinadora_de_Asuntos_de_Cabildo_y_Gobierno.pdf",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Nhatshmi Kelaia Bielma Mejía",
+    description: "Currículum vitae de Nhatshmi Kelaia Bielma Mejía, Oficial 01 de Registro Civil de la Secretaría del Ayuntamiento.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_N_Oficial_01_de_Registro_Civil.pdf",
+    subsubsection: "SECRETARIA DEL AYUNTAMIENTO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Laura Elena Sevilla García",
+    description: "Currículum vitae de Laura Elena Sevilla García, Regidora del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_LESG.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Karolina Fraijo Velázquez",
+    description: "Currículum vitae de Karolina Fraijo Velázquez, Regidora del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_KFV.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Pedro Jesús Torres Salas",
+    description: "Currículum vitae de Pedro Jesús Torres Salas, Regidor del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_PJTS.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Claudia Raquel Cota Ruiz",
+    description: "Currículum vitae de Claudia Raquel Cota Ruiz, Regidora del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_CRCR.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Sonia López Montoya",
+    description: "Currículum vitae de Sonia López Montoya, Regidora del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_SLM.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Isaac Contreras López",
+    description: "Currículum vitae de Isaac Contreras López, Regidor del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_ICL.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — María Reynalda Rodríguez Fermín",
+    description: "Currículum vitae de María Reynalda Rodríguez Fermín, Regidora del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MRGF.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — María de Jesús Quijada Maldonado",
+    description: "Currículum vitae de María de Jesús Quijada Maldonado, Regidora del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MJQM.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Josué Abel Martínez Basilio",
+    description: "Currículum vitae de Josué Abel Martínez Basilio, Regidor del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JAMB.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Samuel Eduardo Real Murillo",
+    description: "Currículum vitae de Samuel Eduardo Real Murillo, Regidor del H. Ayuntamiento de Tecate.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_SRM.pdf",
+    subsubsection: "REGIDORES",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Diana Laura de Santiago Albáñez",
+    description: "Currículum vitae de Diana Laura de Santiago Albáñez, personal de la Coordinación de Protección Civil y Bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_DLSA.pdf",
+    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Constantino León Rodríguez",
+    description: "Currículum vitae de Constantino León Rodríguez, personal de la Coordinación de Protección Civil y Bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_COX.pdf",
+    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Francisco René Abril Guzmán",
+    description: "Currículum vitae de Francisco René Abril Guzmán, personal de la Coordinación de Protección Civil y Bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_FRAG.pdf",
+    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Melesio Melquiades Martínez García",
+    description: "Currículum vitae de Melesio Melquiades Martínez García, personal de la Coordinación de Protección Civil y Bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MMMG.pdf",
+    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Melesio Melquiades Martínez García (2)",
+    description: "Currículum vitae de Melesio Melquiades Martínez García (segundo enlace), personal de la Coordinación de Protección Civil y Bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Melesio.pdf",
+    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Adrián Acuña Contreras",
+    description: "Currículum vitae de Adrián Acuña Contreras, personal de la Coordinación de Protección Civil y Bomberos.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_CO_ACUNA.pdf",
+    subsubsection: "PROTECCION CIVIL Y BOMBEROS",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículums — Presidencia - Roman Cota Muñoz",
+    description: "Currículum vitae del Presidente Municipal de Tecate, B.C.  ",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_RCM.pdf",
+    subsubsection: "PRESIDENCIA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Mariel Ivett Garfio Inzunza",
+    description: "Currículum vitae de Mariel Ivett Garfio Inzunza, personal de la Oficialía Mayor.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MIGI.pdf",
+    subsubsection: "OFICIALIA MAYOR",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Alisson Deniss Partida Maldonado",
+    description: "Currículum vitae de Alisson Deniss Partida Maldonado, personal de la Oficialía Mayor.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_ADPM.pdf",
+    subsubsection: "OFICIALIA MAYOR",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Mtro. Omar Blancarte Aragón",
+    description: "Currículum vitae de Mtro. Omar Blancarte Aragón, personal de la Oficialía Mayor.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Omar_Blancarte_Aragon.pdf",
+    subsubsection: "OFICIALIA MAYOR",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Jesús Alfredo Atondo Olide",
+    description: "Currículum vitae de Jesús Alfredo Atondo Olide, personal de la Dirección de Bienestar Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_ATONDO_OLIDE_JESUS_ALFREDO.pdf",
+    subsubsection: "BIENESTAR",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Brian Cruz",
+    description: "Currículum vitae de Brian Cruz, personal de la Dirección de Bienestar Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_brian_cruz.pdf",
+    subsubsection: "BIENESTAR",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Fabián Hernández Morales",
+    description: "Currículum vitae de Fabián Hernández Morales, personal de la Dirección de Bienestar Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_FABIAN.pdf",
+    subsubsection: "BIENESTAR",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Priscila Carrillo",
+    description: "Currículum vitae de Priscila Carrillo, personal de la Dirección de Bienestar Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_priscila_carrillo.pdf",
+    subsubsection: "BIENESTAR",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Monserrat Landeros",
+    description: "Currículum vitae de Monserrat Landeros, personal de la Dirección de Bienestar Municipal.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_monserrat_landeros.pdf",
+    subsubsection: "BIENESTAR",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Omar Dustan Lozano Rivas",
+    description: "Currículum vitae de Omar Dustan Lozano Rivas, personal de la Coordinación General de Gabinete.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_ODLR.pdf",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Joel Vázquez Martínez",
+    description: "Currículum vitae de Joel Vázquez Martínez, personal de la Coordinación General de Gabinete.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JVM.pdf",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Kelly Guadalupe Osuna Jiménez",
+    description: "Currículum vitae de Kelly Guadalupe Osuna Jiménez, personal de la Coordinación General de Gabinete.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_KELLY1.pdf",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Rosa Aracely Gutiérrez Ramírez",
+    description: "Currículum vitae de Rosa Aracely Gutiérrez Ramírez, personal de la Coordinación General de Gabinete.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_ROSA1.pdf",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Claudia Yajaira Navarro Fernández",
+    description: "Currículum vitae de Claudia Yajaira Navarro Fernández, personal de la Coordinación General de Gabinete.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_YAJAIRA1.pdf",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Ricardo Alejandro Camargo Jiménez",
+    description: "Currículum vitae de Ricardo Alejandro Camargo Jiménez, personal de la Coordinación General de Gabinete.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_RACJ.pdf",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Luis Villavicencio Zárate",
+    description: "Currículum vitae de Luis Villavicencio Zárate, personal de la Coordinación General de Gabinete.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_LVZ.pdf",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — María Eugenia Guadalupe Obeso Gutiérrez",
+    description: "Currículum vitae de María Eugenia Guadalupe Obeso Gutiérrez, personal de la Coordinación General de Gabinete.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MEGOG.pdf",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Katya Aidee Escobar Arce",
+    description: "Currículum vitae de Katya Aidee Escobar Arce, personal de la Coordinación General de Gabinete.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_KAEA.pdf",
+    subsubsection: "COORDINACION GENERAL DE GABINETE",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Mario Alberto González",
+    description: "Currículum vitae de Mario Alberto González, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MARIO_ALBERTO_GONZALEZ.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Daniel Acosta Haskel",
+    description: "Currículum vitae de Daniel Acosta Haskel, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_DANIEL_ACOSTA_HASKEL_.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Juan Manuel Pluneda",
+    description: "Currículum vitae de Juan Manuel Pluneda, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JUAN_MANUEL_PLUNEDA.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Luis Juárez Quiroz",
+    description: "Currículum vitae de Luis Juárez Quiroz, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Luis_Juarez_Quiroz.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Mario Alberto Arredondo N.",
+    description: "Currículum vitae de Mario Alberto Arredondo N., personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CVMario_Alberto_Arredondo_N.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Luis Francisco Martínez B.",
+    description: "Currículum vitae de Luis Francisco Martínez B., personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_LUIS_FRANCISCO_MARTINEZ_B.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Ivonne Anaya",
+    description: "Currículum vitae de Ivonne Anaya, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_IVONNE_ANAYA.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — José Luis Barba Duarte",
+    description: "Currículum vitae de José Luis Barba Duarte, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JOSE_LUIS_BARBA_DUARTE.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Juan Carlos Méndez A.",
+    description: "Currículum vitae de Juan Carlos Méndez A., personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JUAN_CARLOS_MENDEZ_A.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Silvia Karina Jasso Vale",
+    description: "Currículum vitae de Silvia Karina Jasso Vale, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_SILVIA_KARINA_JASSO_VALE.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Gerardo de la Rosa",
+    description: "Currículum vitae de Gerardo de la Rosa, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_GERARDO_DE_LA_ROSA.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Luis Delgado",
+    description: "Currículum vitae de Luis Delgado, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_LUIS_DELGADO.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Juan Manuel Pluneda (2)",
+    description: "Currículum vitae de Juan Manuel Pluneda (segundo enlace), personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JUAN_MANUEL_PLUNEDA_.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Marcos de Israel García",
+    description: "Currículum vitae de Marcos de Israel García, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MARCOS_DE_ISRAEL_GARCIA.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Mario Daniel Maulión",
+    description: "Currículum vitae de Mario Daniel Maulión, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MARIO_DANIEL_MAULION_.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Julio César Leyva",
+    description: "Currículum vitae de Julio César Leyva, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JULIO_CESAR_LEYVA_.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Pablo Contreras",
+    description: "Currículum vitae de Pablo Contreras, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_PAblo_Contreras_.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Río Alam Mercado Barrera",
+    description: "Currículum vitae de Río Alam Mercado Barrera, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Rio_Alam_Mercado_Barrera.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Brenda Lorena Ordóñez Hernández",
+    description: "Currículum vitae de Brenda Lorena Ordóñez Hernández, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_BRENDA_LORENA_ORDOEZ_HERNANDEZ.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Diego Soriano Martínez",
+    description: "Currículum vitae de Diego Soriano Martínez, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV-_DIEGO_SORIANO_MARTINEZ-1.pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Mónica Viviana Zalazar Sandoval",
+    description: "Currículum vitae de Mónica Viviana Zalazar Sandoval, personal de la Dirección de Gestión Integral del Territorio.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_MZALAZAR_2025_acta_(1).pdf",
+    subsubsection: "GESTION INTEGRAL",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Betsy Yesenia Duran Atondo",
+    description: "Currículum vitae de Betsy Yesenia Duran Atondo, personal de la Dirección de Desarrollo Económico.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_BETSY_DURAN.pdf",
+    subsubsection: "DESARROLLO ECONOMICO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Grisel Arely Garcia Pedraza",
+    description: "Currículum vitae de Grisel Arely Garcia Pedraza, personal de la Dirección de Desarrollo Económico.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_GAGP.pdf",
+    subsubsection: "DESARROLLO ECONOMICO",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Carmela Cortés Morales",
+    description: "Currículum vitae de Carmela Cortés Morales, personal de la Dirección de Atención Ciudadana.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Carmela_CM.pdf",
+    subsubsection: "ATENCION CIUDADANA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Jose Leonardo Alvarez Farias",
+    description: "Currículum vitae de Jose Leonardo Alvarez Farias, personal de la Dirección de Atención Ciudadana.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_JLAF.pdf",
+    subsubsection: "ATENCION CIUDADANA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Raúl Azviaury Hernández",
+    description: "Currículum vitae de Raúl Azviaury Hernández, personal de la Dirección de Atención Ciudadana.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_RAH.pdf",
+    subsubsection: "ATENCION CIUDADANA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Rafael Salinas Salcedo",
+    description: "Currículum vitae de Rafael Salinas Salcedo, personal de la Dirección de Atención Ciudadana.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_Rafael_Salinas_Salcedo.pdf",
+    subsubsection: "ATENCION CIUDADANA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Lesdy Corral",
+    description: "Currículum vitae de Lesdy Corral, personal de la Dirección de Atención Ciudadana.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_LESDY_CORRAL.pdf",
+    subsubsection: "ATENCION CIUDADANA",
+    actualizacion: "Abril 2026"
+  },
+  {
+    title: "Currículum — Luis Acosta",
+    description: "Currículum vitae de Luis Acosta, personal de la Dirección de Atención Ciudadana.",
+    url: "https://s3-public-presigner-production-ed97.up.railway.app/CV_LUIS_ACOSTA.pdf",
+    subsubsection: "ATENCION CIUDADANA",
+    actualizacion: "Abril 2026"
+  }
+];
 
 export const dependencias = [
   ...rawContactos.map(c => ({ ...c, isParamunicipal: false })),

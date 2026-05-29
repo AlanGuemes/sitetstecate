@@ -62,12 +62,6 @@ const seccionConfig: Record<
       "Indicadores estadísticos de atención y operación de las distintas áreas de la administración municipal, publicados trimestralmente.",
     icon: BarChart2,
   },
-  CURRICULUMS: {
-    label: "Currículums",
-    description:
-      "Currículums vitae de los servidores públicos de primer nivel del H. Ayuntamiento de Tecate, B.C., en cumplimiento a la Ley de Transparencia.",
-    icon: UserCheck,
-  },
   "METAS Y OBJETIVOS": {
     label: "Metas y Objetivos",
     description:
@@ -115,7 +109,6 @@ const seccionOrder = [
   "PLAN MUNICIPAL DE DESARROLLO",
   "SERVIDORES PUBLICOS CON SANCIONES",
   "ESTADISTICAS",
-  "CURRICULUMS",
   "PENSIONADOS Y JUBILADOS",
   "METAS Y OBJETIVOS",
   "DECLARACION PATRIMONIAL",

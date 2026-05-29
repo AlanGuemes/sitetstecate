@@ -9,9 +9,9 @@ import { DocumentCard } from "@/components/document-card"
 import { NominasSection } from "@/components/estructura-nominas"
 import {
   Phone, Mail, MapPin, Download, Network, Scale, ListChecks,
-  ChevronDown, Building2, FileText, Search, X,
+  ChevronDown, Building2, FileText, Search, X, UserCheck,
 } from "lucide-react"
-import { contactos, contactosParamunicipales, nominas, organigramas } from "@/lib/data"
+import { contactos, contactosParamunicipales, nominas, organigramas, curriculums } from "@/lib/data"
 
 const GRID_THRESHOLD = 4;
 
@@ -408,6 +408,60 @@ export default function EstructuraPage() {
 
           {/* Nominas con tabulador de años */}
           <NominasSection nominas={nominas} />
+
+          {/* Currículums */}
+          <CollapsibleSection
+            id="section-curriculums"
+            icon={UserCheck}
+            title="Currículums"
+            description="Consulta los currículum vitae de los servidores públicos de primer nivel del H. Ayuntamiento de Tecate, B.C."
+            badge={`${curriculums.length} documentos`}
+            gridBadge={curriculums.length > GRID_THRESHOLD}
+          >
+            {(() => {
+              // Group curriculums by subsubsection
+              const groups: Record<string, typeof curriculums> = {}
+              curriculums.forEach(doc => {
+                const sub = (doc.subsubsection as string) || "General"
+                if (!groups[sub]) groups[sub] = []
+                groups[sub].push(doc)
+              })
+              const keys = Object.keys(groups).sort()
+
+              return (
+                <div className="flex flex-col divide-y divide-border/60">
+                  {keys.map(key => {
+                    const groupDocs = groups[key] || []
+                    return (
+                      <details key={key} className="group p-5 border-b border-border/60 last:border-b-0">
+                        <summary className="flex items-center justify-between cursor-pointer list-none select-none">
+                          <div className="flex items-center gap-3 w-full">
+                            <span className="text-xs font-bold uppercase tracking-widest text-primary px-2.5 py-1 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+                              {key}
+                            </span>
+                            <div className="flex-1 h-px bg-border" />
+                            <span className="text-xs text-muted-foreground mr-2">{groupDocs.length} documentos</span>
+                            <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform duration-200 group-open:rotate-180 shrink-0" />
+                          </div>
+                        </summary>
+                        <div className="mt-4 pt-2">
+                          <DocList
+                            docs={groupDocs.map((c) => ({
+                              title: c.title,
+                              description: c.description,
+                              date: c.actualizacion,
+                              url: c.url,
+                            }))}
+                            showFilters={true}
+                          />
+                        </div>
+                      </details>
+                    )
+                  })}
+                </div>
+              )
+            })()}
+          </CollapsibleSection>
         </div>
 
         {/* ── Footer CTA ────────────────────────────────────────────── */}
