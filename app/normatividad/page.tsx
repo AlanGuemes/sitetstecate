@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import Link from "next/link"
 import { SectionHeader } from "@/components/section-header"
 import { DocumentItem } from "@/components/document-item"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { cn, normalizeSearch } from "@/lib/utils"
 import {
   Scale,
@@ -25,8 +25,14 @@ import { normatividadData, siteData } from "@/lib/data"
 const { categories, documentos, enlacesExternos } = normatividadData
 
 export default function NormatividadPage() {
-  const [selectedCategory, setSelectedCategory] = useState("all")
+  const [selectedCategory, setSelectedCategory] = useState("leyes")
   const [searchQuery, setSearchQuery] = useState("")
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash === "#sesionesdecabildo") {
+      setSelectedCategory("sesiones")
+    }
+  }, [])
 
   const filteredDocuments = documentos.filter(doc => {
     const matchesCategory = selectedCategory === "all" ||
@@ -225,7 +231,7 @@ export default function NormatividadPage() {
                 )}
 
                 {cabildoDocs.length > 0 && (
-                  <div className="mb-10">
+                  <div id="sesionesdecabildo" className="mb-10 scroll-mt-24">
                     <SectionHeader
                       title="Sesiones de Cabildo"
                       description={`${cabildoDocs.length} documentos encontrados`}
