@@ -1,6 +1,8 @@
 import { getDocumentos, getEnlacesExternos } from "@/lib/db-data"
 import NormatividadClientPage from "./client-page"
 
+export const dynamic = "force-dynamic";
+
 export default async function NormatividadPage() {
   const allDocs = await getDocumentos()
   const documentos = allDocs.filter(d => !d.subseccion || d.subseccion.nombre === "Normatividad" || d.section === "Normatividad")

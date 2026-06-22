@@ -23,6 +23,8 @@ import {
 import Link from "next/link"
 import { getContactoPrincipal, getAllSearchableItems } from "@/lib/db-data"
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const contactoPrincipal = (await getContactoPrincipal()) || {
     titular: "No disponible",

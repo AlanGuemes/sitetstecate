@@ -4,6 +4,8 @@ import { AdministracionSections } from "@/components/administracion-sections"
 import { getDocumentos } from "@/lib/db-data"
 import { FileText } from "lucide-react"
 
+export const dynamic = "force-dynamic";
+
 export default async function AdministracionPage() {
   const todosDocs = await getDocumentos()
   const documentos = todosDocs.filter(d => d.section === "Administracion").map(d => ({ ...d, description: d.description || undefined, date: d.date || undefined, trimestre: d.trimestre || undefined, subsection: d.subseccion?.nombre, subsubsection: d.subsubseccion?.nombre }))

@@ -4,6 +4,8 @@ import { FinanzasSections } from "@/components/finanzas-sections"
 import { getDocumentos } from "@/lib/db-data"
 import { FileSpreadsheet } from "lucide-react"
 
+export const dynamic = "force-dynamic";
+
 export default async function FinanzasPage() {
   const todosDocs = await getDocumentos()
   const documentos = todosDocs.filter(d => d.section === "Finanzas").map(d => ({ ...d, description: d.description || undefined, date: d.date || undefined, trimestre: d.trimestre || undefined, subsection: d.subseccion?.nombre, subsubsection: d.subsubseccion?.nombre }))

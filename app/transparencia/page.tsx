@@ -15,6 +15,8 @@ const navSections = [
   { navId: "tabla-aplicabilidad", observeId: "tabla-aplicabilidad", label: "Tabla de Aplicabilidad" },
 ]
 
+export const dynamic = "force-dynamic";
+
 export default async function TransparenciaPage() {
   const contactoPrincipal = (await getContactoPrincipal()) || {
     titular: "No disponible",

@@ -1,6 +1,8 @@
 import EstructuraClientPage from "./client-page"
 import { getContactos, getContactosParamunicipales, getDocumentos } from "@/lib/db-data"
 
+export const dynamic = "force-dynamic";
+
 export default async function EstructuraPage() {
   const contactos = await getContactos()
   const contactosParamunicipales = await getContactosParamunicipales()
