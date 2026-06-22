@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { siteData } from "@/lib/data"
+import { siteData } from "@/lib/site-config"
 import { ModuleCard } from "@/components/module-card"
 import { SearchBar } from "@/components/search-bar"
 import { TransparencyCard } from "@/components/transparency-card"
@@ -21,9 +21,18 @@ import {
   Wallet
 } from "lucide-react"
 import Link from "next/link"
-import { contactoPrincipal } from "@/lib/data"
+import { getContactoPrincipal, getAllSearchableItems } from "@/lib/db-data"
 
-export default function HomePage() {
+export default async function HomePage() {
+  const contactoPrincipal = (await getContactoPrincipal()) || {
+    titular: "No disponible",
+    cargo: "No disponible",
+    correo: "No disponible",
+    telefono: "No disponible"
+  };
+
+  const searchableItems = await getAllSearchableItems();
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
@@ -110,7 +119,7 @@ export default function HomePage() {
         <section id="modulos" className="pt-6 pb-16 lg:pt-8 lg:pb-24 bg-background">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             {/* Buscador rápido */}
-            <SearchBar />
+            <SearchBar items={searchableItems} />
             {/* Módulos */}
             <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
               <div className="md:col-span-3 transition-transform hover:-translate-y-1 duration-300">

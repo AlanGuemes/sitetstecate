@@ -1,0 +1,140 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String   // Hash de la contraseña
+  name      String?
+  role      String   @default("ADMIN") // Puedes usar roles como ADMIN o EDITOR
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("usuarios")
+}
+
+model Dependencia {
+  id              Int                  @id @default(autoincrement())
+  nombre          String               
+  titular         String?
+  email           String?
+  phone           String?
+  address         String?
+  isParamunicipal Boolean              @default(false)
+  
+  areas           DependenciaArea[]
+  funciones       DependenciaFuncion[]
+  
+  createdAt       DateTime             @default(now())
+  updatedAt       DateTime             @updatedAt
+
+  @@map("dependencias")
+}
+
+model DependenciaArea {
+  id            Int         @id @default(autoincrement())
+  nombre        String
+  dependenciaId Int
+  dependencia   Dependencia @relation(fields: [dependenciaId], references: [id], onDelete: Cascade)
+  
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@map("dependencia_areas")
+}
+
+model DependenciaFuncion {
+  id            Int         @id @default(autoincrement())
+  descripcion   String      @db.Text
+  dependenciaId Int
+  dependencia   Dependencia @relation(fields: [dependenciaId], references: [id], onDelete: Cascade)
+  
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@map("dependencia_funciones")
+}
+
+model ContactoPrincipal {
+  id            Int      @id @default(autoincrement())
+  titular       String
+  cargo         String
+  dependencia   String
+  correo        String
+  domicilio     String
+  telefono      String
+  horario       String
+  plataforma    String
+  actualizacion String
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("contacto_principal")
+}
+
+model Subseccion {
+  id              Int             @id @default(autoincrement())
+  nombre          String          @unique
+  subsubsecciones Subsubseccion[]
+  documentos      Documento[]
+  
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@map("subsecciones")
+}
+
+model Subsubseccion {
+  id           Int         @id @default(autoincrement())
+  nombre       String      @unique
+  subseccionId Int?
+  subseccion   Subseccion? @relation(fields: [subseccionId], references: [id], onDelete: SetNull)
+  documentos   Documento[]
+  
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@map("subsubsecciones")
+}
+
+model Documento {
+  id              Int            @id @default(autoincrement())
+  category        String         @default("documento")
+  title           String
+  description     String?        @db.Text
+  url             String
+  date            String?
+  trimestre       Int?
+  type            String         @default("PDF")
+  ambito          String         @default("Municipal")
+  section         String         @default("Normatividad")
+  
+  subseccionId    Int?
+  subseccion      Subseccion?    @relation(fields: [subseccionId], references: [id], onDelete: SetNull)
+  
+  subsubseccionId Int?
+  subsubseccion   Subsubseccion? @relation(fields: [subsubseccionId], references: [id], onDelete: SetNull)
+  
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@map("documentos")
+}
+
+model EnlaceExterno {
+  id          Int      @id @default(autoincrement())
+  titulo      String
+  descripcion String?  @db.Text
+  url         String
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("enlaces_externos")
+}

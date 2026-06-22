@@ -1,11 +1,13 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { AdministracionSections } from "@/components/administracion-sections"
-import { administracionData } from "@/lib/data"
+import { getDocumentos } from "@/lib/db-data"
 import { FileText } from "lucide-react"
 
-export default function AdministracionPage() {
-  const totalDocs = administracionData.documentos.length
+export default async function AdministracionPage() {
+  const todosDocs = await getDocumentos()
+  const documentos = todosDocs.filter(d => d.section === "Administracion").map(d => ({ ...d, description: d.description || undefined, date: d.date || undefined, trimestre: d.trimestre || undefined, subsection: d.subseccion?.nombre, subsubsection: d.subsubseccion?.nombre }))
+  const totalDocs = documentos.length
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -49,7 +51,7 @@ export default function AdministracionPage() {
 
         {/* ── Secciones con tabulador de años ─────────────────────────── */}
         <div className="mx-auto max-w-7xl px-4 lg:px-8 py-10">
-          <AdministracionSections documentos={administracionData.documentos} />
+          <AdministracionSections documentos={documentos} />
         </div>
 
         {/* ── Footer CTA ────────────────────────────────────────────── */}

@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/section-header"
 import { ScrollIndexGeneric } from "@/components/scroll-index"
 import { Building2, MapPin, Mail, Phone, Globe, ExternalLink, ChevronRight, AlertCircle, FileText, Shield } from "lucide-react"
 import Link from "next/link"
-import { contactoPrincipal } from "@/lib/data"
+import { getContactoPrincipal } from "@/lib/db-data"
 
 const navSections = [
   { navId: "identificacion", observeId: "identificacion", label: "Identificación" },
@@ -58,7 +58,15 @@ const pasosDenuncia = [
   { paso: 6, accion: "De no subsanar, la Autoridad Garante notifica al superior jerárquico e impone sanciones", plazo: "10 + 5 días adicionales (Art. 71-22)" },
 ]
 
-export default function AutoridadGarantePage() {
+export default async function AutoridadGarantePage() {
+  const contactoPrincipal = (await getContactoPrincipal()) || {
+    titular: "No disponible",
+    cargo: "No disponible",
+    correo: "No disponible",
+    domicilio: "No disponible",
+    horario: "No disponible"
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />

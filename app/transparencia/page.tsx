@@ -1,11 +1,10 @@
-"use client"
-
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SectionHeader } from "@/components/section-header"
 import { ScrollIndexGeneric } from "@/components/scroll-index"
 import { Users, Info, Building2, Table, FileText, CheckCircle2, Scale, ExternalLink, MapPin, Mail, Phone, Clock, ChevronRight, Shield } from "lucide-react"
-import { contactoPrincipal, siteData } from "@/lib/data"
+import { siteData } from "@/lib/site-config"
+import { getContactoPrincipal } from "@/lib/db-data"
 import Link from "next/link"
 
 const navSections = [
@@ -16,7 +15,19 @@ const navSections = [
   { navId: "tabla-aplicabilidad", observeId: "tabla-aplicabilidad", label: "Tabla de Aplicabilidad" },
 ]
 
-export default function TransparenciaPage() {
+export default async function TransparenciaPage() {
+  const contactoPrincipal = (await getContactoPrincipal()) || {
+    titular: "No disponible",
+    cargo: "No disponible",
+    dependencia: "No disponible",
+    correo: "No disponible",
+    domicilio: "No disponible",
+    telefono: "No disponible",
+    horario: "No disponible",
+    plataforma: "No disponible",
+    actualizacion: "No disponible"
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />

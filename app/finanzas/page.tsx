@@ -1,11 +1,13 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { FinanzasSections } from "@/components/finanzas-sections"
-import { finanzasData } from "@/lib/data"
+import { getDocumentos } from "@/lib/db-data"
 import { FileSpreadsheet } from "lucide-react"
 
-export default function FinanzasPage() {
-  const totalDocs = finanzasData.documentos.length
+export default async function FinanzasPage() {
+  const todosDocs = await getDocumentos()
+  const documentos = todosDocs.filter(d => d.section === "Finanzas").map(d => ({ ...d, description: d.description || undefined, date: d.date || undefined, trimestre: d.trimestre || undefined, subsection: d.subseccion?.nombre, subsubsection: d.subsubseccion?.nombre }))
+  const totalDocs = documentos.length
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -48,7 +50,7 @@ export default function FinanzasPage() {
 
         {/* ── Secciones con tabulador de años ─────────────────────────── */}
         <div className="mx-auto max-w-7xl px-4 lg:px-8 py-10">
-          <FinanzasSections documentos={finanzasData.documentos} />
+          <FinanzasSections documentos={documentos} />
         </div>
 
         {/* ── Footer CTA ────────────────────────────────────────────── */}

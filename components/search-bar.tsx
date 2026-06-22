@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react"
 import { Search, FileText, ArrowRight } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { getAllSearchableItems } from "@/lib/data"
 
 import { normalizeSearch } from "@/lib/utils"
 
@@ -16,13 +15,15 @@ const suggestions = [
   "Leyes",
 ]
 
-export function SearchBar() {
+type SearchableItem = { title: string; description: string; url: string; type: string; date?: string; ambito?: string; subsection?: string; subsubsection?: string }
+
+export function SearchBar({ items = [] }: { items?: SearchableItem[] }) {
   const [query, setQuery] = useState("")
   const [focused, setFocused] = useState(false)
   const router = useRouter()
   const dropdownRef = useRef<HTMLDivElement>(null)
 
-  const allSearchableItems = getAllSearchableItems();
+  const allSearchableItems = items;
 
   const filteredResults = query.trim() === ""
     ? []
