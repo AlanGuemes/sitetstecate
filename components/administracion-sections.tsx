@@ -433,7 +433,11 @@ export function AdministracionSections({ documentos }: { documentos: DocType[] }
   return (
     <YearTabs documentos={documentos}>
       {(filtered) => {
-        const grouped = seccionOrder.reduce<Record<string, DocType[]>>(
+        const allSubsections = Array.from(new Set(filtered.map(d => d.subsection).filter(Boolean))) as string[];
+        const unknownSubsections = allSubsections.filter(sub => !seccionOrder.includes(sub)).sort();
+        const displayOrder = [...seccionOrder, ...unknownSubsections];
+
+        const grouped = displayOrder.reduce<Record<string, DocType[]>>(
           (acc, key) => {
             acc[key] = filtered.filter((d) => d.subsection === key)
             return acc
@@ -443,11 +447,15 @@ export function AdministracionSections({ documentos }: { documentos: DocType[] }
 
         return (
           <div className="space-y-3">
-            {seccionOrder.map((key) => {
+            {displayOrder.map((key) => {
               const docs = grouped[key]
               if (!docs || docs.length === 0) return null
 
-              const config = seccionConfig[key]
+              const config = seccionConfig[key] || {
+                label: formatTitleCase(key),
+                description: `Documentos de la sección ${formatTitleCase(key)}.`,
+                icon: Folder
+              };
               if (!config) return null
               const Icon = config.icon
 

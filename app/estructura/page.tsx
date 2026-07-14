@@ -13,6 +13,7 @@ export default async function EstructuraPage() {
   const nominas = estructuraDocs.filter(d => d.subseccion?.nombre === "NOMINAS")
   const organigramas = estructuraDocs.filter(d => d.subseccion?.nombre === "ORGANIGRAMAS")
   const curriculums = estructuraDocs.filter(d => d.subseccion?.nombre === "CURRICULUMS")
+  const otrosDocs = estructuraDocs.filter(d => !["NOMINAS", "ORGANIGRAMAS", "CURRICULUMS"].includes(d.subseccion?.nombre || ""))
 
   return (
     <EstructuraClientPage 
@@ -21,6 +22,7 @@ export default async function EstructuraPage() {
       nominas={nominas}
       organigramas={organigramas}
       curriculums={curriculums}
+      otrosDocs={otrosDocs}
     />
   )
 }

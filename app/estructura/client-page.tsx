@@ -316,15 +316,18 @@ export default function EstructuraClientPage({
   contactosParamunicipales,
   nominas,
   organigramas,
-  curriculums
+  curriculums,
+  otrosDocs
 }: { 
   contactos: any[], 
   contactosParamunicipales: any[],
   nominas: any[],
   organigramas: any[],
-  curriculums: any[]
+  curriculums: any[],
+  otrosDocs?: any[]
 }) {
   const totalDependencias = contactos.length + contactosParamunicipales.length
+  const otrosDocsSafe = otrosDocs || []
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -473,6 +476,47 @@ export default function EstructuraClientPage({
               )
             })()}
           </CollapsibleSection>
+
+          {/* Secciones dinámicas (otrosDocs) */}
+          {(() => {
+            if (!otrosDocsSafe.length) return null;
+            const groups: Record<string, any[]> = {}
+            otrosDocsSafe.forEach(doc => {
+              const sub = doc.subseccion?.nombre || "Otros"
+              if (!groups[sub]) groups[sub] = []
+              groups[sub].push(doc)
+            })
+            const keys = Object.keys(groups).sort()
+
+            return keys.map(key => {
+              const docs = groups[key]
+              
+              // Helper for titlecase
+              const titleCased = key.toLowerCase().split(/\s+/).map((w, i) => {
+                if (i > 0 && ["al", "del", "de", "para", "en", "con", "y", "la", "el", "los", "las", "a", "o"].includes(w)) return w;
+                return w.charAt(0).toUpperCase() + w.slice(1);
+              }).join(" ");
+
+              return (
+                <CollapsibleSection
+                  key={key}
+                  id={`section-${key.toLowerCase().replace(/\s+/g, '-')}`}
+                  icon={FileText}
+                  title={titleCased}
+                  description={`Documentos de la sección ${titleCased}.`}
+                  badge={`${docs.length} documentos`}
+                  gridBadge={docs.length > GRID_THRESHOLD}
+                >
+                  <DocList docs={docs.map((c: any) => ({
+                    title: c.title,
+                    description: c.description,
+                    date: c.date,
+                    url: c.url,
+                  }))} showFilters={true} />
+                </CollapsibleSection>
+              )
+            })
+          })()}
         </div>
 
         {/* ── Footer CTA ────────────────────────────────────────────── */}
