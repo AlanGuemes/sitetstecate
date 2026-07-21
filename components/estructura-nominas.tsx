@@ -118,20 +118,38 @@ function DocList({
       {/* Render Document List */}
       <div className="animate-in fade-in duration-200">
         {filteredDocs.length > 0 ? (
-          <div className="divide-y divide-border/60">
-            {filteredDocs.map((doc, i) => (
-              <div
-                key={i}
-                className={i % 2 === 0 ? "bg-card" : "bg-muted/15"}
-              >
-                <DocumentItem
-                  title={doc.title}
-                  description={doc.description}
-                  date={doc.date}
-                  trimestre={doc.trimestre}
-                  downloadUrl={doc.url}
-                  variant="compact"
-                />
+          <div className="flex flex-col">
+            {Object.entries(
+              filteredDocs.reduce<Record<string, typeof filteredDocs>>((acc, doc) => {
+                const desc = doc.description || "";
+                if (!acc[desc]) acc[desc] = [];
+                acc[desc].push(doc);
+                return acc;
+              }, {})
+            ).map(([desc, docsInGroup], groupIndex) => (
+              <div key={groupIndex} className="flex flex-col">
+                {desc && (
+                  <div className="bg-muted/30 border-y border-border/50 px-4 py-2.5">
+                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">{desc}</span>
+                  </div>
+                )}
+                <div className="divide-y divide-border/60">
+                  {docsInGroup.map((doc, i) => (
+                    <div
+                      key={i}
+                      className={i % 2 === 0 ? "bg-card" : "bg-muted/15"}
+                    >
+                      <DocumentItem
+                        title={doc.title}
+                        description={undefined}
+                        date={doc.date}
+                        trimestre={doc.trimestre}
+                        downloadUrl={doc.url}
+                        variant="compact"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

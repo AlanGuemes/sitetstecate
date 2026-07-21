@@ -17,7 +17,8 @@ import {
   ChevronRight,
   Download,
   ExternalLink,
-  BookOpen
+  BookOpen,
+  Users
 } from "lucide-react"
 
 import { siteData, normatividadCategories } from "@/lib/site-config"
@@ -105,13 +106,18 @@ export default function NormatividadClientPage({ documentos, enlacesExternos }: 
           {doc.category === "reglamentos" && <Scale className="h-6 w-6 text-primary" />}
           {doc.category === "manuales" && <Book className="h-6 w-6 text-primary" />}
           {(doc.category === "lineamientos" || doc.category === "documento") && <FileText className="h-6 w-6 text-primary" />}
+          {(doc.category === "sesiones-de-cabildo" || doc.category === "sesiones") && <Users className="h-6 w-6 text-primary" />}
+          {(doc.category === "actas-de-sesion-de-comision" || doc.category === "actas") && <FileText className="h-6 w-6 text-primary" />}
+          {(!doc.category || !["leyes", "código", "reglamentos", "manuales", "lineamientos", "documento", "sesiones-de-cabildo", "sesiones", "actas-de-sesion-de-comision", "actas"].includes(doc.category?.toLowerCase())) && <FileText className="h-6 w-6 text-primary" />}
         </div>
         <div className="flex-1">
           <div className="flex items-start justify-between gap-4">
             <div>
               <div className="flex gap-2 mb-2">
-                <span className="inline-block px-2 py-0.5 text-xs font-medium bg-secondary/10 text-secondary rounded capitalize">
-                  {doc.category}
+                <span className="inline-block px-2 py-0.5 text-xs font-medium bg-secondary/10 text-secondary rounded">
+                  {doc.category === 'sesiones-de-cabildo' ? 'Sesiones de Cabildo' : 
+                   doc.category === 'actas-de-sesion-de-comision' ? 'Actas de Sesión de Comisión' : 
+                   doc.category ? doc.category.charAt(0).toUpperCase() + doc.category.slice(1).replace(/-/g, ' ') : ''}
                 </span>
                 {doc.ambito && (
                   <span className={`inline-block px-2 py-0.5 text-[10px] font-bold rounded uppercase ${doc.ambito === 'Constitucional'
