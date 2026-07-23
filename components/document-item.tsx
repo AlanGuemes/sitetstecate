@@ -1,4 +1,7 @@
-import { FileText, Download, ExternalLink } from "lucide-react"
+"use client"
+
+import { useState } from "react"
+import { FileText, Download, ExternalLink, Link as LinkIcon, Check } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface DocumentItemProps {
@@ -21,6 +24,13 @@ export function DocumentItem({
   variant = "default"
 }: DocumentItemProps) {
   const isCompact = variant === "compact"
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = (url: string) => {
+    navigator.clipboard.writeText(url)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   return (
     <div className={cn(
@@ -63,15 +73,24 @@ export function DocumentItem({
           </span>
         )}
         {downloadUrl && (
-          <a
-            href={downloadUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-1.5 text-muted-foreground hover:text-primary transition-colors hover:bg-primary/5 rounded-md"
-            title="Descargar"
-          >
-            <Download className="h-4 w-4" />
-          </a>
+          <>
+            <a
+              href={downloadUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-1.5 text-muted-foreground hover:text-primary transition-colors hover:bg-primary/5 rounded-md"
+              title="Descargar"
+            >
+              <Download className="h-4 w-4" />
+            </a>
+            <button
+              onClick={() => handleCopy(downloadUrl)}
+              className="p-1.5 text-muted-foreground hover:text-primary transition-colors hover:bg-primary/5 rounded-md"
+              title="Copiar URL"
+            >
+              {copied ? <Check className="h-4 w-4 text-green-500" /> : <LinkIcon className="h-4 w-4" />}
+            </button>
+          </>
         )}
         {externalUrl && (
           <a

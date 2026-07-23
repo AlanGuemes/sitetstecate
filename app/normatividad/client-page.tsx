@@ -18,12 +18,35 @@ import {
   Download,
   ExternalLink,
   BookOpen,
-  Users
+  Users,
+  Check,
+  Link as LinkIcon
 } from "lucide-react"
 
 import { siteData, normatividadCategories } from "@/lib/site-config"
 
 export default function NormatividadClientPage({ documentos, enlacesExternos }: { documentos: any[], enlacesExternos: any[] }) {
+  const CopyButton = ({ url }: { url: string }) => {
+    const [copied, setCopied] = useState(false)
+
+    const handleCopy = () => {
+      navigator.clipboard.writeText(url)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+
+    return (
+      <button
+        onClick={handleCopy}
+        className="inline-flex items-center gap-2 text-sm px-4 py-2 bg-muted text-foreground rounded-lg hover:bg-accent transition-colors"
+        title="Copiar URL"
+      >
+        {copied ? <Check className="h-4 w-4 text-green-500" /> : <LinkIcon className="h-4 w-4" />}
+        Copiar URL
+      </button>
+    )
+  }
+
   const categories = normatividadCategories.map(cat => {
     if (cat.id === "all") return { ...cat, count: documentos.length };
     if (cat.id === "sesiones") return { ...cat, count: documentos.filter(d => d.subseccion?.nombre === "SESIONES DE CABILDO").length };
@@ -149,6 +172,7 @@ export default function NormatividadClientPage({ documentos, enlacesExternos }: 
                   <ExternalLink className="h-4 w-4" />
                   Ver en línea
                 </a>
+                <CopyButton url={doc.url} />
               </>
             ) : (
               <>
