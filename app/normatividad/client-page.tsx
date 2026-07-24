@@ -80,8 +80,24 @@ export default function NormatividadClientPage({ documentos, enlacesExternos }: 
     return matchesCategory && matchesSearch
   })
 
-  const cabildoDocs = filteredDocuments
-    .filter(d => d.subseccion?.nombre === "SESIONES DE CABILDO")
+  const [selectedSubsubseccionCabildo, setSelectedSubsubseccionCabildo] = useState<string>("all")
+  const [selectedSubsubseccionActas, setSelectedSubsubseccionActas] = useState<string>("all")
+
+  const cabildoSubsubsecciones = Array.from(new Set(
+    documentos
+      .filter(d => d.subseccion?.nombre === "SESIONES DE CABILDO" && d.subsubseccion?.nombre)
+      .map(d => d.subsubseccion.nombre as string)
+  )).sort()
+
+  const actasSubsubsecciones = Array.from(new Set(
+    documentos
+      .filter(d => d.subseccion?.nombre === "ACTAS DE SESION DE COMISION" && d.subsubseccion?.nombre)
+      .map(d => d.subsubseccion.nombre as string)
+  )).sort()
+
+  const baseCabildoDocs = filteredDocuments.filter(d => d.subseccion?.nombre === "SESIONES DE CABILDO")
+  const cabildoDocs = baseCabildoDocs
+    .filter(d => selectedSubsubseccionCabildo === "all" || d.subsubseccion?.nombre === selectedSubsubseccionCabildo)
     .sort((a, b) => {
       const titleA = a.title.toUpperCase();
       const titleB = b.title.toUpperCase();
@@ -98,8 +114,9 @@ export default function NormatividadClientPage({ documentos, enlacesExternos }: 
 
       return numB - numA;
     })
-  const actasDocs = filteredDocuments
-    .filter(d => d.subseccion?.nombre === "ACTAS DE SESION DE COMISION")
+  const baseActasDocs = filteredDocuments.filter(d => d.subseccion?.nombre === "ACTAS DE SESION DE COMISION")
+  const actasDocs = baseActasDocs
+    .filter(d => selectedSubsubseccionActas === "all" || d.subsubseccion?.nombre === selectedSubsubseccionActas)
     .sort((a, b) => {
       const titleA = a.title.toUpperCase();
       const titleB = b.title.toUpperCase();
@@ -257,7 +274,7 @@ export default function NormatividadClientPage({ documentos, enlacesExternos }: 
 
               {/* Documentos */}
               <div className="lg:col-span-2">
-                {(generalDocs.length > 0 || (cabildoDocs.length === 0 && actasDocs.length === 0)) && (
+                {(generalDocs.length > 0 || (baseCabildoDocs.length === 0 && baseActasDocs.length === 0)) && (
                   <div className="mb-10">
                     <SectionHeader
                       title="Marco Normativo"
@@ -270,26 +287,74 @@ export default function NormatividadClientPage({ documentos, enlacesExternos }: 
                   </div>
                 )}
 
-                {cabildoDocs.length > 0 && (
+                {baseCabildoDocs.length > 0 && (
                   <div id="sesionesdecabildo" className="mb-10 scroll-mt-24">
-                    <SectionHeader
-                      title="Sesiones de Cabildo"
-                      description={`${cabildoDocs.length} documentos encontrados`}
-                    />
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-2">
+                      <div className="flex-1">
+                        <SectionHeader
+                          title="Sesiones de Cabildo"
+                          description={`${cabildoDocs.length} documentos encontrados`}
+                        />
+                      </div>
+                      {cabildoSubsubsecciones.length > 0 && (
+                        <div className="mb-8 w-full sm:w-auto">
+                          <select
+                            value={selectedSubsubseccionCabildo}
+                            onChange={(e) => setSelectedSubsubseccionCabildo(e.target.value)}
+                            className="w-full sm:w-auto px-4 py-2 bg-card border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+                          >
+                            <option value="all">Todas las subsubsecciones</option>
+                            {cabildoSubsubsecciones.map(sub => (
+                              <option key={sub} value={sub}>{sub}</option>
+                            ))}
+                          </select>
+                        </div>
+                      )}
+                    </div>
                     <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">
-                      {cabildoDocs.map(renderDocumentCard)}
+                      {cabildoDocs.length > 0 ? (
+                        cabildoDocs.map(renderDocumentCard)
+                      ) : (
+                        <div className="text-center py-8 text-muted-foreground bg-muted/30 rounded-lg border border-border">
+                          No hay documentos para la subsubsección seleccionada.
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
 
-                {actasDocs.length > 0 && (
+                {baseActasDocs.length > 0 && (
                   <div className="mb-10">
-                    <SectionHeader
-                      title="Actas de Sesión de Comisión"
-                      description={`${actasDocs.length} documentos encontrados`}
-                    />
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-2">
+                      <div className="flex-1">
+                        <SectionHeader
+                          title="Actas de Sesión de Comisión"
+                          description={`${actasDocs.length} documentos encontrados`}
+                        />
+                      </div>
+                      {actasSubsubsecciones.length > 0 && (
+                        <div className="mb-8 w-full sm:w-auto">
+                          <select
+                            value={selectedSubsubseccionActas}
+                            onChange={(e) => setSelectedSubsubseccionActas(e.target.value)}
+                            className="w-full sm:w-auto px-4 py-2 bg-card border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+                          >
+                            <option value="all">Todas las subsubsecciones</option>
+                            {actasSubsubsecciones.map(sub => (
+                              <option key={sub} value={sub}>{sub}</option>
+                            ))}
+                          </select>
+                        </div>
+                      )}
+                    </div>
                     <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-primary/20">
-                      {actasDocs.map(renderDocumentCard)}
+                      {actasDocs.length > 0 ? (
+                        actasDocs.map(renderDocumentCard)
+                      ) : (
+                        <div className="text-center py-8 text-muted-foreground bg-muted/30 rounded-lg border border-border">
+                          No hay documentos para la subsubsección seleccionada.
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
