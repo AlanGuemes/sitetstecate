@@ -22,7 +22,7 @@ export const siteData = {
     { label: "Material de Apoyo", href: "/transparencia#material", icon: Users, disabled: true },
   ],
   recursos: [
-    { label: "Tabla de Aplicabilidad", href: "https://s3-public-presigner-production-ed97.up.railway.app/2025_TablaAplicabilidad_AytoTecate.pdf", icon: LayoutGrid, external: true },
+    { label: "Tabla de Aplicabilidad", href: "https://s3-public-presigner-production-ed97.up.railway.app/2026_TablaAplicabilidad.pdf", icon: LayoutGrid, external: true },
     { label: "Archivo de Sesiones Anteriores", href: "/transparencia#sesiones", icon: FileText, disabled: true },
     { label: "¿Cómo Presentar una Denuncia?", href: "https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/denuncia/denunciaCiudadana.xhtml", icon: Eye },
     { label: "Avisos de Privacidad", href: "/aviso-privacidad", icon: Search },
