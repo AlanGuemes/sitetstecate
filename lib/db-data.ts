@@ -1,5 +1,29 @@
 import { db } from "./db"
 
+export async function getHomeStatistics() {
+  try {
+    const documentos = await db.documento.count()
+    const dependencias = await db.dependencia.count()
+    const ultimoDocumento = await db.documento.findFirst({
+      orderBy: { updatedAt: "desc" },
+      select: { updatedAt: true }
+    })
+
+    return {
+      documentos,
+      dependencias,
+      ultimaActualizacion: ultimoDocumento?.updatedAt || null
+    }
+  } catch (error) {
+    console.error("Error fetching home statistics:", error)
+    return {
+      documentos: 0,
+      dependencias: 0,
+      ultimaActualizacion: null
+    }
+  }
+}
+
 export async function getContactoPrincipal() {
   try {
     return await db.contactoPrincipal.findFirst()

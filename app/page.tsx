@@ -5,6 +5,7 @@ import { ModuleCard } from "@/components/module-card"
 import { SearchBar } from "@/components/search-bar"
 import { TransparencyCard } from "@/components/transparency-card"
 import { ScrollIndex } from "@/components/scroll-index"
+import { AnimatedCounter } from "@/components/animated-counter"
 import {
   FileText,
   Users,
@@ -21,7 +22,7 @@ import {
   Wallet
 } from "lucide-react"
 import Link from "next/link"
-import { getContactoPrincipal, getAllSearchableItems } from "@/lib/db-data"
+import { getContactoPrincipal, getAllSearchableItems, getHomeStatistics } from "@/lib/db-data"
 
 export const dynamic = "force-dynamic";
 
@@ -34,6 +35,11 @@ export default async function HomePage() {
   };
 
   const searchableItems = await getAllSearchableItems();
+  const homeStatistics = await getHomeStatistics();
+  const moduleCount = siteData.secciones.filter(({ href }) => href !== "/aviso-privacidad").length;
+  const lastUpdate = homeStatistics.ultimaActualizacion
+    ? `${homeStatistics.ultimaActualizacion.toLocaleDateString("es-MX", { month: "long" }).replace(/^./, character => character.toUpperCase())} ${homeStatistics.ultimaActualizacion.getFullYear()}`
+    : "No disponible";
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -61,13 +67,6 @@ export default async function HomePage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/#div-cumplimiento"
-                className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-colors"
-              >
-                <Eye className="h-5 w-5" />
-                Ver Obligaciones
-              </Link>
-              <Link
                 href="#modulos"
                 className="inline-flex items-center gap-2 bg-primary-foreground/10 text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary-foreground/20 transition-colors border border-primary-foreground/20"
               >
@@ -84,19 +83,19 @@ export default async function HomePage() {
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border">
               <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none">40+</p>
-                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Artículos Publicados</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none"><AnimatedCounter value={homeStatistics.documentos} /></p>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Documentos Publicados</p>
               </div>
               <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none">120+</p>
-                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Documentos Disponibles</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none"><AnimatedCounter value={homeStatistics.dependencias} /></p>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Dependencias Registradas</p>
               </div>
               <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none">5</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-none">{moduleCount}</p>
                 <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Módulos de Información</p>
               </div>
               <div className="flex flex-col items-center justify-center py-6 px-4 text-center">
-                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-secondary leading-tight">Abril{"\u00A0"}2026</p>
+                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-secondary leading-tight">{lastUpdate}</p>
                 <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-tight">Última Actualización</p>
               </div>
             </div>
