@@ -180,7 +180,7 @@ function DocList({
   docs,
   showFilters = false,
 }: {
-  docs: Array<{ title: string; description?: string; date?: string; url?: string }>
+  docs: Array<{ title: string; description?: string; date?: string; trimestre?: number; url?: string }>
   showFilters?: boolean
 }) {
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
@@ -286,6 +286,7 @@ function DocList({
                   title={doc.title}
                   description={doc.description}
                   date={doc.date}
+                  trimestre={doc.trimestre}
                   downloadUrl={doc.url}
                   variant="compact"
                 />
@@ -464,6 +465,7 @@ export default function EstructuraClientPage({
                               title: c.title,
                               description: c.description,
                               date: c.date,
+                              trimestre: c.trimestre,
                               url: c.url,
                             }))}
                             showFilters={true}
@@ -511,6 +513,7 @@ export default function EstructuraClientPage({
                     title: c.title,
                     description: c.description,
                     date: c.date,
+                    trimestre: c.trimestre,
                     url: c.url,
                   }))} showFilters={true} />
                 </CollapsibleSection>
