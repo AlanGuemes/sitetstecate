@@ -13,7 +13,9 @@ type NominaDoc = {
   title: string
   description?: string
   date?: string
+  trimestre?: number
   url?: string
+  subsubseccion?: { nombre: string } | null
   [key: string]: unknown
 }
 
@@ -22,7 +24,14 @@ function DocList({
   docs,
   showFilters = false,
 }: {
-  docs: Array<{ title: string; description?: string; date?: string; trimestre?: number; url?: string }>
+  docs: Array<{
+    title: string
+    description?: string
+    date?: string
+    trimestre?: number
+    url?: string
+    subsubseccion?: { nombre: string } | null
+  }>
   showFilters?: boolean
 }) {
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
@@ -205,9 +214,43 @@ export function NominasSection({ nominas }: { nominas: NominaDoc[] }) {
 
       <div className="border-t border-border p-5 bg-card">
         <YearTabs documentos={nominas}>
-          {(filtered) => (
-            <DocList docs={filtered} showFilters={true} />
-          )}
+          {(filtered) => {
+            const groups: Record<string, NominaDoc[]> = {}
+            filtered.forEach((doc) => {
+              const sub = doc.subsubseccion?.nombre || "General"
+              if (!groups[sub]) groups[sub] = []
+              groups[sub].push(doc)
+            })
+            const keys = Object.keys(groups).sort()
+
+            return (
+              <div className="flex flex-col divide-y divide-border/60">
+                {keys.map((key) => {
+                  const groupDocs = groups[key] || []
+                  return (
+                    <details key={key} className="group p-5 border-b border-border/60 last:border-b-0">
+                      <summary className="flex items-center justify-between cursor-pointer list-none select-none">
+                        <div className="flex items-center gap-3 w-full">
+                          <span className="text-xs font-bold uppercase tracking-widest text-primary px-2.5 py-1 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+                            {key}
+                          </span>
+                          <div className="flex-1 h-px bg-border" />
+                          <span className="text-xs text-muted-foreground mr-2">{groupDocs.length} documentos</span>
+                          <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform duration-200 group-open:rotate-180 shrink-0" />
+                        </div>
+                      </summary>
+                      <div className="mt-4 pt-2">
+                        <DocList
+                          docs={groupDocs}
+                          showFilters={true}
+                        />
+                      </div>
+                    </details>
+                  )
+                })}
+              </div>
+            )
+          }}
         </YearTabs>
       </div>
     </details>
